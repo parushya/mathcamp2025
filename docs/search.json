@@ -1,0 +1,342 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Math Camp 2024",
+    "section": "",
+    "text": "Welcome to the Math Camp 2024, organised by the Department of Government, Georgetown University.",
+    "crumbs": [
+      "Instructors"
+    ]
+  },
+  {
+    "objectID": "index.html#instructors",
+    "href": "index.html#instructors",
+    "title": "Math Camp 2024",
+    "section": "Instructors",
+    "text": "Instructors\nMohammad Hashem Krayem\n\nPh.D. Student (3rd Year), International Relations\nmhk62@georgetown.edu\n\nParushya,\n\nPh.D. Student (3rd Year), Comparative Government\npp714@georgetown.edu",
+    "crumbs": [
+      "Instructors"
+    ]
+  },
+  {
+    "objectID": "index.html#acknowledgments",
+    "href": "index.html#acknowledgments",
+    "title": "Math Camp 2024",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nThanks to Henry Watson and Ankushi Mitra for sharing the teaching material from previous editions of Maths Camp.",
+    "crumbs": [
+      "Instructors"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "Math Camp is an intensive week-long course designed to refresh mathematical concepts that Ph.D. students will use in their quantitative research methods classes. This course will reintroduce students to basic topics in probability, linear algebra, and calculus through lectures, problem sets, and home work assignments. Students will also be exposed to the statistical software package R through a series of daily labs.\nYou can find the course syllabus and material from classes here.\nClasses would take place between 9 - 4 pm in ICC 234.\n\n\n\n\n\nSchedule for the Week",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "day1.html",
+    "href": "day1.html",
+    "title": "Day 1 - Software",
+    "section": "",
+    "text": "Math Session\nNotation, Functions, and Limits\nLinks",
+    "crumbs": [
+      "Day 1 - Software"
+    ]
+  },
+  {
+    "objectID": "day1.html#math-session",
+    "href": "day1.html#math-session",
+    "title": "Day 1 - Software",
+    "section": "",
+    "text": "Measurement and notation\nReview Basic Algebra\nFunctions\nLimits and Series\n\n\n\nLecture slides here\nProblem set here",
+    "crumbs": [
+      "Day 1 - Software"
+    ]
+  },
+  {
+    "objectID": "day1.html#software-session",
+    "href": "day1.html#software-session",
+    "title": "Day 1 - Software",
+    "section": "Software Session",
+    "text": "Software Session\nWe will be getting started with the following installations today:\n\nR - Statistical Programming Language\nRStudio - Interactive Development Environment for R\nStata - Statistical Software Package (the “other” one)\nZotero - Reference Management Tool\nGitHub - Storing code online with version control\n\n\nR and R Studio\nUse the link here to install RStudio on your systems.\n\n\nStata\nStata is a paid software. Georgetown provides download option through the university webstore here.\n\n\nZotero\nZotero is a reference management tool. It allows you to maintain a structured bibliography. Its integration with various web browsers and software like MS Word and R, makes it a fantastic tool for keeping track of readings as well as citing them.\n\n\n\n\n\nZotero Folder\n\n\n\n\n\nMake Zotero Account.\nAdd a connector to the browser (For eg, zotero connector for google chrome).\nDownload Zotero Desktop App here.\nConnect Zotero to R Studio. (We will do this step on Day 5, using the link here).\n\n\n\nGitHub\nMake your account here",
+    "crumbs": [
+      "Day 1 - Software"
+    ]
+  },
+  {
+    "objectID": "day2.html",
+    "href": "day2.html",
+    "title": "Day 2 - R Basics",
+    "section": "",
+    "text": "Math Session\nLinear Algebra\nLinks",
+    "crumbs": [
+      "Day 2 - R Basics"
+    ]
+  },
+  {
+    "objectID": "day2.html#why-programming-or-coding",
+    "href": "day2.html#why-programming-or-coding",
+    "title": "Day 2 - R Basics",
+    "section": "Why Programming or Coding?",
+    "text": "Why Programming or Coding?\nThere are a lot of fancy answers to it. But the key idea is that you want to be lazy about repetitive tasks (MBAs call it being “productive”).\nMany tasks - data cleaning, wrangling, visualization, and statistical analysis - require you to do them many times. Moreover, you would want to be able to reproduce and replicate your thinking about all of the tasks mentioned above on many different datasets and sometimes even on the same dataset after some time.\nCoding is about formalizing your thinking about how you treat the data and automating the formalization task to be done repetitively. It improves efficiency, enhances reproducibility, and boosts creativity when it comes to finding new patterns in your data.\nGuidelines for data and statistical analyses:1\n\nAccuracy: Write a code that reduces the chances of making an error and lets you catch one if it occurs.\nEfficiency: If you are doing it twice, see the pattern of your decision-making and formalize it in your code. Difference between Excel and coding\nReplicate-and-Reproduce: Ability to repeat the computational process which reflects your thinking and decisions that you took along the way. Improves transparency and forces one to be deliberate and responsible about choices during analyses.\n\nHuman Interpretability: Writing code is not just about analyzing but allowing yourself and then others to be able to understand your analytic choices.\n\nPublic Good: Research is a public good. And the code allows your research to be truly accessible. This means you write a code that anyone else who understands the language can read, reuse, and recreate without you being present. We essentially ensure that by writing a readable and ideally publicly accessible code.",
+    "crumbs": [
+      "Day 2 - R Basics"
+    ]
+  },
+  {
+    "objectID": "day2.html#r-and-rstudio",
+    "href": "day2.html#r-and-rstudio",
+    "title": "Day 2 - R Basics",
+    "section": "R and RStudio",
+    "text": "R and RStudio\nR is a free open-source statistical programming language. We generally use R through RStudio which is an integrated development environment (IDE). Essentially, it is the graphic user interface that allows us to use R efficiently. It has point-and-click functionality also (which we would not use a lot).\n\n\n\n\n\nRStudio Screen\n\n\n\n\nR Scripts: This is where put your code in a script. The script is saved with a .R extension. An R script is a text file that you can read on text editors too. We use RStudio to run the code in a way that the computer understands.\nConsole: Output from your code appears here. You can also write the code directly here. But it does not get saved. Also, by default, it shows only a limited number of previous steps (commands + outputs). Not a good practice to code here.\nEnvironment: All the objects, datasets, lists, etc that you have created/loaded in the environment appear here. Alongside, you also see the custom functions that you might create.\nFile Browser/Help/Plot: Internal file navigator and help documentation for packages and functions appear here. Further, when you plot anything, that also gets shown here.\nComments: R interprets every line in the script as a separate command. And it does for each line unless preceded by a #. Comments signal to R that what follows the # is to be ignored.We use comments to write explanatory notes about the code. A comment should explain the purpose of a command or code and not just be a description of what it does.",
+    "crumbs": [
+      "Day 2 - R Basics"
+    ]
+  },
+  {
+    "objectID": "day2.html#basics",
+    "href": "day2.html#basics",
+    "title": "Day 2 - R Basics",
+    "section": "Basics",
+    "text": "Basics\nR uses &lt;- as the assignment operator. To the left of it is an object (sort of like a box that stores values which are to the right of the operator).\nSyntax: object &lt;- value/data\n\nExercise 1Code 1\n\n\n\nCreate a new .R script. Name it and save it on your system.\n\nR does all the functions of a calculator. Write some code in the script that\n\n\nAdds two numbers\nMultiplies three numbers\nPrints your name\n\n\nRun each command separately by using cmd + Enter / ctrl + Enter.\nAssign the outputs from 2 to different objects.\nPrint the objects with some description using paste().\nRun the whole file.\n\n\n\nYou can start a new script through many different ways:\n\nctrl + shift + n\nClick on the tiny white page button with a green+sign on the upper left corner of the screen\nClick on File &gt; New file&gt; R script\n\nSaving a script:\n\nCtrl + S\nEnter the name of the script, and add .R as a suffix. For example: xyzbasic.R\n\n\n#2. \n2 + 7\n\n56 * 9 * 33\n\nprint(\"Parushya\")\n\nThe output is displayed in the console.\n\n#4\n\n\nsum_2 &lt;- 2 + 7\n\nprod_3 &lt;- 56 * 9 * 33\n\nname &lt;- \"parushya\"\n\n\n#5\n\npaste(\"Sum of 2 and 7 is\", sum_2)\n\npaste(\"Product of 56, 9 and 33 is\", prod_3)\n\npaste(\"This very fancy R code was written by\", name)",
+    "crumbs": [
+      "Day 2 - R Basics"
+    ]
+  },
+  {
+    "objectID": "day2.html#objects-datatypes-and-data-structures",
+    "href": "day2.html#objects-datatypes-and-data-structures",
+    "title": "Day 2 - R Basics",
+    "section": "Objects, Datatypes, and Data Structures",
+    "text": "Objects, Datatypes, and Data Structures\n\n\n\n\n\n\nExercise 2\n\n\n\nRun the following code in the same script that we created\n\nclass(sum_2)\n\nclass(prod_3)\n\nclass(name)\n\n\n\nEverything in R is called an “object”\n“Objects” contain “data”.\nThe three variables we created - sum_2, prod_3, and name - were all basic objects.\nR has 5 basic or “atomic” classes/datatypes of objects.\n\nCharacter - (abc)\nNumeric - (real numbers) - (1,7.5,etc)\nInteger - (1,2,0,-896)\nLogical - (True/False)\nComplex - (1, 0+i)\n\nData structures are bigger containers that hold many objects.\nTwo basic or “atomic” data structures in R are:\n\nVectors: can hold objects of same datatype\nLists: can hold objects with different datatypes\n\n\n\n\n\n\n\nUnderstanding Vectors\n\n\n\nWe can create a vector using the “c()” command.\n\na_num &lt;- c(0,0.7,9,2,3,4,-1)            # numeric or double\n\nb_logical &lt;- c(TRUE,FALSE,TRUE,TRUE,TRUE) # logical\n\nc_logical &lt;- c(T,F,T,T,T) # also logical - Never use T and F as it leads to errors in analysis\n\nd_char &lt;- c(\"Sheila\", \"Nila\", \"Camilla\")  # character\n\ne_int &lt;- 1:20 # integer\n\nf_int &lt;- c(1,2,3,4,5)  # integer\n\ng_int &lt;- c(1+0i,2+4i) # complex numbers\n\nBasic vectors are uni-dimensional. We can make a two dimensional vector, which is called matrix.\n\nWorking with matrices\n\n# Creating Blank Matrix\nm_1 &lt;- matrix(nrow=3,ncol=4)\nm_1      \n\n     [,1] [,2] [,3] [,4]\n[1,]   NA   NA   NA   NA\n[2,]   NA   NA   NA   NA\n[3,]   NA   NA   NA   NA\n\ndim(m_1)\n\n[1] 3 4\n\n\n\n?matrix # Help documentation\n\n# Creating Matrix with elements\n\nm_2 &lt;- matrix(1:10, nrow = 3, ncol = 4) # Why the warning?\nm_2\n\n# With correct number of elements\nm_3 &lt;- matrix(1:18, nrow=9, ncol=2))\nm3\n\nLogic of matrices\nMatrices are constructed column-wise. So, it fills the upper left corner, and then runs down along.\nIndexing in matrices\n\n# Rows & Columns ----    \n# Very simply the syntax is:  (2,3) = (Rows, Columns)\n# m[1,] - 1st row\n# m[2,] - 2nd row\n# m[,3] - 3rd column  \n# m[,5] - 5th column\n# m[,7] - 7th column\n\n\n# What if you already have a vector?\n# Example: You have received a list of students who have skipped school today.\n# You know which section they are in, and want to create a matrix.\nk &lt;- c(\"Hashem\", \"John\", \"Cecillia\", \"Minha\", \"Parushya\", \"Keeheon\")\nk\n\n[1] \"Hashem\"   \"John\"     \"Cecillia\" \"Minha\"    \"Parushya\" \"Keeheon\" \n\ndim(k) &lt;- c(3,2)\nk\n\n     [,1]       [,2]      \n[1,] \"Hashem\"   \"Minha\"   \n[2,] \"John\"     \"Parushya\"\n[3,] \"Cecillia\" \"Keeheon\" \n\ncolnames(k) &lt;- c(\"Section A\", \"Section B\")\n\nk\n\n     Section A  Section B \n[1,] \"Hashem\"   \"Minha\"   \n[2,] \"John\"     \"Parushya\"\n[3,] \"Cecillia\" \"Keeheon\" \n\nrownames(k) &lt;- c(\"Student 1\", \"Student 2\", \"Student 3\")\n\nk\n\n          Section A  Section B \nStudent 1 \"Hashem\"   \"Minha\"   \nStudent 2 \"John\"     \"Parushya\"\nStudent 3 \"Cecillia\" \"Keeheon\" \n\n\nBinding vectors together to make a matrix\n\n# Binding\nx &lt;- 1:3\ny &lt;- 4:6\nz &lt;- c(\"Camilla\",\"Nila\",\"Duflo\",\"Akbar\")\n\nx\n\n[1] 1 2 3\n\ny\n\n[1] 4 5 6\n\nz\n\n[1] \"Camilla\" \"Nila\"    \"Duflo\"   \"Akbar\"  \n\nrbind(x,y) # Stitches vector row wise, or appends it horizontally\n\n  [,1] [,2] [,3]\nx    1    2    3\ny    4    5    6\n\ncbind(x,y) # Stitches vector column wise, or vertically\n\n     x y\n[1,] 1 4\n[2,] 2 5\n[3,] 3 6\n\n\n\n\n\n\nLists\nIf we want to create something that stores objects of different classes together, we use another data structure called list.\nA list can contain two or more classes of objects with different lengths.\n\n\n\n\n\n\nCreating lists\n\nlist_1 &lt;- list(\"a\" = 2.5, \"b\" = TRUE, \"c\" = 1:3)\n\nlist_1\n\n$a\n[1] 2.5\n\n$b\n[1] TRUE\n\n$c\n[1] 1 2 3\n\n\nWe created a list with objects of three different types - numeric, logical, and integer vector.\n\n# Structure of the list\nstr(list_1)\n\nList of 3\n $ a: num 2.5\n $ b: logi TRUE\n $ c: int [1:3] 1 2 3\n\n\nWe can also create a list with existing vectors.\n\n# A new vector\nname_vec &lt;- c(\"Camilla\",\"Nila\",\"Duflo\",\"Akbar\")\n\n# And then lets use the vectors we already have in the environment\nlist_2 &lt;- list(name_vec, c_logical, d_char, f_int, e_int, a_num)\nlist_2\n\n[[1]]\n[1] \"Camilla\" \"Nila\"    \"Duflo\"   \"Akbar\"  \n\n[[2]]\n[1]  TRUE FALSE  TRUE  TRUE  TRUE\n\n[[3]]\n[1] \"Sheila\"  \"Nila\"    \"Camilla\"\n\n[[4]]\n[1] 1 2 3 4 5\n\n[[5]]\n [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20\n\n[[6]]\n[1]  0.0  0.7  9.0  2.0  3.0  4.0 -1.0\n\n\n\n# let's check the classes of objects\nclass(list_2[[2]])\nclass(list_2[[3]])\n\n# And their lengths\nlength(list_2[[2]])\nlength(list_2[[3]])\n\nAccessing elements in a List\nBy indices in a list\n\n# So lists are printed differently, and elements of a list will have [[]] i.e 2 brackets.    \n\nlist_2\n\n[[1]]\n[1] \"Camilla\" \"Nila\"    \"Duflo\"   \"Akbar\"  \n\n[[2]]\n[1]  TRUE FALSE  TRUE  TRUE  TRUE\n\n[[3]]\n[1] \"Sheila\"  \"Nila\"    \"Camilla\"\n\n[[4]]\n[1] 1 2 3 4 5\n\n[[5]]\n [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20\n\n[[6]]\n[1]  0.0  0.7  9.0  2.0  3.0  4.0 -1.0\n\n\n\n## Accessing elements | run each of the follwing lines and see the output\nlist_2[[2]] \nlist_2[2]\nlist_2[1][2]\nlist_2[[1]][1]\nlist_2[[1]][[1]]\nlist_2[[1]][2]\n\nBy using names or tags\n\nlist_3 &lt;- list(name = \"John\", age = 19, speaks = c(\"English\", \"French\"))\n\n# access elements by name\nlist_3$name\nlist_3$age\nlist_3$speaks\n\n# access elements by integer index\nlist_3[c(1, 2)]\nlist_3[-2]\n\n# access elements by logical index\nlist_3[c(TRUE, FALSE, FALSE)]\n\n# access elements by character index\nlist_3[c(\"age\", \"speaks\")]\n\nModifying lists\nAdding components in a list\n\nlist_4 &lt;- list(name = \"Clair\", age = 19, speaks = c(\"English\", \"French\"))\n\n# assign a new element to the list using double brackets [[]]\nlist_4[[\"married\"]] &lt;- FALSE\n\n# print the updated list\nlist_4\n\n$name\n[1] \"Clair\"\n\n$age\n[1] 19\n\n$speaks\n[1] \"English\" \"French\" \n\n$married\n[1] FALSE\n\n\nDeleting components in a list\n\nlist_5 &lt;- list(name = \"Clair\", age = 19, speaks = c(\"English\", \"French\"))\n\n# remove an element from the list using double brackets [[]]\nlist_5[[\"age\"]] &lt;- NULL\n\n# print the structure of the updated list\nstr(list_5)\n\nList of 2\n $ name  : chr \"Clair\"\n $ speaks: chr [1:2] \"English\" \"French\"\n\n# remove an element from the list using $ notation\nlist_5$married &lt;- NULL\n\n# print the structure of the updated list\nstr(list_5)\n\nList of 2\n $ name  : chr \"Clair\"\n $ speaks: chr [1:2] \"English\" \"French\"",
+    "crumbs": [
+      "Day 2 - R Basics"
+    ]
+  },
+  {
+    "objectID": "day2.html#footnotes",
+    "href": "day2.html#footnotes",
+    "title": "Day 2 - R Basics",
+    "section": "",
+    "text": "Inspired by the summary provided by Prof Aaron Williams’ course on Data Analysis offered at McCourt School. Strongly recommended to learn good coding using R↩︎",
+    "crumbs": [
+      "Day 2 - R Basics"
+    ]
+  },
+  {
+    "objectID": "day3.html",
+    "href": "day3.html",
+    "title": "Day 3 - R for Analysis",
+    "section": "",
+    "text": "Math Session\nCalculus I: Derivatives\nLinks",
+    "crumbs": [
+      "Day 3 - R for Analysis"
+    ]
+  },
+  {
+    "objectID": "day3.html#factors",
+    "href": "day3.html#factors",
+    "title": "Day 3 - R for Analysis",
+    "section": "Factors",
+    "text": "Factors\nFactors are used for categorical data - both nominal and ordinal ones.\nFactors are treated as a separate datatype in R. Technically, factors are stored as a vector of integer values corresponding to the character type objects which they are used to represent.\n\n\n\n\n\n\nYou can define a factor by using factor() command.\n\nvec_1 &lt;- c(\"yes\", \"no\", \"yes\")\n\nfct_1 &lt;- factor(c(\"yes\", \"no\", \"yes\"))\n\n# Notice the difference in outputs\n\nvec_1\n\n[1] \"yes\" \"no\"  \"yes\"\n\nfct_1\n\n[1] yes no  yes\nLevels: no yes\n\n\n\n# Btw, table() command cn be used in R for cross-tabulations\n# with both vector and factor datatypes. \n\ntable(vec_1)\n\nvec_1\n no yes \n  1   2 \n\ntable(fct_1)\n\nfct_1\n no yes \n  1   2 \n\n\nOrdering Factors\nSometimes it is essential to specify the orders of your factor levels. Particularly during modelling and estimation with binary or categorical variables, given that the first level of factor is used in most functions, like lm(linear regression command in R), will be treated as baseline level or category.\nFor example, we have a variable measuring dose of vaccine administered (placebo, medium, high). Here specifying order becomes important as all measurements of the treatment efficacy will have to be with respect to the baseline category.\nWe use levels() within factor() command to do this.\n\nfct_2 &lt;- factor(c(\"High\", \"High\", \"Medium\", \"Medium\", \"High\", \"High\",\"Placebo\"))\nfct_2   \n\n[1] High    High    Medium  Medium  High    High    Placebo\nLevels: High Medium Placebo\n\n# (Order is often determined using alphabetical variables by default) (H-M-P)\n\n# Ordering it\nfct_2 &lt;- factor(c(\"Placebo\", \"High\", \"Medium\", \"Placebo\", \"Medium\", \n            \"Medium\", \"High\", \"High\"),\nlevels = c(\"Placebo\",\"Medium\",\"High\"))\n\nfct_2\n\n[1] Placebo High    Medium  Placebo Medium  Medium  High    High   \nLevels: Placebo Medium High",
+    "crumbs": [
+      "Day 3 - R for Analysis"
+    ]
+  },
+  {
+    "objectID": "day3.html#dataframes",
+    "href": "day3.html#dataframes",
+    "title": "Day 3 - R for Analysis",
+    "section": "Dataframes",
+    "text": "Dataframes\nIn R, dataframes are data structure which store data in a tabular format.\n\n\n\n\n\n\nWe create dataframes using data.frame() command.\n\ndf_1 &lt;- data.frame(\n    Foo= 15:18, \n    Bar= c(T, F, T, T), \n    Name= c(\"Penny\", \"Sheldon\", \"Rajesh\", \"Leonard\")\n)\n\nExploring the contents and structure of the dataframe\n\n# Viewing dataframe\ndf_1 # In Console\nView(df_1)  # In Viewer\n\n# structure of dataframe\nstr(df_1)\n\n# Names of columns/variables\nnames(df_1)\n\n# Dimesnions of Dataframe\nnrow(df_1)      \nncol(df_1)\ndim(df_1)\n\n# Summary of dataframe\nsummary(df_1) # See the output closely | very useful for understanding the dataset\n\nAccessing the objects inside dataframe\n\n# Access Items using [] \ndf_1[1]\n\n  Foo\n1  15\n2  16\n3  17\n4  18\n\n# Access Items using [[]]\ndf_1[['Bar']]\n\n[1]  TRUE FALSE  TRUE  TRUE\n\n# Access Items using $\ndf_1$Bar\n\n[1]  TRUE FALSE  TRUE  TRUE\n\n# Access particular data point\ndf_1$Foo[3]\n\n[1] 17\n\n# what will be the output?\ndf_1[1,3]\n\n[1] \"Penny\"\n\n\nTidyverse package has a very efficient framwork for working with dataset. Check the tidyverse book from day 2 for the same.",
+    "crumbs": [
+      "Day 3 - R for Analysis"
+    ]
+  },
+  {
+    "objectID": "day3.html#packages",
+    "href": "day3.html#packages",
+    "title": "Day 3 - R for Analysis",
+    "section": "Packages",
+    "text": "Packages\nPackages in R are containers for functions. A lot of packages are already installed when you install R.\n\n# Check available packages\nlibrary()\n\nYou can install packages from Comprehensive R Archive Network or CRAN which is an online storage of peer-reviewed and documented packages.\nThe command for loading a package is install.package().\n\n# installing package. Eg, tidyverse\n\ninstall.packages(\"tidyverse\") # You have ti run this once on system\n\nlibrary(tidyverse) # Once installed library(&lt;packagename&gt;) command loads all the functions associated with the package in the current session for use\n\n\n\n\n\n\n\nExercise 1\n\n\n\nLoad the following four packages/libraries, which we would be using later - janitor, here, readstata13, and tinytex.\n\ninstall.packages(\"&lt;package name&gt;\")\nlibrary(&lt;package name&gt;)",
+    "crumbs": [
+      "Day 3 - R for Analysis"
+    ]
+  },
+  {
+    "objectID": "day3.html#importing-and-exporting-datasets",
+    "href": "day3.html#importing-and-exporting-datasets",
+    "title": "Day 3 - R for Analysis",
+    "section": "Importing and Exporting Datasets",
+    "text": "Importing and Exporting Datasets\n\nR has a range of functions for using different types of data. But before loading datasets let’s understand the concept of working directories.\nA working directory is sort of the “office” that you operate from. They tell R where to operate from.\nWorking directories are specified using a file path i.e. the address in your computer where your script will be stored, or where your dataset is kept.\n\n# Commands:\ngetwd() # Gets the present directory or pathway where you are operating from\n     \nsetwd(\"&lt;press tab here&gt;\") # Setting new directory as working directory\n\nlist.files()  #list the files in the working directory\n\nBelow is a limited list of commands for loading/importing most commonly used dataset types.\n\nread.csv(\"FileName\") # reads CSV files / press tab inside the quotes\nread_csv(\"Pathname/filename.csv\")  \n\n# The part before :: in the following code refers to the package from where the \n#  function comes from. You will need to load those packages first.\n\nreadxl::read_excel() # read excel files\nreadxl::read_xlsx() # reads excel workbooks\nhaven::read_dta()   # reads stata dta files\n\n# example: \n    \ndataframe1 &lt;- read.csv(\"&lt;file path&gt;\")\n\n\nExercise 2Code 2\n\n\n\nDownload the folder Datasets-mathcamp from the link\nLoad datasets using the functions referred above\nExplore the contents of datasets using the functions we learned in the previous section.\nSave these datasets with a different names at a different location.\n\n\n\n\nDownload the folder Datasets-mathcamp from the link\nLoad datasets using the functions referred above.\n\nANES dataset | American National Election Study (“2016 Time Series Study,” n.d.)\n\nanes_df &lt;- read.csv(\"Datasets-mathcamp/anes_specialstudy_2020-2022_socialmedia_csv_20230705/anes_specialstudy_2020-2022_socialmedia_csv_20230705.csv\") # base R\n\nanes_df_2 &lt;- read_csv(\"Datasets-mathcamp/anes_specialstudy_2020-2022_socialmedia_csv_20230705/anes_specialstudy_2020-2022_socialmedia_csv_20230705.csv\")  # tidyverse\n\nWorld Political Cleavages and Inequality Database\n\nwid_df &lt;- readxl::read_excel(\"Datasets-mathcamp/World Inequality Database/gmp-macro-final-party.xlsx\")\n\nDatabase on Political Institutions\n\ndpi20_df &lt;- read_dta(\"Datasets-mathcamp/DPI/DPI2020_stata13.dta\") # Why error?\ndpi20_df_2 &lt;- read.dta13(\"Datasets-mathcamp/DPI/DPI2020_stata13.dta\")\n\nVDem dataset | Varieties of democracy\n\nvdem_df &lt;- readRDS(\"Datasets-mathcamp/V-Dem-CY-Full+Others-v12.rds\")\n\n# RDS and Rdata are native R file storage formats\n\n\nExplore the contents of datasets using the functions we learned in the previous section.\n\n\n#Hint: summary, str\n\n\nSave these datsets with a different name at a different location.\n\n\n# Hint\n# write.csv() and equivalents\n\n# saveRDS and save for native R data struture types\n\n\n\n\n\nThe datasets we just practiced with are very commonly used across various subfields. The documentation is also included in the folder that we just downloaded.\n\n\n\n\n“2016 Time Series Study.” n.d. ANES | American National Election Studies. https://electionstudies.org/data-center/2016-time-series-study/.",
+    "crumbs": [
+      "Day 3 - R for Analysis"
+    ]
+  },
+  {
+    "objectID": "day4.html",
+    "href": "day4.html",
+    "title": "Day 4 - \\(\\LaTeX\\) and Quarto",
+    "section": "",
+    "text": "Software Session",
+    "crumbs": [
+      "Day 4 - $\\LaTeX$ and Quarto"
+    ]
+  },
+  {
+    "objectID": "day4.html#wth-is-latex",
+    "href": "day4.html#wth-is-latex",
+    "title": "Day 4 - \\(\\LaTeX\\) and Quarto",
+    "section": "WTH is \\(\\LaTeX\\)?",
+    "text": "WTH is \\(\\LaTeX\\)?\n\\(\\LaTeX\\) (pronounced “LAY-tek” or “LAH-Tek) is a typesetting tool for preparing high-quality professional documents. It is the preferred typesetting tool used in high-end scientific documentation task. Essentially, it allows you better control over how your document look like, has enhanced capabilities to write technical specifications (Maths, stats, proofs, etc.), and produces readily editable back-end documents.\nIt is not a word-processing tool. It is a simple tool without too many priors about how the document should look like.\nIn academic world there are definite advantages to learning and being comfortable with \\(\\LaTeX\\). That would require regular use and best time to start doing that would be today (or at least next week!).\nThere are many interfaces that allow you to work with \\(\\LaTeX\\). Overleaf is a widely used online platform and Texmaker is a popular offline application.\nHowever, RStudio has in-built capability to double as a \\(\\LaTeX\\) editor. Previously RMarkdown and now Quarto are those capabilities that you can harness to achieve professional and beautifully typeset documents.\nThink of writing an equation like:\n\\[\nViolence_{i,j} = \\beta_0 + \\beta_1EthnicFractionalization_i + \\gamma_j + \\epsilon_i\n\\] In Latex, using quarto, you have to write something like the following:\n$Violence_{i,j} = \\\\beta_0 + \\\\beta_1EthnicFractionalization_i + \\\\gamma_j + \\\\epsilon_i$\nFor a single line of text we encapsulate code by $ sign.\nFor multi-line code we use $$.\nRead more about \\(\\LaTeX\\) here\nThe box folder has some detailed resources for helping with typesetting in \\(\\LaTeX\\).",
+    "crumbs": [
+      "Day 4 - $\\LaTeX$ and Quarto"
+    ]
+  },
+  {
+    "objectID": "day4.html#quarto",
+    "href": "day4.html#quarto",
+    "title": "Day 4 - \\(\\LaTeX\\) and Quarto",
+    "section": "Quarto",
+    "text": "Quarto\nQuarto is a literate statistical programming tool. Literate statistical programming, as Donald Knuth (1984) defines, is a way to write programs that focuses on explaining to human readers what we want the computers to do, rather than just instructing the computers to do so.\nQuarto can include code from not just R, but also Python, Julia, Stata and many other languages/tools.\nQuarto allows you to truly include the good coding guidelines that we discussed on day 1. It provides you with capability to write code using R, write text that is part of any professional communication, and include mathematical symbols and equations in a well typeset format. Essentially, it allows you to work on a manuscript with data analysis at one place.\nHere is some cool stuff that you can do with quarto.\n\n\n\n\n\n\nExercise 1\n\nOpen a new quarto document by File &gt; New File &gt; Quarto Document.\nUse Render button on top on scripts panel to save and get a .pdf output.",
+    "crumbs": [
+      "Day 4 - $\\LaTeX$ and Quarto"
+    ]
+  },
+  {
+    "objectID": "day4.html#basics",
+    "href": "day4.html#basics",
+    "title": "Day 4 - \\(\\LaTeX\\) and Quarto",
+    "section": "Basics",
+    "text": "Basics\nA Quarto document is saved as a .qmd file. You can edit this file in two ways: Programmatically by being in source button and visually by choosing the Visual button, both button on top left corner of the .qmd window. More details about workign with Quarto can be found on the quarto website here.\nThere are three building blocks in a .qmd file:\n\nYAML\nShort for Yet-Another-Markup-Languge\nThis is the part we see sandwiched between two --- at the strat of .qmd file. Here we define different global settings for the particular document.\nCurrently, we see\n---\ntitle: \"Untitled\"\nformat: html\n---\nWe can add many more options here to modify the details to appear at the start of the document. Here’s an example from quarto reference site\n\n\n\n\n\n\n  ---\n  title: \"Toward a Unified Theory of High-Energy Metaphysics: Silly String Theory\"\n  date: 2008-02-29\n  author:\n    - name: Josiah Carberry\n      id: jc\n      orcid: 0000-0002-1825-0097\n      email: josiah@psychoceramics.org\n      affiliation: \n        - name: Brown University\n          city: Providence\n          state: RI\n          url: www.brown.edu\n  abstract: &gt; \n    The characteristic theme of the works of Stone is \n    the bridge between culture and society. ...\n  keywords:\n    - Metaphysics\n    - String Theory\n  license: \"CC BY\"\n  copyright: \n    holder: Josiah Carberry\n    year: 2008\n  citation: \n    container-title: Journal of Psychoceramics\n    volume: 1\n    issue: 1\n    doi: 10.5555/12345678\n  funding: \"The author received no specific funding for this work.\"\n  ---\n  \n\n\n\nOr, global settings for different formats of outputs like\n\n\n\n\n\n\n---\ntitle: \"My Document\"\nformat: \n  html:\n    fig-width: 8\n    fig-height: 6\n  pdf:\n    fig-width: 7\n    fig-height: 5\n---\n\n\n\n\n\nCode Chunks\nOne of the fascinating features about quarto is that you can write code to anlayse data and regular text in the same document.\nYou can start a new R code chunk by pressing cmd + option + I or ctrl + alt + I.\nYou can also do this with the Insert button icon in the editor toolbar or by manually typing the chunk delimiters ```{r} and ```.\nTry to use the keyboard shortcut more often as it will save you a ton of time later.\nR code chunks are surrounded by ```{r} and ```.\nYou can run each code chunk by clicking the Run icon (it looks like a play button at the top of the chunk), or by pressing Cmd/Ctrl + Shift + Enter.\n#| eval: true # Do evaluate this chunk\n#| echo: true # Do show this chunk in the final rendered document\n#| output: true # Do show the output / results of this chunk in the rendered document\n\nprint(\"Dont run this code\")\nRStudio executes the code and displays the results below the code.\nIf you don’t like seeing your plots and output in your document and would rather make use of RStudio’s Console and Plot panes, you can click on the gear icon next to “Render” and switch to “Chunk Output in Console”.\nA chunk should be relatively self-contained, and focused around a single task.\n\n\n\n\n\n\nExercise\n\nAdd a code chunk at the bottom of the .qmd file you created.\nAdd some simple mathematical operations from the exercises on Day 2 in the code chunk.\nRun the code chunk separately, and then the whole file by pressing Render button from the top.\n\n\n\n\nCode chunk options are included in a special comment at the top of the block (lines at the top prefaced with #| are considered options). More on code chunk options here\nOptions available for customizing output include:\n\n\n\n\n\n\n\nOption\nDescription\n\n\n\n\neval\nEvaluate the code chunk (if false, just echos the code into the output).\n\n\necho\nInclude the source code in output\n\n\noutput\nInclude the results of executing the code in the output (true, false, or asis to indicate that the output is raw markdown and should not have any of Quarto’s standard enclosing markdown).\n\n\nwarning\nInclude warnings in the output.\n\n\nerror\nInclude errors in the output (note that this implies that errors executing code will not halt processing of the document).\n\n\ninclude\nCatch all for preventing any output (code or results) from being included (e.g. include: false suppresses all output from the code block).\n\n\n\nYou can also add these options as global options in the YAML by writing them under execute option like:\n---\nexecute: \n  echo: true\n  inlcude: false\n---\nThe following table summarizes which types of output each option suppresses:1\n\n\n\n\n\n\n\n\n\n\n\n\nOption\nRun code\nShow code\nOutput\nPlots\nMessages\nWarnings\n\n\n\n\neval: false\nX\n\nX\nX\nX\nX\n\n\ninclude: false\n\nX\nX\nX\nX\nX\n\n\necho: false\n\nX\n\n\n\n\n\n\nresults: hide\n\n\nX\n\n\n\n\n\nfig-show: hide\n\n\n\nX\n\n\n\n\nmessage: false\n\n\n\n\nX\n\n\n\nwarning: false\n\n\n\n\n\nX\n\n\n\n\nInline code\nWe can also embed R code into a Quarto document: directly into the text, with: ```{r} &lt;code&gt; ```.\nFor example: ```{r} (2+2)```.\n\n\n\nMarkdown Text\nMarkdown text is like any other text just with some special considerations.\nYou can see the help section from R to see some of the basic formatting tips.\n\n\n\nR Markdown Help\n\n\n\n\n\n\n\n\nThese are some of the regularly used formatting options in RMarkdown/Quarto Titles and subtitles ————————————————————\n# Title 1\n\n## Title 2\n\n### Title 3\n\n\nText formatting \n------------------------------------------------------------\n\n*italic*  \n\n**bold**   \n\n`code`\n\nLists\n------------------------------------------------------------\n\n* Bulleted list item 1\n* Item 2\n  * Item 2a\n  * Item 2b\n\n1. Item 1\n2. Item 2\n\nLinks and images\n------------------------------------------------------------",
+    "crumbs": [
+      "Day 4 - $\\LaTeX$ and Quarto"
+    ]
+  },
+  {
+    "objectID": "day4.html#latex",
+    "href": "day4.html#latex",
+    "title": "Day 4 - \\(\\LaTeX\\) and Quarto",
+    "section": "\\(\\LaTeX\\)",
+    "text": "\\(\\LaTeX\\)\nFollow these instructions to install library(tinytex).\nIntro to \\(\\LaTeX\\) in Markdown",
+    "crumbs": [
+      "Day 4 - $\\LaTeX$ and Quarto"
+    ]
+  },
+  {
+    "objectID": "day4.html#footnotes",
+    "href": "day4.html#footnotes",
+    "title": "Day 4 - \\(\\LaTeX\\) and Quarto",
+    "section": "",
+    "text": "This section is copied from R4DS book↩︎",
+    "crumbs": [
+      "Day 4 - $\\LaTeX$ and Quarto"
+    ]
+  },
+  {
+    "objectID": "day5.html",
+    "href": "day5.html",
+    "title": "Day 5 - File Management and Workflow",
+    "section": "",
+    "text": "Software Session",
+    "crumbs": [
+      "Day 5 - File Management and Workflow"
+    ]
+  },
+  {
+    "objectID": "day5.html#r-projects",
+    "href": "day5.html#r-projects",
+    "title": "Day 5 - File Management and Workflow",
+    "section": "R Projects",
+    "text": "R Projects\nWe used the setwd() command till now to trace the files we need in our work. As your work expands, projects will have multiple datasets to be loaded, different subsidiary scripts to be used, and multiple outputs to be saved.\nA first order problem related to both file management and reproducability of code is the usage of file paths. Using absolute paths, like ~/User/MyName/Documents/..... becomes cumbersome and also inhibits efficiency of reproducability. Every time someone else runs the script, they will have to change the file paths in all the instances in Rscripts or .qmd file to locate the related datasets as well as other objects. Similarly, there would be issues with saving objects in new places. A partially efficient way we used till now involved using setwd() to direct R to a new working directory; this is also called usage of relative paths\nR Projects is a built-in mechanism in RStudio for seamless file management and usage of relative paths.\nLet’s start by creating a new project. Click File &gt; New Project. Name the new project govt-8001-dataessay.\n\n\n\n\n\n\n\n\nFigure 1.1: To create new project: (top) first click New Directory, then (middle) click New Project, then (bottom) fill in the directory (project) name, choose a good subdirectory for its home and click Create Project. source\n\n\n\n\n\n\n\n\n\n\n\nExercise\n\nDo this process again, this time creating a new project in the the existing directory. The existing directory should be the folder where you have been saving R scripts and .qmd file associated with math camp 2024.\nGo to the folder on your system, and click the .RProj file.\nStart a new qmd file like we did yesterday. Delete existing code except for YAML. Run getwd() command in console and see the difference.\nStart a new R code chunk (cmd + option + I) and load vdem dataset. Notice the change in behavior when you press TAB inside the readRDS() function.",
+    "crumbs": [
+      "Day 5 - File Management and Workflow"
+    ]
+  },
+  {
+    "objectID": "day5.html#here-package",
+    "href": "day5.html#here-package",
+    "title": "Day 5 - File Management and Workflow",
+    "section": "here package",
+    "text": "here package\nAn efficient file and folder management system is going to be crucial as we move into working with serious projects. As stressed earlier, keeping and using all the files associated with a project in a comprehensible folder system is facilitated by R Projects. You would ideally want to create your own template for folder management that you follow across proejcts. For starters, the folder structure below is the one created for your data essay assignment in Govt 8001 or Quant 1.\nYou can use the point-and-click fucntionality in your computers to create this strcuture. Later today, we will briefly go through an R script that do this programmatically.\n📦 govt-8001-dataessay\n├─ govt-8001-dataessay.RProj\n├─ 000-setup.R\n├─ 001-eda.qmd\n├─ 002-analysis.qmd\n└─ 003-manuscript.qmd\n├─ Data\n│  ├─ Raw\n│  │  ├─ Dataset1\n│  │  │  ├─ dataset1.csv\n│  │  │  └─ codebook-dataset1.pdf\n│  │  └─ Dataset2\n│  │     ├─ ...dta\n│  │     └─ codebook-dataset2.pdf\n│  └─ Clean\n│     └─ Merged-df1-df2.csv\n├─ Scripts\n│  ├─ R-scripts\n│  │  ├─ plotting-some-variable.R\n│  │  └─ exploring-different-models.R\n│  ├─ Stata-Scripts\n│  │  └─ seeing-variable-labels.do\n│  └─ Python-Scripts\n│     └─ scraping-data-from-website.py\n└─ Outputs\n   ├─ Plots\n   │  ├─ ...jpeg\n   │  └─ ...png\n   ├─ Tables\n   │  └─ .csv\n   └─ Text\n      └─ ...txt\nSuggested folder structure for a Quant-1 project\nWhile we learnt how to create or associate an .RProj with a folder, integrating it with here() function from the here package, makes things further smoother. Let’s do it with the following exercise.\n\n\n\n\n\n\nExercise\n\nGo the RStudio window with mathcamp2024 project. Check the extreme upper left corner to see if you are in the write window.\nIn the qmd file we were working in, add an R chunk.\nLoad the library here with the follwing code. Run the code line by line\n\n\nlibrary(here)\n\n\n # See the output for each of the following lines\nhere()\n\nhere(\"Datasets-mathcamp\",\"V-Dem-CY-Full+Others-v12.rds\")\n\n# syntax is\n\n# here(\"First subfolder from the root folder\", \"second subfolder\",...., \"file\")\n\n\nvdem_new &lt;- readRDS(here(\"Datasets-mathcamp\",\"V-Dem-CY-Full+Others-v12.rds\"))\n\nThis is a cleaner syntax which when coupled with usage of R projects saves time in typing file paths and avoids issues when the project is run on some other computer system.\nNote: here() always notes the path from the main folder or the root directory where your .RProj file is located.\nSave the files and close the mathcamp2024 project window\n\n\n\nMake it a habit of using R Prohects and here() function in your scripts for writing portable code.\nYou can read this quick and informative blogpost on using these two here.",
+    "crumbs": [
+      "Day 5 - File Management and Workflow"
+    ]
+  },
+  {
+    "objectID": "day5.html#folder-structure",
+    "href": "day5.html#folder-structure",
+    "title": "Day 5 - File Management and Workflow",
+    "section": "Folder Structure",
+    "text": "Folder Structure\nLet’s look at the other opened RStudio window. This is the one associated with govt-8001-dataessay.\nWe ideally want a folder structure that is easily understandable to us and others.\n📦 govt-8001-dataessay\n├─ govt-8001-dataessay.RProj\n├─ 000-setup.R\n├─ 001-eda.qmd\n├─ 002-analysis.qmd\n└─ 003-manuscript.qmd\n├─ Data\n│  ├─ Raw\n│  │  ├─ Dataset1\n│  │  │  ├─ dataset1.csv\n│  │  │  └─ codebook-dataset1.pdf\n│  │  └─ Dataset2\n│  │     ├─ ...dta\n│  │     └─ codebook-dataset2.pdf\n│  └─ Clean\n│     └─ Merged-df1-df2.csv\n├─ Scripts\n│  ├─ R-scripts\n│  │  ├─ plotting-some-variable.R\n│  │  └─ exploring-different-models.R\n│  ├─ Stata-Scripts\n│  │  └─ seeing-variable-labels.do\n│  └─ Python-Scripts\n│     └─ scraping-data-from-website.py\n└─ Outputs\n   ├─ Plots\n   │  ├─ ...jpeg\n   │  └─ ...png\n   ├─ Tables\n   │  └─ .csv\n   └─ Text\n      └─ ...txt\nWe can create this struture by using point and click system on our laptops. But since we might want to use the same folder structure repetitively it will make sense to be lazy and do it programmatically.\n\n\n\n\n\n\nExercise\n\nDownload the 000-setup.R from here\nPlace it in the govt-8001-dataessay folder.\nOpen it in the opened RStudio window.\n\n```{r}\n# Name: 000-setup.R\n# Author: Parushya\n# Purpose: Creates main folders, subfolders in the main project directory\n# Will also ensure that you have basic packages required to run the repository\n# Date Created: 2020/10/07\n\n\n\n# Checking if packages are installed and installing\n\n\n# check.packages function: install and load multiple R packages.\n# Found this function here: https://gist.github.com/smithdanielle/9913897 on 2019/06/17\n# Check to see if packages are installed. Install them if they are not, then load them into the R session.\n\ncheck.packages &lt;- function(pkg) {\n  new.pkg &lt;- pkg[!(pkg %in% installed.packages()[, \"Package\"])]\n  if (length(new.pkg)) {\n    install.packages(new.pkg, dependencies = TRUE)\n  }\n  sapply(pkg, require, character.only = TRUE)\n}\n\n# Check if packages are installed and loaded:\npackages &lt;- c(\"janitor\",  \"tidyverse\", \"utils\", \"here\")\ncheck.packages(packages)\n\n\n# Setting Directories and creating subfolders\n\n\n# Creating Sub Folders\n\n## Data\ndir.create(file.path(paste0(here(\"Data\")))) # Data Folder\ndir.create(file.path(paste0(here(\"Data\",\"Raw\")))) # Raw Data sub-folder\ndir.create(file.path(paste0(here(\"Data\",\"Clean\")))) # Clean Data sub-folder\n\n\n# Scripts\ndir.create(file.path(paste0(here(\"Scripts\")))) # Scripts Folder\ndir.create(file.path(paste0(here(\"Scripts\",\"RScripts\")))) # RScripts  sub-folder\ndir.create(file.path(paste0(here(\"Scripts\",\"Stata-Scripts\")))) # Stata Scripts sub-folder\ndir.create(file.path(paste0(here(\"Scripts\",\"Python-Scripts\")))) # Python Scripts sub-folder\n\n\n# Output\ndir.create(file.path(paste0(here(\"Outputs\")))) # Outputs Folder\ndir.create(file.path(paste0(here(\"Outputs\",\"figures\")))) # Figures sub-folder\ndir.create(file.path(paste0(here(\"Outputs\",\"tables\")))) # Tables sub-folder\ndir.create(file.path(paste0(here(\"Outputs\",\"text\")))) # Text sub-folder\n\n```\n\nRun the file line-by-line. See the folder structure created in your main folder.",
+    "crumbs": [
+      "Day 5 - File Management and Workflow"
+    ]
+  },
+  {
+    "objectID": "day5.html#takeaways",
+    "href": "day5.html#takeaways",
+    "title": "Day 5 - File Management and Workflow",
+    "section": "Takeaways",
+    "text": "Takeaways\nHere’s a quick workflow for starting a new project or assignment or paper.\n\nMake a new folder in your computer with apt name. Ideally, govt-&lt;coursecode&gt;-&lt;project&gt;.\nStart RStudio.\nCreate a new Rstudio Project by clicking File &gt; New Project. Name it govt-&lt;coursecode&gt;-&lt;project.\nCheck if now your RStudio Window shows the project name on top right corner. If not, go to folder and double-click the .RProj file.\nPaste the 000-setup.R file in the main project folder. Open it in the same Rstudio window with the project and run the complete file. Your folder structure is created.\nCopy your raw data in Data/Raw folder. Similarly, your scripts in Scripts/RScripts folder\nStart your new .qmd file and save it in the main folder.\nRemember to use here() package extensively in both scripts and quarto file when loading or saving the data.\nYou can always zip the whole project folder for sharing. The receiver will just need to unzip and run the code after starting the associated .RProj file, without changing file paths on their computer.",
+    "crumbs": [
+      "Day 5 - File Management and Workflow"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "Wrapping Up!",
+    "section": "",
+    "text": "We accomplished the following:",
+    "crumbs": [
+      "Wrapping Up!"
+    ]
+  },
+  {
+    "objectID": "summary.html#we-accomplished-the-following",
+    "href": "summary.html#we-accomplished-the-following",
+    "title": "Wrapping Up!",
+    "section": "",
+    "text": "Why code\nHow to handle data\nBasics of R, RStudio, Quarto and \\(\\LaTeX\\)\nBasics of reproducible and comprehensible coding practices\nEfficient File Management",
+    "crumbs": [
+      "Wrapping Up!"
+    ]
+  },
+  {
+    "objectID": "summary.html#what-we-could-not-cover-or-covered-partially",
+    "href": "summary.html#what-we-could-not-cover-or-covered-partially",
+    "title": "Wrapping Up!",
+    "section": "What we could not cover or covered partially:",
+    "text": "What we could not cover or covered partially:\n\nData Wrangling and Analysis with R: Particularly useful would be R for Data Science. The online book is one the the most useful sources to learn all the aspects of coding in R using tidyverse framework.\nZotero integration with RStudio: Follow the link here.\nGithub: This is an excellent tutorial\n\nThere are many other links which are attached to the pages for each day. It would be useful to revisit and explore them as you walk through your semesters.\nOver the next few days, you can access some of the basic qmd templates for writing papers and assignments on the box link here. Make sure to revisit by the time you have to write your first essay.",
+    "crumbs": [
+      "Wrapping Up!"
+    ]
+  },
+  {
+    "objectID": "summary.html#and-as-promised-one-last-thing",
+    "href": "summary.html#and-as-promised-one-last-thing",
+    "title": "Wrapping Up!",
+    "section": "And as promised, one last thing!",
+    "text": "And as promised, one last thing!",
+    "crumbs": [
+      "Wrapping Up!"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "“2016 Time Series Study.” n.d. ANES | American National\nElection Studies. https://electionstudies.org/data-center/2016-time-series-study/.",
+    "crumbs": [
+      "References"
+    ]
+  }
+]

@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.553">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Math Camp 2024 - Day 4 - \(\LaTeX\) and Quarto</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./day5.html" rel="next">
+<link href="./day3.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="www/styles.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./day4.html">Day 4 - <span class="math inline">\(\LaTeX\)</span> and Quarto</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Math Camp 2024</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Instructors</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./day1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Day 1 - Software</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./day2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Day 2 - R Basics</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./day3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Day 3 - R for Analysis</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./day4.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Day 4 - <span class="math inline">\(\LaTeX\)</span> and Quarto</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./day5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Day 5 - File Management and Workflow</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wrapping Up!</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#software-session" id="toc-software-session" class="nav-link active" data-scroll-target="#software-session">Software Session</a>
+  <ul class="collapse">
+  <li><a href="#wth-is-latex" id="toc-wth-is-latex" class="nav-link" data-scroll-target="#wth-is-latex">WTH is <span class="math inline">\(\LaTeX\)</span>?</a></li>
+  <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto">Quarto</a></li>
+  <li><a href="#basics" id="toc-basics" class="nav-link" data-scroll-target="#basics">Basics</a>
+  <ul class="collapse">
+  <li><a href="#yaml" id="toc-yaml" class="nav-link" data-scroll-target="#yaml"><strong>YAML</strong></a></li>
+  <li><a href="#code-chunks" id="toc-code-chunks" class="nav-link" data-scroll-target="#code-chunks"><strong>Code Chunks</strong></a></li>
+  <li><a href="#markdown-text" id="toc-markdown-text" class="nav-link" data-scroll-target="#markdown-text"><strong>Markdown Text</strong></a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#practice" id="toc-practice" class="nav-link" data-scroll-target="#practice">Practice</a></li>
+  <li><a href="#additonal-links" id="toc-additonal-links" class="nav-link" data-scroll-target="#additonal-links">Additonal Links</a>
+  <ul class="collapse">
+  <li><a href="#latex" id="toc-latex" class="nav-link" data-scroll-target="#latex"><span class="math inline">\(\LaTeX\)</span></a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Day 4 - <span class="math inline">\(\LaTeX\)</span> and Quarto</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="quartomeme.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Suggested citation: Parushya. (2024). “Employing the Olympic Shooter Meme for Quarto Adoption”. In Hashem and Parushya (Eds.), <em>Math Camp 2024</em></figcaption>
+</figure>
+</div>
+<section id="software-session" class="level1">
+<h1>Software Session</h1>
+<ol type="1">
+<li><p>WTH is <span class="math inline">\(\LaTeX\)</span>?</p></li>
+<li><p>Why Quarto?</p></li>
+<li><p>Basics</p></li>
+</ol>
+<ul>
+<li><p>Yaml</p></li>
+<li><p>Markdown text</p></li>
+<li><p>Code Chunks</p></li>
+</ul>
+<ol start="3" type="1">
+<li>Practice</li>
+</ol>
+<section id="wth-is-latex" class="level2">
+<h2 class="anchored" data-anchor-id="wth-is-latex">WTH is <span class="math inline">\(\LaTeX\)</span>?</h2>
+<p><a href="https://www.latex-project.org/about/"><span class="math inline">\(\LaTeX\)</span></a> (pronounced <em>“LAY-tek”</em> or <em>“LAH-Tek</em>) is a typesetting tool for preparing high-quality professional documents. It is the preferred typesetting tool used in high-end scientific documentation task. Essentially, it allows you better control over how your document look like, has enhanced capabilities to write technical specifications (Maths, stats, proofs, etc.), and produces readily editable back-end documents.</p>
+<p>It is not a word-processing tool. It is a simple tool without too many priors about how the document should look like.</p>
+<p>In academic world there are definite advantages to learning and being comfortable with <span class="math inline">\(\LaTeX\)</span>. That would require regular use and best time to start doing that would be today (or at least next week!).</p>
+<p>There are many interfaces that allow you to work with <span class="math inline">\(\LaTeX\)</span>. <a href="https://www.overleaf.com/">Overleaf</a> is a widely used online platform and <a href="https://www.xm1math.net/texmaker/index.html">Texmaker</a> is a popular offline application.</p>
+<p>However, RStudio has in-built capability to double as a <span class="math inline">\(\LaTeX\)</span> editor. Previously <code>RMarkdown</code> and now <code>Quarto</code> are those capabilities that you can harness to achieve professional and beautifully typeset documents.</p>
+<p>Think of writing an equation like:<br>
+<span class="math display">\[
+Violence_{i,j} = \beta_0 + \beta_1EthnicFractionalization_i + \gamma_j + \epsilon_i
+\]</span> In Latex, using quarto, you have to write something like the following:</p>
+<p><code>$Violence_{i,j} = \\beta_0 + \\beta_1EthnicFractionalization_i + \\gamma_j + \\epsilon_i$</code></p>
+<p>For a single line of text we encapsulate code by <code>$</code> sign.</p>
+<p>For multi-line code we use <code>$$</code>.</p>
+<p>Read more about <span class="math inline">\(\LaTeX\)</span> <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics">here</a></p>
+<p>The <a href="https://georgetown.app.box.com/folder/281469681155">box folder has some detailed resources</a> for helping with typesetting in <span class="math inline">\(\LaTeX\)</span>.</p>
+<p><img src="issueslatex.webp" class="img-fluid" style="width:100.0%"></p>
+</section>
+<section id="quarto" class="level2">
+<h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
+<p>Quarto is a literate statistical programming tool. Literate statistical programming, as <a href="https://academic.oup.com/comjnl/article/27/2/97/343244?login=false">Donald Knuth (1984)</a> defines, is a way to write programs that focuses on explaining to human readers what we want the computers to do, rather than just instructing the computers to do so.</p>
+<p>Quarto can include code from not just R, but also Python, Julia, Stata and many other languages/tools.</p>
+<p>Quarto allows you to truly include the good coding guidelines that we discussed on day 1. It provides you with capability to write code using R, write text that is part of any professional communication, and include mathematical symbols and equations in a well typeset format. Essentially, it allows you to work on a manuscript with data analysis at one place.</p>
+<p>Here is <a href="https://quarto.org/docs/gallery/">some cool stuff</a> that you can do with quarto.</p>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Exercise 1</p>
+<ol type="1">
+<li>Open a new quarto document by <code>File &gt; New File &gt; Quarto Document</code>.</li>
+<li>Use Render button on top on scripts panel to save and get a <code>.pdf</code> output.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="basics" class="level2">
+<h2 class="anchored" data-anchor-id="basics">Basics</h2>
+<p>A Quarto document is saved as a <code>.qmd</code> file. You can edit this file in two ways: Programmatically by being in <code>source</code> button and visually by choosing the <code>Visual</code> button, both button on top left corner of the <code>.qmd</code> window. More details about workign with Quarto can be found on the <a href="https://quarto.org/docs/get-started/hello/rstudio.html">quarto website here</a>.</p>
+<p>There are three building blocks in a <code>.qmd</code> file:</p>
+<section id="yaml" class="level3">
+<h3 class="anchored" data-anchor-id="yaml"><strong>YAML</strong></h3>
+<p>Short for <em>Yet-Another-Markup-Languge</em></p>
+<p>This is the part we see sandwiched between two <code>---</code> at the strat of <code>.qmd</code> file. Here we define different global settings for the particular document.</p>
+<p>Currently, we see</p>
+<pre><code>---
+title: "Untitled"
+format: html
+---</code></pre>
+<p>We can add many more options here to modify the details to appear at the start of the document. Here’s an example from <a href="https://quarto.org/docs/authoring/front-matter.html">quarto reference site</a></p>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<pre><code>  ---
+  title: "Toward a Unified Theory of High-Energy Metaphysics: Silly String Theory"
+  date: 2008-02-29
+  author:
+    - name: Josiah Carberry
+      id: jc
+      orcid: 0000-0002-1825-0097
+      email: josiah@psychoceramics.org
+      affiliation: 
+        - name: Brown University
+          city: Providence
+          state: RI
+          url: www.brown.edu
+  abstract: &gt; 
+    The characteristic theme of the works of Stone is 
+    the bridge between culture and society. ...
+  keywords:
+    - Metaphysics
+    - String Theory
+  license: "CC BY"
+  copyright: 
+    holder: Josiah Carberry
+    year: 2008
+  citation: 
+    container-title: Journal of Psychoceramics
+    volume: 1
+    issue: 1
+    doi: 10.5555/12345678
+  funding: "The author received no specific funding for this work."
+  ---
+  </code></pre>
+</div>
+</div>
+</div>
+<p>Or, global settings for different formats of outputs like</p>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<pre><code>---
+title: "My Document"
+format: 
+  html:
+    fig-width: 8
+    fig-height: 6
+  pdf:
+    fig-width: 7
+    fig-height: 5
+---</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="code-chunks" class="level3">
+<h3 class="anchored" data-anchor-id="code-chunks"><strong>Code Chunks</strong></h3>
+<p>One of the fascinating features about quarto is that you can write code to anlayse data and regular text in the same document.</p>
+<p>You can start a new <code>R</code> code chunk by pressing <code>cmd + option + I</code> or <code>ctrl + alt + I</code>.</p>
+<p>You can also do this with the <code>Insert</code> button icon in the editor toolbar or by manually typing the chunk delimiters <code>```{r}</code> and <code>```</code>.</p>
+<p>Try to use the keyboard shortcut more often as it will save you a ton of time later.</p>
+<p>R code chunks are surrounded by <code>```{r}</code> and <code>```</code>.</p>
+<p>You can run each code chunk by clicking the Run icon (it looks like a play button at the top of the chunk), or by pressing Cmd/Ctrl + Shift + Enter.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: true # Do evaluate this chunk</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true # Do show this chunk in the final rendered document</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| output: true # Do show the output / results of this chunk in the rendered document</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"Dont run this code"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>RStudio executes the code and displays the results below the code.</p>
+<p>If you don’t like seeing your plots and output in your document and would rather make use of RStudio’s Console and Plot panes, you can click on the gear icon next to “Render” and switch to “Chunk Output in Console”.</p>
+<p>A chunk should be relatively self-contained, and focused around a single task.</p>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Exercise</p>
+<ol type="1">
+<li><p>Add a code chunk at the bottom of the <code>.qmd</code> file you created.</p></li>
+<li><p>Add some simple mathematical operations from the exercises on Day 2 in the code chunk.</p></li>
+<li><p>Run the code chunk separately, and then the whole file by pressing <code>Render</code> button from the top.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<p>Code chunk options are included in a special comment at the top of the block (lines at the top prefaced with <code>#|</code> are considered options). More on code chunk options <a href="https://quarto.org/docs/computations/execution-options.html">here</a></p>
+<p>Options available for customizing output include:</p>
+<table class="table">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 94%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>eval</code></td>
+<td>Evaluate the code chunk (if <code>false</code>, just echos the code into the output).</td>
+</tr>
+<tr class="even">
+<td><code>echo</code></td>
+<td>Include the source code in output</td>
+</tr>
+<tr class="odd">
+<td><code>output</code></td>
+<td>Include the results of executing the code in the output (<code>true</code>, <code>false</code>, or <code>asis</code> to indicate that the output is raw markdown and should not have any of Quarto’s standard enclosing markdown).</td>
+</tr>
+<tr class="even">
+<td><code>warning</code></td>
+<td>Include warnings in the output.</td>
+</tr>
+<tr class="odd">
+<td><code>error</code></td>
+<td>Include errors in the output (note that this implies that errors executing code will not halt processing of the document).</td>
+</tr>
+<tr class="even">
+<td><code>include</code></td>
+<td>Catch all for preventing any output (code or results) from being included (e.g.&nbsp;<code>include: false</code> suppresses all output from the code block).</td>
+</tr>
+</tbody>
+</table>
+<p>You can also add these options as global options in the <strong>YAML</strong> by writing them under execute option like:</p>
+<pre><code>---
+execute: 
+  echo: true
+  inlcude: false
+---</code></pre>
+<p>The following table summarizes which types of output each option suppresses:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<table class="table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 13%">
+<col style="width: 14%">
+<col style="width: 10%">
+<col style="width: 9%">
+<col style="width: 13%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Option</th>
+<th style="text-align: center;">Run code</th>
+<th style="text-align: center;">Show code</th>
+<th style="text-align: center;">Output</th>
+<th style="text-align: center;">Plots</th>
+<th style="text-align: center;">Messages</th>
+<th style="text-align: center;">Warnings</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>eval: false</code></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td><code>include: false</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td><code>echo: false</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td><code>results: hide</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td><code>fig-show: hide</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td><code>message: false</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td><code>warning: false</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+</tbody>
+</table>
+<section id="inline-code" class="level4">
+<h4 class="anchored" data-anchor-id="inline-code">Inline code</h4>
+<p>We can also embed R code into a Quarto document: directly into the text, with: <code>```{r} &lt;code&gt; ```</code>.</p>
+<p>For example: <code>```{r} (2+2)```</code>.</p>
+</section>
+</section>
+<section id="markdown-text" class="level3">
+<h3 class="anchored" data-anchor-id="markdown-text"><strong>Markdown Text</strong></h3>
+<p>Markdown text is like any other text just with some special considerations.</p>
+<p>You can see the <code>help</code> section from R to see some of the basic formatting tips.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Markdownhelp.png" class="img-fluid figure-img"></p>
+<figcaption>R Markdown Help</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>These are some of the regularly used formatting options in RMarkdown/Quarto Titles and subtitles ————————————————————</p>
+<pre><code># Title 1
+
+## Title 2
+
+### Title 3
+
+
+Text formatting 
+------------------------------------------------------------
+
+*italic*  
+
+**bold**   
+
+`code`
+
+Lists
+------------------------------------------------------------
+
+* Bulleted list item 1
+* Item 2
+  * Item 2a
+  * Item 2b
+
+1. Item 1
+2. Item 2
+
+Links and images
+------------------------------------------------------------</code></pre>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="practice" class="level1">
+<h1>Practice</h1>
+<p>Let’s try all that we learnt</p>
+<div class="callout callout-style-simple callout-none no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>Delete the existing code in the <code>.qmd</code> file that we created today.</p></li>
+<li><p>Add some simple mathematical operations from the exercises on Day 2 in the code chunk (like the previous exercise). Now, in the chunk set the options differently. You could play with different options that we learnt above and their values. Use <code>&lt;TAB&gt;</code> button to see different values that you can provide to chunk options.</p></li>
+</ol>
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| echo: true</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| output: asis</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="in">1 + 1</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>[1] 2</p>
+<ol start="3" type="1">
+<li>Add two separate R chunks. First, load the VDEM data as we did yesterday in one. Second, to <code>filter</code> data to year 2021 and <code>select</code> the variables - <code>year</code>, <code>country_name</code>, <code>v2x_libdem</code>, <code>e_gdppc</code>, <code>e_pop</code>.</li>
+</ol>
+<div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| echo: false </span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="in">#| warning: false</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="in"># Loading packages</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="in">library(tidyverse) # For tidyverse</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="in">library(janitor) # For Janitor</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="in"># Loading Dataset</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="in">vdem_df &lt;- readRDS("Datasets-mathcamp/V-Dem-CY-Full+Others-v12.rds") %&gt;% </span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="in">clean_names() </span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="in"># ` %&gt;% ` is the piping operator from tidyverse universe</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="in"># `clean_names` cleans the names of columns and standardizes them | from Janitor package</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| echo: false  # Toggle with options as well the paramters like true/false etc</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="in">#| warning: false</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="in">vdem_2021 &lt;- vdem_df %&gt;% </span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="in">  filter(year == 2021) %&gt;%  # To filter values according to one variable</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="in">  select(year, country_name, v2x_libdem, e_gdppc, e_pop) # To select particular variables</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="4" type="1">
+<li>Run the following code to plot <code>v2x_libdem</code> on x-axis and <code>e_gdppc</code> on y-axis.</li>
+</ol>
+<div class="sourceCode" id="cb10"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| echo: false  # Toggle with options as well the paramters like true/false etc</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="in">#| warning: false</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot( data = vdem_df, aes( x = v2x_libdem, y = e_gdppc)) +</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="in">geom_point()</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="5" type="1">
+<li>Add a least-squares/ linear regression line to the plot.</li>
+</ol>
+<div class="sourceCode" id="cb11"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| echo: false  # Toggle with options as well the paramters like true/false etc</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| message: false</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="in">#| warning: false</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot( data = vdem_df, aes( x = v2x_libdem, y = e_gdppc)) +</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="in">geom_point( alpha = 0.5) +</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="in">geom_smooth(method = "lm")</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Tasks <strong>3</strong>, <strong>4</strong> and <strong>5</strong> use ggplot which is a part of tidyverse. Follow the tidyverse book from Day 1 for understanding them well.</p>
+<ol start="6" type="1">
+<li><p>Find out what the variables <code>v2x_libdem</code> and <code>e_gdppc</code> mean from the VDem Codebook <a href="https://v-dem.net/documents/38/V-Dem_Codebook_v14.pdf">here</a>. Write the details of the variable in the markdown text area of quarto explaining these variables.</p></li>
+<li><p>We added a least squares best fit line in the second plot. Write a basic equation in LaTex that looks like this:</p></li>
+</ol>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Model Equation</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Model Latex Code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p><span class="math inline">\(LiberalDemocracy_i = \alpha + \beta_1GDPpc_i + epislon_i\)</span></p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><code>$LiberalDemocracy_i = \alpha + \beta_1GDPpc_i + epislon_i$</code></p>
+</div>
+</div>
+</div>
+<p><br></p>
+<ol start="8" type="1">
+<li>Render the whole document into a <code>.pdf</code> with your name in the YAML and today’s date. You may use the following YAML with modifications.</li>
+</ol>
+<pre><code>---
+title: My First Latex Document
+subtitle: Prepared for Math Camp 2024
+author: &lt;Your Name&gt;
+date: today
+format:
+  pdf:
+    highlight-style: kate
+    citation_package: natbib
+  docx: default
+always_allow_html: true
+geometry: margin=1.2in
+fontsize: 12pt
+linestretch: 1.5
+linkcolor: blue
+toc: true
+link-citations: true
+editor_options: 
+  chunk_output_type: console
+execute: 
+  fig-height: 6
+  fig-width: 8.5
+  fig-pos: "!t"
+keep_tex: true
+whitespace: small
+---
+</code></pre>
+</div>
+</div>
+<p><img src="latex.webp" class="img-fluid"></p>
+<p><strong>If you think your thought is not making sense, write it in <span class="math inline">\(\LaTeX\)</span>,</strong></p>
+<p><strong>It will at least not make sense in a beautiful way.</strong></p>
+<p>-Buddha (500 B.C.E.)</p>
+</section>
+<section id="additonal-links" class="level1">
+<h1>Additonal Links</h1>
+<p><a href="https://quarto.org/docs/guide/">Quarto Official Guide</a></p>
+<p><a href="https://r4ds.hadley.nz/quarto">Quarto R for datascience</a></p>
+<p><a href="https://quarto.org/docs/get-started/hello/rstudio.html">Quarto with RStudio</a></p>
+<section id="latex" class="level2">
+<h2 class="anchored" data-anchor-id="latex"><span class="math inline">\(\LaTeX\)</span></h2>
+<p>Follow <a href="https://yihui.org/tinytex/">these instructions</a> to install <code>library(tinytex)</code>.</p>
+<p><a href="https://bookdown.org/Yuleng/introrlatex/introLaTeX.html">Intro to <span class="math inline">\(\LaTeX\)</span> in Markdown</a></p>
+
+
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>This section is copied from <a href="https://github.com/hadley/r4ds/blob/main/quarto.qmd">R4DS book</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./day3.html" class="pagination-link" aria-label="Day 3 - R for Analysis">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Day 3 - R for Analysis</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./day5.html" class="pagination-link" aria-label="Day 5 - File Management and Workflow">
+        <span class="nav-page-text">Day 5 - File Management and Workflow</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
