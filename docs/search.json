@@ -42,91 +42,91 @@
   {
     "objectID": "day1.html",
     "href": "day1.html",
-    "title": "Day 1",
+    "title": "Day 1 - Getting Started",
     "section": "",
     "text": "Math Session\nNotation, Functions, and Limits\nLinks",
     "crumbs": [
-      "Day 1"
+      "Day 1 - Getting Started"
     ]
   },
   {
     "objectID": "day1.html#math-session",
     "href": "day1.html#math-session",
-    "title": "Day 1",
+    "title": "Day 1 - Getting Started",
     "section": "",
     "text": "Measurement and notation\nReview Basic Algebra\nFunctions\nLimits and Series\n\n\n\nLecture slides here\nProblem set here",
     "crumbs": [
-      "Day 1"
+      "Day 1 - Getting Started"
     ]
   },
   {
     "objectID": "day1.html#software-session",
     "href": "day1.html#software-session",
-    "title": "Day 1",
+    "title": "Day 1 - Getting Started",
     "section": "Software Session",
     "text": "Software Session\nWe will be getting started with the following installations today:\n\nR - Statistical Programming Language\nRStudio - Interactive Development Environment for R\nStata - Statistical Software Package (the “other” one)\nZotero - Reference Management Tool\nGitHub - Storing code online with version control\n\n\nR and R Studio\nUse the link here to install RStudio on your systems.\n\n\nStata\nStata is a paid software. Georgetown provides download option through the university webstore here.\n\n\nZotero\nZotero is a reference management tool. It allows you to maintain a structured bibliography. Its integration with various web browsers and software like MS Word and R, makes it a fantastic tool for keeping track of readings as well as citing them.\n\n\n\n\n\nZotero Folder\n\n\n\n\n\nMake Zotero Account.\nAdd a connector to the browser (For eg, zotero connector for google chrome).\nDownload Zotero Desktop App here.\nConnect Zotero to R Studio. (We will do this step on Day 5, using the link here).\n\n\n\nGitHub\nMake your account here",
     "crumbs": [
-      "Day 1"
+      "Day 1 - Getting Started"
     ]
   },
   {
     "objectID": "day2.html",
     "href": "day2.html",
-    "title": "Day 2 - R Basics",
+    "title": "Day 2 - Basics",
     "section": "",
     "text": "Math Session\nLinear Algebra\nLinks",
     "crumbs": [
-      "Day 2 - R Basics"
+      "Day 2 - Basics"
     ]
   },
   {
     "objectID": "day2.html#why-programming-or-coding",
     "href": "day2.html#why-programming-or-coding",
-    "title": "Day 2 - R Basics",
+    "title": "Day 2 - Basics",
     "section": "Why Programming or Coding?",
     "text": "Why Programming or Coding?\nThere are a lot of fancy answers to it. But the key idea is that you want to be lazy about repetitive tasks (MBAs call it being “productive”).\nMany tasks - data cleaning, wrangling, visualization, and statistical analysis - require you to do them many times. Moreover, you would want to be able to reproduce and replicate your thinking about all of the tasks mentioned above on many different datasets and sometimes even on the same dataset after some time.\nCoding is about formalizing your thinking about how you treat the data and automating the formalization task to be done repetitively. It improves efficiency, enhances reproducibility, and boosts creativity when it comes to finding new patterns in your data.\nGuidelines for data and statistical analyses:1\n\nAccuracy: Write a code that reduces the chances of making an error and lets you catch one if it occurs.\nEfficiency: If you are doing it twice, see the pattern of your decision-making and formalize it in your code. Difference between Excel and coding\nReplicate-and-Reproduce: Ability to repeat the computational process which reflects your thinking and decisions that you took along the way. Improves transparency and forces one to be deliberate and responsible about choices during analyses.\n\nHuman Interpretability: Writing code is not just about analyzing but allowing yourself and then others to be able to understand your analytic choices.\n\nPublic Good: Research is a public good. And the code allows your research to be truly accessible. This means you write a code that anyone else who understands the language can read, reuse, and recreate without you being present. We essentially ensure that by writing a readable and ideally publicly accessible code.",
     "crumbs": [
-      "Day 2 - R Basics"
+      "Day 2 - Basics"
     ]
   },
   {
     "objectID": "day2.html#r-and-rstudio",
     "href": "day2.html#r-and-rstudio",
-    "title": "Day 2 - R Basics",
+    "title": "Day 2 - Basics",
     "section": "R and RStudio",
     "text": "R and RStudio\nR is a free open-source statistical programming language. We generally use R through RStudio which is an integrated development environment (IDE). Essentially, it is the graphic user interface that allows us to use R efficiently. It has point-and-click functionality also (which we would not use a lot).\n\n\n\n\n\nRStudio Screen\n\n\n\n\nR Scripts: This is where put your code in a script. The script is saved with a .R extension. An R script is a text file that you can read on text editors too. We use RStudio to run the code in a way that the computer understands.\nConsole: Output from your code appears here. You can also write the code directly here. But it does not get saved. Also, by default, it shows only a limited number of previous steps (commands + outputs). Not a good practice to code here.\nEnvironment: All the objects, datasets, lists, etc that you have created/loaded in the environment appear here. Alongside, you also see the custom functions that you might create.\nFile Browser/Help/Plot: Internal file navigator and help documentation for packages and functions appear here. Further, when you plot anything, that also gets shown here.\nComments: R interprets every line in the script as a separate command. And it does for each line unless preceded by a #. Comments signal to R that what follows the # is to be ignored.We use comments to write explanatory notes about the code. A comment should explain the purpose of a command or code and not just be a description of what it does.",
     "crumbs": [
-      "Day 2 - R Basics"
+      "Day 2 - Basics"
     ]
   },
   {
     "objectID": "day2.html#basics",
     "href": "day2.html#basics",
-    "title": "Day 2 - R Basics",
+    "title": "Day 2 - Basics",
     "section": "Basics",
     "text": "Basics\nR uses &lt;- as the assignment operator. To the left of it is an object (sort of like a box that stores values which are to the right of the operator).\nSyntax: object &lt;- value/data\n\nExercise 1Code 1\n\n\n\nCreate a new .R script. Name it and save it on your system.\n\nR does all the functions of a calculator. Write some code in the script that\n\n\nAdds two numbers\nMultiplies three numbers\nPrints your name\n\n\nRun each command separately by using cmd + Enter / ctrl + Enter.\nAssign the outputs from 2 to different objects.\nPrint the objects with some description using paste().\nRun the whole file.\n\n\n\nYou can start a new script through many different ways:\n\nctrl + shift + n\nClick on the tiny white page button with a green+sign on the upper left corner of the screen\nClick on File &gt; New file&gt; R script\n\nSaving a script:\n\nCtrl + S\nEnter the name of the script, and add .R as a suffix. For example: xyzbasic.R\n\n\n#2. \n2 + 7\n\n56 * 9 * 33\n\nprint(\"Parushya\")\n\nThe output is displayed in the console.\n\n#4\n\n\nsum_2 &lt;- 2 + 7\n\nprod_3 &lt;- 56 * 9 * 33\n\nname &lt;- \"parushya\"\n\n\n#5\n\npaste(\"Sum of 2 and 7 is\", sum_2)\n\npaste(\"Product of 56, 9 and 33 is\", prod_3)\n\npaste(\"This very fancy R code was written by\", name)",
     "crumbs": [
-      "Day 2 - R Basics"
+      "Day 2 - Basics"
     ]
   },
   {
     "objectID": "day2.html#objects-datatypes-and-data-structures",
     "href": "day2.html#objects-datatypes-and-data-structures",
-    "title": "Day 2 - R Basics",
+    "title": "Day 2 - Basics",
     "section": "Objects, Datatypes, and Data Structures",
     "text": "Objects, Datatypes, and Data Structures\n\n\n\n\n\n\nExercise 2\n\n\n\nRun the following code in the same script that we created\n\nclass(sum_2)\n\nclass(prod_3)\n\nclass(name)\n\n\n\nEverything in R is called an “object”\n“Objects” contain “data”.\nThe three variables we created - sum_2, prod_3, and name - were all basic objects.\nR has 5 basic or “atomic” classes/datatypes of objects.\n\nCharacter - (abc)\nNumeric - (real numbers) - (1,7.5,etc)\nInteger - (1,2,0,-896)\nLogical - (True/False)\nComplex - (1, 0+i)\n\nData structures are bigger containers that hold many objects.\nTwo basic or “atomic” data structures in R are:\n\nVectors: can hold objects of same datatype\nLists: can hold objects with different datatypes\n\n\n\n\n\n\n\nUnderstanding Vectors\n\n\n\nWe can create a vector using the “c()” command.\n\na_num &lt;- c(0,0.7,9,2,3,4,-1)            # numeric or double\n\nb_logical &lt;- c(TRUE,FALSE,TRUE,TRUE,TRUE) # logical\n\nc_logical &lt;- c(T,F,T,T,T) # also logical - Never use T and F as it leads to errors in analysis\n\nd_char &lt;- c(\"Sheila\", \"Nila\", \"Camilla\")  # character\n\ne_int &lt;- 1:20 # integer\n\nf_int &lt;- c(1,2,3,4,5)  # integer\n\ng_int &lt;- c(1+0i,2+4i) # complex numbers\n\nBasic vectors are uni-dimensional. We can make a two dimensional vector, which is called matrix.\n\nWorking with matrices\n\n# Creating Blank Matrix\nm_1 &lt;- matrix(nrow=3,ncol=4)\nm_1      \n\n     [,1] [,2] [,3] [,4]\n[1,]   NA   NA   NA   NA\n[2,]   NA   NA   NA   NA\n[3,]   NA   NA   NA   NA\n\ndim(m_1)\n\n[1] 3 4\n\n\n\n?matrix # Help documentation\n\n# Creating Matrix with elements\n\nm_2 &lt;- matrix(1:10, nrow = 3, ncol = 4) # Why the warning?\nm_2\n\n# With correct number of elements\nm_3 &lt;- matrix(1:18, nrow=9, ncol=2))\nm3\n\nLogic of matrices\nMatrices are constructed column-wise. So, it fills the upper left corner, and then runs down along.\nIndexing in matrices\n\n# Rows & Columns ----    \n# Very simply the syntax is:  (2,3) = (Rows, Columns)\n# m[1,] - 1st row\n# m[2,] - 2nd row\n# m[,3] - 3rd column  \n# m[,5] - 5th column\n# m[,7] - 7th column\n\n\n# What if you already have a vector?\n# Example: You have received a list of students who have skipped school today.\n# You know which section they are in, and want to create a matrix.\nk &lt;- c(\"Hashem\", \"John\", \"Cecillia\", \"Minha\", \"Parushya\", \"Keeheon\")\nk\n\n[1] \"Hashem\"   \"John\"     \"Cecillia\" \"Minha\"    \"Parushya\" \"Keeheon\" \n\ndim(k) &lt;- c(3,2)\nk\n\n     [,1]       [,2]      \n[1,] \"Hashem\"   \"Minha\"   \n[2,] \"John\"     \"Parushya\"\n[3,] \"Cecillia\" \"Keeheon\" \n\ncolnames(k) &lt;- c(\"Section A\", \"Section B\")\n\nk\n\n     Section A  Section B \n[1,] \"Hashem\"   \"Minha\"   \n[2,] \"John\"     \"Parushya\"\n[3,] \"Cecillia\" \"Keeheon\" \n\nrownames(k) &lt;- c(\"Student 1\", \"Student 2\", \"Student 3\")\n\nk\n\n          Section A  Section B \nStudent 1 \"Hashem\"   \"Minha\"   \nStudent 2 \"John\"     \"Parushya\"\nStudent 3 \"Cecillia\" \"Keeheon\" \n\n\nBinding vectors together to make a matrix\n\n# Binding\nx &lt;- 1:3\ny &lt;- 4:6\nz &lt;- c(\"Camilla\",\"Nila\",\"Duflo\",\"Akbar\")\n\nx\n\n[1] 1 2 3\n\ny\n\n[1] 4 5 6\n\nz\n\n[1] \"Camilla\" \"Nila\"    \"Duflo\"   \"Akbar\"  \n\nrbind(x,y) # Stitches vector row wise, or appends it horizontally\n\n  [,1] [,2] [,3]\nx    1    2    3\ny    4    5    6\n\ncbind(x,y) # Stitches vector column wise, or vertically\n\n     x y\n[1,] 1 4\n[2,] 2 5\n[3,] 3 6\n\n\n\n\n\n\nLists\nIf we want to create something that stores objects of different classes together, we use another data structure called list.\nA list can contain two or more classes of objects with different lengths.\n\n\n\n\n\n\nCreating lists\n\nlist_1 &lt;- list(\"a\" = 2.5, \"b\" = TRUE, \"c\" = 1:3)\n\nlist_1\n\n$a\n[1] 2.5\n\n$b\n[1] TRUE\n\n$c\n[1] 1 2 3\n\n\nWe created a list with objects of three different types - numeric, logical, and integer vector.\n\n# Structure of the list\nstr(list_1)\n\nList of 3\n $ a: num 2.5\n $ b: logi TRUE\n $ c: int [1:3] 1 2 3\n\n\nWe can also create a list with existing vectors.\n\n# A new vector\nname_vec &lt;- c(\"Camilla\",\"Nila\",\"Duflo\",\"Akbar\")\n\n# And then lets use the vectors we already have in the environment\nlist_2 &lt;- list(name_vec, c_logical, d_char, f_int, e_int, a_num)\nlist_2\n\n[[1]]\n[1] \"Camilla\" \"Nila\"    \"Duflo\"   \"Akbar\"  \n\n[[2]]\n[1]  TRUE FALSE  TRUE  TRUE  TRUE\n\n[[3]]\n[1] \"Sheila\"  \"Nila\"    \"Camilla\"\n\n[[4]]\n[1] 1 2 3 4 5\n\n[[5]]\n [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20\n\n[[6]]\n[1]  0.0  0.7  9.0  2.0  3.0  4.0 -1.0\n\n\n\n# let's check the classes of objects\nclass(list_2[[2]])\nclass(list_2[[3]])\n\n# And their lengths\nlength(list_2[[2]])\nlength(list_2[[3]])\n\nAccessing elements in a List\nBy indices in a list\n\n# So lists are printed differently, and elements of a list will have [[]] i.e 2 brackets.    \n\nlist_2\n\n[[1]]\n[1] \"Camilla\" \"Nila\"    \"Duflo\"   \"Akbar\"  \n\n[[2]]\n[1]  TRUE FALSE  TRUE  TRUE  TRUE\n\n[[3]]\n[1] \"Sheila\"  \"Nila\"    \"Camilla\"\n\n[[4]]\n[1] 1 2 3 4 5\n\n[[5]]\n [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20\n\n[[6]]\n[1]  0.0  0.7  9.0  2.0  3.0  4.0 -1.0\n\n\n\n## Accessing elements | run each of the follwing lines and see the output\nlist_2[[2]] \nlist_2[2]\nlist_2[1][2]\nlist_2[[1]][1]\nlist_2[[1]][[1]]\nlist_2[[1]][2]\n\nBy using names or tags\n\nlist_3 &lt;- list(name = \"John\", age = 19, speaks = c(\"English\", \"French\"))\n\n# access elements by name\nlist_3$name\nlist_3$age\nlist_3$speaks\n\n# access elements by integer index\nlist_3[c(1, 2)]\nlist_3[-2]\n\n# access elements by logical index\nlist_3[c(TRUE, FALSE, FALSE)]\n\n# access elements by character index\nlist_3[c(\"age\", \"speaks\")]\n\nModifying lists\nAdding components in a list\n\nlist_4 &lt;- list(name = \"Clair\", age = 19, speaks = c(\"English\", \"French\"))\n\n# assign a new element to the list using double brackets [[]]\nlist_4[[\"married\"]] &lt;- FALSE\n\n# print the updated list\nlist_4\n\n$name\n[1] \"Clair\"\n\n$age\n[1] 19\n\n$speaks\n[1] \"English\" \"French\" \n\n$married\n[1] FALSE\n\n\nDeleting components in a list\n\nlist_5 &lt;- list(name = \"Clair\", age = 19, speaks = c(\"English\", \"French\"))\n\n# remove an element from the list using double brackets [[]]\nlist_5[[\"age\"]] &lt;- NULL\n\n# print the structure of the updated list\nstr(list_5)\n\nList of 2\n $ name  : chr \"Clair\"\n $ speaks: chr [1:2] \"English\" \"French\"\n\n# remove an element from the list using $ notation\nlist_5$married &lt;- NULL\n\n# print the structure of the updated list\nstr(list_5)\n\nList of 2\n $ name  : chr \"Clair\"\n $ speaks: chr [1:2] \"English\" \"French\"",
     "crumbs": [
-      "Day 2 - R Basics"
+      "Day 2 - Basics"
     ]
   },
   {
     "objectID": "day2.html#footnotes",
     "href": "day2.html#footnotes",
-    "title": "Day 2 - R Basics",
+    "title": "Day 2 - Basics",
     "section": "",
     "text": "Inspired by the summary provided by Prof Aaron Williams’ course on Data Analysis offered at McCourt School. Strongly recommended to learn good coding using R↩︎",
     "crumbs": [
-      "Day 2 - R Basics"
+      "Day 2 - Basics"
     ]
   },
   {

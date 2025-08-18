@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Day 2 - R Basics – Math Camp 2025</title>
+<title>Day 2 - Basics – Math Camp 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -77,6 +77,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -147,7 +150,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./day2.html">Day 2 - R Basics</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./day2.html">Day 2 - Basics</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -190,13 +193,13 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./day1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Day 1</span></a>
+ <span class="menu-text">Day 1 - Getting Started</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./day2.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Day 2 - R Basics</span></a>
+ <span class="menu-text">Day 2 - Basics</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -259,7 +262,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Day 2 - R Basics</h1>
+<h1 class="title">Day 2 - Basics</h1>
 </div>
 
 
@@ -276,7 +279,7 @@ window.Quarto = {
 </header>
 
 
-<p><img src="excel.webp" class="img-fluid" width="650"></p>
+<p><a href="excel.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="excel.webp" class="img-fluid" width="650"></a></p>
 <section id="math-session" class="level1">
 <h1>Math Session</h1>
 <p><strong>Linear Algebra</strong></p>
@@ -315,7 +318,7 @@ window.Quarto = {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="rstudio.png" class="img-fluid figure-img" width="734"></p>
+<p><a href="rstudio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="RStudio Screen"><img src="rstudio.png" class="img-fluid figure-img" width="734" alt="RStudio Screen"></a></p>
 <figcaption>RStudio Screen</figcaption>
 </figure>
 </div>
@@ -775,7 +778,7 @@ $married
 <ul>
 <li><p><a href="https://r4ds.hadley.nz/">R for DataScience, by Hadley Wickham et al.</a></p>
 <ul>
-<li>This is a highly recommended book written by creators of tidyverse.</li>
+<li>This is a highly recommended book written by creators of Tidyverse.</li>
 </ul></li>
 </ul>
 <ol start="3" type="1">
@@ -1363,8 +1366,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./day1.html" class="pagination-link" aria-label="Day 1">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Day 1</span>
+      <a href="./day1.html" class="pagination-link" aria-label="Day 1 - Getting Started">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Day 1 - Getting Started</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
@@ -1374,6 +1377,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","openEffect":"zoom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
