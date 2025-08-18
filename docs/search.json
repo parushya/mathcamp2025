@@ -42,31 +42,31 @@
   {
     "objectID": "day1.html",
     "href": "day1.html",
-    "title": "Day 1 - Software",
+    "title": "Day 1",
     "section": "",
     "text": "Math Session\nNotation, Functions, and Limits\nLinks",
     "crumbs": [
-      "Day 1 - Software"
+      "Day 1"
     ]
   },
   {
     "objectID": "day1.html#math-session",
     "href": "day1.html#math-session",
-    "title": "Day 1 - Software",
+    "title": "Day 1",
     "section": "",
     "text": "Measurement and notation\nReview Basic Algebra\nFunctions\nLimits and Series\n\n\n\nLecture slides here\nProblem set here",
     "crumbs": [
-      "Day 1 - Software"
+      "Day 1"
     ]
   },
   {
     "objectID": "day1.html#software-session",
     "href": "day1.html#software-session",
-    "title": "Day 1 - Software",
+    "title": "Day 1",
     "section": "Software Session",
     "text": "Software Session\nWe will be getting started with the following installations today:\n\nR - Statistical Programming Language\nRStudio - Interactive Development Environment for R\nStata - Statistical Software Package (the “other” one)\nZotero - Reference Management Tool\nGitHub - Storing code online with version control\n\n\nR and R Studio\nUse the link here to install RStudio on your systems.\n\n\nStata\nStata is a paid software. Georgetown provides download option through the university webstore here.\n\n\nZotero\nZotero is a reference management tool. It allows you to maintain a structured bibliography. Its integration with various web browsers and software like MS Word and R, makes it a fantastic tool for keeping track of readings as well as citing them.\n\n\n\n\n\nZotero Folder\n\n\n\n\n\nMake Zotero Account.\nAdd a connector to the browser (For eg, zotero connector for google chrome).\nDownload Zotero Desktop App here.\nConnect Zotero to R Studio. (We will do this step on Day 5, using the link here).\n\n\n\nGitHub\nMake your account here",
     "crumbs": [
-      "Day 1 - Software"
+      "Day 1"
     ]
   },
   {
