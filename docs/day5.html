@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Day 5 - File Management and Workflow – Math Camp 2025</title>
+<title>Day 5 - R-eady to be Deployed! – Math Camp 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -77,6 +77,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -147,7 +150,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./day5.html">Day 5 - File Management and Workflow</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./day5.html">Day 5 - <strong>R</strong>-eady to be Deployed!</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -214,7 +217,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./day5.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Day 5 - File Management and Workflow</span></a>
+ <span class="menu-text">Day 5 - <strong>R</strong>-eady to be Deployed!</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -239,13 +242,53 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#software-session" id="toc-software-session" class="nav-link active" data-scroll-target="#software-session">Software Session</a>
+  <li><a href="#setup" id="toc-setup" class="nav-link active" data-scroll-target="#setup">Setup</a></li>
+  <li><a href="#conditionals-in-base-r" id="toc-conditionals-in-base-r" class="nav-link" data-scroll-target="#conditionals-in-base-r">1. Conditionals in Base R</a>
   <ul class="collapse">
-  <li><a href="#r-projects" id="toc-r-projects" class="nav-link" data-scroll-target="#r-projects">R Projects</a></li>
-  <li><a href="#here-package" id="toc-here-package" class="nav-link" data-scroll-target="#here-package"><code>here</code> package</a></li>
-  <li><a href="#folder-structure" id="toc-folder-structure" class="nav-link" data-scroll-target="#folder-structure">Folder Structure</a></li>
-  <li><a href="#takeaways" id="toc-takeaways" class="nav-link" data-scroll-target="#takeaways">Takeaways</a></li>
+  <li><a href="#comparison-operators-what-they-do" id="toc-comparison-operators-what-they-do" class="nav-link" data-scroll-target="#comparison-operators-what-they-do">1.1 Comparison operators (what they do)</a></li>
+  <li><a href="#if" id="toc-if" class="nav-link" data-scroll-target="#if">1.2 <code>if</code></a></li>
+  <li><a href="#if-...-else" id="toc-if-...-else" class="nav-link" data-scroll-target="#if-...-else">1.3 <code>if ... else</code></a></li>
+  <li><a href="#laddered-else-if" id="toc-laddered-else-if" class="nav-link" data-scroll-target="#laddered-else-if">1.4 Laddered <code>else if</code></a></li>
+  <li><a href="#nested-if" id="toc-nested-if" class="nav-link" data-scroll-target="#nested-if">1.5 Nested <code>if</code></a></li>
+  <li><a href="#multiple-conditions-and-the-difference-between-vs" id="toc-multiple-conditions-and-the-difference-between-vs" class="nav-link" data-scroll-target="#multiple-conditions-and-the-difference-between-vs">1.6 Multiple conditions and the difference between <code>&amp;</code>/<code>|</code> vs <code>&amp;&amp;</code>/<code>||</code></a></li>
   </ul></li>
+  <li><a href="#descriptive-statistics-aggregation-base-r" id="toc-descriptive-statistics-aggregation-base-r" class="nav-link" data-scroll-target="#descriptive-statistics-aggregation-base-r">2. Descriptive Statistics &amp; Aggregation (Base R)</a>
+  <ul class="collapse">
+  <li><a href="#central-tendency" id="toc-central-tendency" class="nav-link" data-scroll-target="#central-tendency">2.1 Central tendency</a></li>
+  <li><a href="#spread-quantiles" id="toc-spread-quantiles" class="nav-link" data-scroll-target="#spread-quantiles">2.2 Spread &amp; quantiles</a></li>
+  <li><a href="#categorical-summaries" id="toc-categorical-summaries" class="nav-link" data-scroll-target="#categorical-summaries">2.3 Categorical summaries</a></li>
+  <li><a href="#group-wise-means-manual-vs.-aggregate" id="toc-group-wise-means-manual-vs.-aggregate" class="nav-link" data-scroll-target="#group-wise-means-manual-vs.-aggregate">2.4 Group-wise means (manual vs.&nbsp;<code>aggregate()</code>)</a></li>
+  <li><a href="#quick-summaries-summary-by" id="toc-quick-summaries-summary-by" class="nav-link" data-scroll-target="#quick-summaries-summary-by">2.5 Quick summaries (<code>summary()</code>, <code>by()</code>)</a></li>
+  <li><a href="#contingency-tables-proportions-table-xtabs-prop.table" id="toc-contingency-tables-proportions-table-xtabs-prop.table" class="nav-link" data-scroll-target="#contingency-tables-proportions-table-xtabs-prop.table">2.6 Contingency tables &amp; proportions (<code>table()</code>, <code>xtabs()</code>, <code>prop.table()</code>)</a></li>
+  <li><a href="#mosaic-plot" id="toc-mosaic-plot" class="nav-link" data-scroll-target="#mosaic-plot">2.7 Mosaic plot</a></li>
+  </ul></li>
+  <li><a href="#data-wrangling-with-dplyr-pipes-select-filter-mutate-summarise-joins" id="toc-data-wrangling-with-dplyr-pipes-select-filter-mutate-summarise-joins" class="nav-link" data-scroll-target="#data-wrangling-with-dplyr-pipes-select-filter-mutate-summarise-joins">3. Data Wrangling with dplyr (Pipes, select, filter, mutate, summarise, joins)</a>
+  <ul class="collapse">
+  <li><a href="#pipes" id="toc-pipes" class="nav-link" data-scroll-target="#pipes">3.1 Pipes</a></li>
+  <li><a href="#select-choose-columns" id="toc-select-choose-columns" class="nav-link" data-scroll-target="#select-choose-columns">3.2 <code>select()</code> (choose columns)</a></li>
+  <li><a href="#filter-keep-rows" id="toc-filter-keep-rows" class="nav-link" data-scroll-target="#filter-keep-rows">3.3 <code>filter()</code> (keep rows)</a></li>
+  <li><a href="#mutate-createmodify-columns" id="toc-mutate-createmodify-columns" class="nav-link" data-scroll-target="#mutate-createmodify-columns">3.4 <code>mutate()</code> (create/modify columns)</a></li>
+  <li><a href="#arrange-sort-rows" id="toc-arrange-sort-rows" class="nav-link" data-scroll-target="#arrange-sort-rows">3.5 <code>arrange()</code> (sort rows)</a></li>
+  <li><a href="#group_by-summarise-grouped-summaries" id="toc-group_by-summarise-grouped-summaries" class="nav-link" data-scroll-target="#group_by-summarise-grouped-summaries">3.6 <code>group_by()</code> + <code>summarise()</code> (grouped summaries)</a></li>
+  <li><a href="#distinct-slice-sampling" id="toc-distinct-slice-sampling" class="nav-link" data-scroll-target="#distinct-slice-sampling">3.7 <code>distinct()</code>, <code>slice()</code>, sampling</a></li>
+  <li><a href="#joins-combine-tables-by-keys" id="toc-joins-combine-tables-by-keys" class="nav-link" data-scroll-target="#joins-combine-tables-by-keys">3.8 Joins (combine tables by keys)</a></li>
+  <li><a href="#reshaping-with-tidyr-bonus" id="toc-reshaping-with-tidyr-bonus" class="nav-link" data-scroll-target="#reshaping-with-tidyr-bonus">3.9 Reshaping with tidyr (bonus)</a></li>
+  </ul></li>
+  <li><a href="#grammar-of-graphics-with-ggplot2" id="toc-grammar-of-graphics-with-ggplot2" class="nav-link" data-scroll-target="#grammar-of-graphics-with-ggplot2">4. Grammar of Graphics with ggplot2</a>
+  <ul class="collapse">
+  <li><a href="#first-plot" id="toc-first-plot" class="nav-link" data-scroll-target="#first-plot">4.1 First plot</a></li>
+  <li><a href="#aesthetics-colour-size-shape-alpha" id="toc-aesthetics-colour-size-shape-alpha" class="nav-link" data-scroll-target="#aesthetics-colour-size-shape-alpha">4.2 Aesthetics: colour, size, shape, alpha</a></li>
+  <li><a href="#faceting" id="toc-faceting" class="nav-link" data-scroll-target="#faceting">4.3 Faceting</a></li>
+  <li><a href="#smoothed-trends" id="toc-smoothed-trends" class="nav-link" data-scroll-target="#smoothed-trends">4.4 Smoothed trends</a></li>
+  <li><a href="#distributions-histogram-frequency-polygon-density-combo" id="toc-distributions-histogram-frequency-polygon-density-combo" class="nav-link" data-scroll-target="#distributions-histogram-frequency-polygon-density-combo">4.5 Distributions: histogram, frequency polygon, density, combo</a></li>
+  <li><a href="#box-violin-and-jitter" id="toc-box-violin-and-jitter" class="nav-link" data-scroll-target="#box-violin-and-jitter">4.6 Box, violin, and jitter</a></li>
+  <li><a href="#bars-counts-vs.-pre-summarised-values" id="toc-bars-counts-vs.-pre-summarised-values" class="nav-link" data-scroll-target="#bars-counts-vs.-pre-summarised-values">4.7 Bars: counts vs.&nbsp;pre-summarised values</a></li>
+  <li><a href="#lines-paths-time-series" id="toc-lines-paths-time-series" class="nav-link" data-scroll-target="#lines-paths-time-series">4.8 Lines &amp; paths (time series)</a></li>
+  <li><a href="#axes-and-limits" id="toc-axes-and-limits" class="nav-link" data-scroll-target="#axes-and-limits">4.9 Axes and limits</a></li>
+  <li><a href="#annotations-math-expressions" id="toc-annotations-math-expressions" class="nav-link" data-scroll-target="#annotations-math-expressions">4.10 Annotations &amp; math expressions</a></li>
+  <li><a href="#saving-plots" id="toc-saving-plots" class="nav-link" data-scroll-target="#saving-plots">4.11 Saving plots</a></li>
+  </ul></li>
+  <li><a href="#wrap-up" id="toc-wrap-up" class="nav-link" data-scroll-target="#wrap-up">Wrap-up</a></li>
   </ul>
 </nav>
     </div>
@@ -254,7 +297,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Day 5 - File Management and Workflow</h1>
+<h1 class="title">Day 5 - <strong>R</strong>-eady to be Deployed!</h1>
 </div>
 
 
@@ -271,254 +314,602 @@ window.Quarto = {
 </header>
 
 
-<p><img src="rwar.webp" class="img-fluid" style="width:50.0%"></p>
-<section id="software-session" class="level1">
-<h1>Software Session</h1>
-<ol type="1">
-<li><p>Using R Projects</p></li>
-<li><p><code>here</code> package</p></li>
-<li><p>Folder Structure</p></li>
-<li><p>Takeaways</p></li>
-</ol>
-<section id="r-projects" class="level2">
-<h2 class="anchored" data-anchor-id="r-projects">R Projects</h2>
-<p>We used the <code>setwd()</code> command till now to trace the files we need in our work. As your work expands, projects will have multiple datasets to be loaded, different subsidiary scripts to be used, and multiple outputs to be saved.</p>
-<p>A first order problem related to both file management and reproducability of code is the usage of file paths. Using <strong>absolute paths</strong>, like <code>~/User/MyName/Documents/.....</code> becomes cumbersome and also inhibits efficiency of reproducability. Every time someone else runs the script, they will have to change the file paths in all the instances in Rscripts or <code>.qmd</code> file to locate the related datasets as well as other objects. Similarly, there would be issues with saving objects in new places. A partially efficient way we used till now involved using <code>setwd()</code> to direct R to a new working directory; this is also called usage of <strong>relative paths</strong></p>
-<p><strong>R Projects</strong> is a built-in mechanism in RStudio for seamless file management and usage of relative paths.</p>
-<p>Let’s start by creating a new project. Click <code>File &gt; New Project</code>. Name the new project <code>govt-8001-dataessay</code>.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div id="fig-new-project" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-new-project-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="new-project.png" class="img-fluid figure-img" width="1172">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-new-project-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1.1: To create new project: (top) first click New Directory, then (middle) click New Project, then (bottom) fill in the directory (project) name, choose a good subdirectory for its home and click Create Project. <a href="https://r4ds.hadley.nz/workflow-scripts">source</a>
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p><strong>Exercise</strong></p>
-<ol type="1">
-<li><p>Do this process again, this time creating a new project in the the existing directory. The existing directory should be the folder where you have been saving R scripts and <code>.qmd</code> file associated with math camp 2024.</p></li>
-<li><p>Go to the folder on your system, and click the <code>.RProj</code> file.</p></li>
-<li><p>Start a new <code>qmd</code> file like we did yesterday. Delete existing code except for YAML. Run <code>getwd()</code> command in console and see the difference.</p></li>
-<li><p>Start a new R code chunk (<code>cmd + option + I</code>) and load vdem dataset. Notice the change in behavior when you press <code>TAB</code> inside the <code>readRDS()</code> function.</p></li>
-</ol>
-</div>
-</div>
-</div>
+<p><a href="me.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="me.png" class="img-fluid"></a></p>
+<p>By the end of today, you will be able to:</p>
+<ul>
+<li>Write conditional logic with <code>if</code>, <code>if...else</code>, laddered <code>else if</code>, and nested conditionals.</li>
+<li>Compute descriptive statistics and group-wise summaries using base R (<code>aggregate()</code>, <code>by()</code>, <code>table()</code>, <code>xtabs()</code>).</li>
+<li>Perform fast, readable data wrangling with <strong>dplyr</strong>: <code>select()</code>, <code>filter()</code>, <code>mutate()</code>, <code>arrange()</code>, <code>summarise()</code>, <code>group_by()</code>, <code>across()</code>, <code>distinct()</code>, and basic joins.</li>
+<li>Build layered visualizations with <strong>ggplot2</strong> (scatter, histograms, density, box/violin/jitter, lines, bars, faceting, and annotations).</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Data used:</strong> <code>mpg</code>, <code>economics</code> (bundled with <strong>ggplot2</strong>).</p>
+</blockquote>
+<section id="setup" class="level2">
+<h2 class="anchored" data-anchor-id="setup">Setup</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="in"># Install if needed (run once):</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="in"># install.packages(c("ggplot2", "dplyr", "tidyr"))</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="in">library(ggplot2)</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="in">library(tidyverse)</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="in"># Quick peek at the data we'll use</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="in">head(mpg)</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="in">str(mpg)</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
 </section>
-<section id="here-package" class="level2">
-<h2 class="anchored" data-anchor-id="here-package"><code>here</code> package</h2>
-<p>An efficient file and folder management system is going to be crucial as we move into working with serious projects. As stressed earlier, keeping and using all the files associated with a project in a comprehensible folder system is facilitated by R Projects. You would ideally want to create your own template for folder management that you follow across proejcts. For starters, the folder structure below is the one created for your data essay assignment in Govt 8001 or Quant 1.</p>
-<p>You can use the point-and-click fucntionality in your computers to create this strcuture. Later today, we will briefly go through an R script that do this programmatically.</p>
-<pre><code>📦 govt-8001-dataessay
-├─&nbsp;govt-8001-dataessay.RProj
-├─&nbsp;000-setup.R
-├─&nbsp;001-eda.qmd
-├─&nbsp;002-analysis.qmd
-└─&nbsp;003-manuscript.qmd
-├─&nbsp;Data
-│&nbsp;&nbsp;├─&nbsp;Raw
-│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;Dataset1
-│&nbsp;&nbsp;│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;dataset1.csv
-│&nbsp;&nbsp;│&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;codebook-dataset1.pdf
-│&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;Dataset2
-│&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─&nbsp;...dta
-│&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;codebook-dataset2.pdf
-│&nbsp;&nbsp;└─&nbsp;Clean
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;Merged-df1-df2.csv
-├─&nbsp;Scripts
-│&nbsp;&nbsp;├─&nbsp;R-scripts
-│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;plotting-some-variable.R
-│&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;exploring-different-models.R
-│&nbsp;&nbsp;├─&nbsp;Stata-Scripts
-│&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;seeing-variable-labels.do
-│&nbsp;&nbsp;└─&nbsp;Python-Scripts
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;scraping-data-from-website.py
-└─&nbsp;Outputs
-&nbsp;&nbsp;&nbsp;├─&nbsp;Plots
-&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;...jpeg
-&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;...png
-&nbsp;&nbsp;&nbsp;├─&nbsp;Tables
-&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;.csv
-&nbsp;&nbsp;&nbsp;└─&nbsp;Text
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;...txt</code></pre>
-<p><strong>Suggested folder structure for a Quant-1 project</strong></p>
-<p>While we learnt how to create or associate an <code>.RProj</code> with a folder, integrating it with <code>here()</code> function from the <code>here</code> package, makes things further smoother. Let’s do it with the following exercise.</p>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p><strong>Exercise</strong></p>
-<ol type="1">
-<li><p>Go the RStudio window with <code>mathcamp2024</code> project. Check the extreme upper left corner to see if you are in the write window.</p></li>
-<li><p>In the qmd file we were working in, add an R chunk.</p></li>
-<li><p>Load the library <code>here</code> with the follwing code. Run the code line by line</p></li>
-</ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a> <span class="co"># See the output for each of the following lines</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">here</span>()</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">here</span>(<span class="st">"Datasets-mathcamp"</span>,<span class="st">"V-Dem-CY-Full+Others-v12.rds"</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># syntax is</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># here("First subfolder from the root folder", "second subfolder",...., "file")</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>vdem_new <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="fu">here</span>(<span class="st">"Datasets-mathcamp"</span>,<span class="st">"V-Dem-CY-Full+Others-v12.rds"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>This is a cleaner syntax which when coupled with usage of R projects saves time in typing file paths and avoids issues when the project is run on some other computer system.</p>
-<p>Note: <code>here()</code> always notes the path from the main folder or the root directory where your <code>.RProj</code> file is located.</p>
-<p><strong>Save the files and close the <code>mathcamp2024</code> project window</strong></p>
-</div>
-</div>
-</div>
-<p>Make it a habit of using R Prohects and <code>here()</code> function in your scripts for writing portable code.</p>
-<p>You can read this quick and informative blogpost on using these two <a href="http://jenrichmond.rbind.io/post/how-to-use-the-here-package/">here</a>.</p>
+<section id="conditionals-in-base-r" class="level1">
+<h1>1. Conditionals in Base R</h1>
+<p>Conditional statements let your code make decisions.</p>
+<section id="comparison-operators-what-they-do" class="level2">
+<h2 class="anchored" data-anchor-id="comparison-operators-what-they-do">1.1 Comparison operators (what they do)</h2>
+<ul>
+<li><code>==</code>, <code>!=</code>: test equality / inequality (return TRUE/FALSE).</li>
+<li><code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code>: numeric comparisons.</li>
+<li><code>&amp;&amp;</code>, <code>||</code>: element-wise logic on <strong>single</strong> TRUE/FALSE values (short-circuit). Use <code>&amp;</code>/<code>|</code> for <strong>vectorized</strong> logic.</li>
+<li><code>!</code>: logical negation.</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="in">x &lt;- 10</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="in">y &lt;- 20</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="in">x == y     # FALSE</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="in">x != y     # TRUE</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="in">x &gt; 0      # TRUE</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="in">x &gt;= 10    # TRUE</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="in">x &lt; y      # TRUE</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="in">x &lt;= y     # TRUE</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="folder-structure" class="level2">
-<h2 class="anchored" data-anchor-id="folder-structure">Folder Structure</h2>
-<p>Let’s look at the other opened RStudio window. This is the one associated with <code>govt-8001-dataessay</code>.</p>
-<p>We ideally want a folder structure that is easily understandable to us and others.</p>
-<pre><code>📦 govt-8001-dataessay
-├─&nbsp;govt-8001-dataessay.RProj
-├─&nbsp;000-setup.R
-├─&nbsp;001-eda.qmd
-├─&nbsp;002-analysis.qmd
-└─&nbsp;003-manuscript.qmd
-├─&nbsp;Data
-│&nbsp;&nbsp;├─&nbsp;Raw
-│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;Dataset1
-│&nbsp;&nbsp;│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;dataset1.csv
-│&nbsp;&nbsp;│&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;codebook-dataset1.pdf
-│&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;Dataset2
-│&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─&nbsp;...dta
-│&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;codebook-dataset2.pdf
-│&nbsp;&nbsp;└─&nbsp;Clean
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;Merged-df1-df2.csv
-├─&nbsp;Scripts
-│&nbsp;&nbsp;├─&nbsp;R-scripts
-│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;plotting-some-variable.R
-│&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;exploring-different-models.R
-│&nbsp;&nbsp;├─&nbsp;Stata-Scripts
-│&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;seeing-variable-labels.do
-│&nbsp;&nbsp;└─&nbsp;Python-Scripts
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;scraping-data-from-website.py
-└─&nbsp;Outputs
-&nbsp;&nbsp;&nbsp;├─&nbsp;Plots
-&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;...jpeg
-&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;...png
-&nbsp;&nbsp;&nbsp;├─&nbsp;Tables
-&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;.csv
-&nbsp;&nbsp;&nbsp;└─&nbsp;Text
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;...txt</code></pre>
-<p>We can create this structure by using point and click system on our laptops. But since we might want to use the same folder structure repetitively it will make sense to be <strong>lazy</strong> and do it programmatically.</p>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>Exercise</p>
-<ol type="1">
-<li><p>Download the <code>000-setup.R</code> from <a href="https://georgetown.app.box.com/file/1629650190568">here</a></p></li>
-<li><p>Place it in the <code>govt-8001-dataessay</code> folder.</p></li>
-<li><p>Open it in the opened RStudio window.</p></li>
-</ol>
+<section id="if" class="level2">
+<h2 class="anchored" data-anchor-id="if">1.2 <code>if</code></h2>
+<ul>
+<li>Runs a code block <strong>only if</strong> the condition is TRUE.</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="in">if (x &gt; 0) {</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="in">  print("x is a positive number")</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="if-...-else" class="level2">
+<h2 class="anchored" data-anchor-id="if-...-else">1.3 <code>if ... else</code></h2>
+<ul>
+<li>Chooses <strong>one</strong> of two paths.</li>
+</ul>
 <div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="in"># Name: 000-setup.R</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="in"># Author: Parushya</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="in"># Purpose: Creates main folders, subfolders in the main project directory</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="in"># Will also ensure that you have basic packages required to run the repository</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="in"># Date Created: 2020/10/07</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="in"># Checking if packages are installed and installing</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="in"># check.packages function: install and load multiple R packages.</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="in"># Found this function here: https://gist.github.com/smithdanielle/9913897 on 2019/06/17</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="in"># Check to see if packages are installed. Install them if they are not, then load them into the R session.</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="in">check.packages &lt;- function(pkg) {</span></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="in">  new.pkg &lt;- pkg[!(pkg %in% installed.packages()[, "Package"])]</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="in">  if (length(new.pkg)) {</span></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="in">    install.packages(new.pkg, dependencies = TRUE)</span></span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="in">  }</span></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="in">  sapply(pkg, require, character.only = TRUE)</span></span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="in"># Check if packages are installed and loaded:</span></span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="in">packages &lt;- c("janitor",  "tidyverse", "utils", "here")</span></span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="in">check.packages(packages)</span></span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="in"># Setting Directories and creating subfolders</span></span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a><span class="in"># Creating Sub Folders</span></span>
-<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a><span class="in">## Data</span></span>
-<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a><span class="in">dir.create(file.path(paste0(here("Data")))) # Data Folder</span></span>
-<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a><span class="in">dir.create(file.path(paste0(here("Data","Raw")))) # Raw Data sub-folder</span></span>
-<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a><span class="in">dir.create(file.path(paste0(here("Data","Clean")))) # Clean Data sub-folder</span></span>
-<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a><span class="in"># Scripts</span></span>
-<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a><span class="in">dir.create(file.path(paste0(here("Scripts")))) # Scripts Folder</span></span>
-<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a><span class="in">dir.create(file.path(paste0(here("Scripts","RScripts")))) # RScripts  sub-folder</span></span>
-<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a><span class="in">dir.create(file.path(paste0(here("Scripts","Stata-Scripts")))) # Stata Scripts sub-folder</span></span>
-<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a><span class="in">dir.create(file.path(paste0(here("Scripts","Python-Scripts")))) # Python Scripts sub-folder</span></span>
-<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a><span class="in"># Output</span></span>
-<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a><span class="in">dir.create(file.path(paste0(here("Outputs")))) # Outputs Folder</span></span>
-<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a><span class="in">dir.create(file.path(paste0(here("Outputs","figures")))) # Figures sub-folder</span></span>
-<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a><span class="in">dir.create(file.path(paste0(here("Outputs","tables")))) # Tables sub-folder</span></span>
-<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a><span class="in">dir.create(file.path(paste0(here("Outputs","text")))) # Text sub-folder</span></span>
-<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="4" type="1">
-<li>Run the file line-by-line. See the folder structure created in your main folder.</li>
-</ol>
-</div>
-</div>
-</div>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="in">if (x &gt; y) {</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="in">  print("x is greater than y")</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="in">} else {</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="in">  print("y is greater than or equal to x")</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="takeaways" class="level2">
-<h2 class="anchored" data-anchor-id="takeaways">Takeaways</h2>
-<p>Here’s a quick workflow for starting a new project or assignment or paper.</p>
-<ol type="1">
-<li><p>Make a new folder in your computer with apt name. Ideally, <code>govt-&lt;coursecode&gt;-&lt;project&gt;</code>.</p></li>
-<li><p>Start RStudio.</p></li>
-<li><p>Create a new Rstudio Project by clicking <code>File &gt; New Project</code>. Name it <code>govt-&lt;coursecode&gt;-&lt;project</code>.</p></li>
-<li><p>Check if now your RStudio Window shows the project name on top right corner. If not, go to folder and double-click the <code>.RProj</code> file.</p></li>
-<li><p>Paste the <code>000-setup.R</code> file in the main project folder. Open it in the same Rstudio window with the project and run the complete file. Your folder structure is created.</p></li>
-<li><p>Copy your raw data in <code>Data/Raw</code> folder. Similarly, your scripts in <code>Scripts/RScripts</code> folder</p></li>
-<li><p>Start your new <code>.qmd</code> file and save it in the main folder.</p></li>
-<li><p>Remember to use <code>here()</code> package extensively in both scripts and quarto file when loading or saving the data.</p></li>
-<li><p>You can always zip the whole project folder for sharing. The receiver will just need to unzip and run the code after starting the associated <code>.RProj</code> file, without changing file paths on their computer.</p></li>
-</ol>
+<section id="laddered-else-if" class="level2">
+<h2 class="anchored" data-anchor-id="laddered-else-if">1.4 Laddered <code>else if</code></h2>
+<ul>
+<li>Chains multiple mutually exclusive tests.</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="in">x &lt;- y</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="in">if (x &gt; y) {</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="in">  print("x is greater than y")</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="in">} else if (y &gt; x) {</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="in">  print("y is greater than x")</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="in">} else {</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="in">  print("x and y are equal")</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="nested-if" class="level2">
+<h2 class="anchored" data-anchor-id="nested-if">1.5 Nested <code>if</code></h2>
+<ul>
+<li>Scope one decision <strong>inside</strong> another.</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="in">x &lt;- 20; y &lt;- 10; z &lt;- -30</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="in">if (x &gt; y) {</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="in">  print("x is greater than y")</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="in">  if (x &gt; z) {</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="in">    print("x is greater than y and z")</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="in">  }</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="multiple-conditions-and-the-difference-between-vs" class="level2">
+<h2 class="anchored" data-anchor-id="multiple-conditions-and-the-difference-between-vs">1.6 Multiple conditions and the difference between <code>&amp;</code>/<code>|</code> vs <code>&amp;&amp;</code>/<code>||</code></h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="in"># For single TRUE/FALSE (first element only): &amp;&amp;, ||</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="in">if (x &gt; y &amp;&amp; x &gt; z) {</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="in">  print("x is greater than both y and z")</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="in"># Vectorized comparisons across all elements: &amp;, |</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="in">c(1,2,3) &gt; 2 &amp; c(10,20,30) &gt; 15</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Write an <code>if...else if...else</code> ladder that prints <code>"small"</code>, <code>"medium"</code>, or <code>"large"</code> depending on the value of <code>n</code> relative to 10 and 100.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="descriptive-statistics-aggregation-base-r" class="level1">
+<h1>2. Descriptive Statistics &amp; Aggregation (Base R)</h1>
+<p>Summarize the <code>mpg</code> dataset to understand central tendency, spread, and relationships.</p>
+<section id="central-tendency" class="level2">
+<h2 class="anchored" data-anchor-id="central-tendency">2.1 Central tendency</h2>
+<ul>
+<li><code>mean(x)</code>: arithmetic average (sensitive to outliers).</li>
+<li><code>median(x)</code>: middle value (robust to outliers).</li>
+</ul>
+<div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="in">mean(mpg$displ)</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="in">median(mpg$displ)</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="in"># Note: base R's mode() returns the storage mode, not the statistical mode.</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="in">mode(mpg$displ)</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="spread-quantiles" class="level2">
+<h2 class="anchored" data-anchor-id="spread-quantiles">2.2 Spread &amp; quantiles</h2>
+<ul>
+<li><code>var(x)</code>, <code>sd(x)</code>: variance and SD.</li>
+<li><code>quantile(x, p)</code>: p-th quantile (e.g., 0.25 = Q1).</li>
+<li><code>IQR(x)</code>: Q3 - Q1.</li>
+<li><code>range(x)</code>, <code>min(x)</code>, <code>max(x)</code>.</li>
+</ul>
+<div class="sourceCode" id="cb9"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="in">var(mpg$cty)</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="in">sd(mpg$cty)</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="in">quantile(mpg$cty, c(0.25, 0.75))</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="in">IQR(mpg$cty)</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="in">min(mpg$cty); max(mpg$cty)</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="in">range(mpg$cty)</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="categorical-summaries" class="level2">
+<h2 class="anchored" data-anchor-id="categorical-summaries">2.3 Categorical summaries</h2>
+<ul>
+<li><code>table(x)</code>: counts by category.</li>
+<li><code>unique(x)</code>: distinct values.</li>
+</ul>
+<div class="sourceCode" id="cb10"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="in">table(mpg$drv)</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="in">unique(mpg$cyl)</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="group-wise-means-manual-vs.-aggregate" class="level2">
+<h2 class="anchored" data-anchor-id="group-wise-means-manual-vs.-aggregate">2.4 Group-wise means (manual vs.&nbsp;<code>aggregate()</code>)</h2>
+<ul>
+<li><code>aggregate(y ~ g, FUN, data)</code>: summary of y by groups g.</li>
+<li><code>subset =</code> lets you compute summaries on filtered rows.</li>
+</ul>
+<div class="sourceCode" id="cb11"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="in"># Manual subsetting (repetitive)</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="in">mean(mpg$cty[mpg$cyl == 4])</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="in">mean(mpg$cty[mpg$cyl == 6])</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="in">mean(mpg$cty[mpg$cyl == 8])</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="in"># Using aggregate(): dv ~ iv</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="in">aggregate(cty ~ cyl, FUN = mean, data = mpg)</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="in"># Subset argument</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="in">aggregate(cty ~ cyl,</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="in">          FUN = mean,</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="in">          subset = cty &lt; 15,</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="in">          data = mpg)</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="quick-summaries-summary-by" class="level2">
+<h2 class="anchored" data-anchor-id="quick-summaries-summary-by">2.5 Quick summaries (<code>summary()</code>, <code>by()</code>)</h2>
+<ul>
+<li><code>summary(df)</code> gives per-column summaries.</li>
+<li><code>by(df, group, summary)</code> applies <code>summary()</code> within each group.</li>
+</ul>
+<div class="sourceCode" id="cb12"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="in">summary(mpg)</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="in">summary(mpg$displ)</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="in">by(mpg, mpg$cyl, summary)</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="contingency-tables-proportions-table-xtabs-prop.table" class="level2">
+<h2 class="anchored" data-anchor-id="contingency-tables-proportions-table-xtabs-prop.table">2.6 Contingency tables &amp; proportions (<code>table()</code>, <code>xtabs()</code>, <code>prop.table()</code>)</h2>
+<ul>
+<li><code>xtabs(~ a + b)</code>: formula interface for contingency tables.</li>
+<li><code>prop.table(tab, margin)</code>: convert counts to proportions (by rows <code>1</code> or columns <code>2</code>).</li>
+</ul>
+<div class="sourceCode" id="cb13"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="in"># Counts</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="in">table(mpg$cyl, mpg$year)</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="in">xtabs(~ mpg$cyl + mpg$year)</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="in"># Relative frequencies</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="in">prop.table(table(mpg$year, mpg$class))</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="in">prop.table(table(mpg$year, mpg$class), 1)          # by row</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="in">round(prop.table(table(mpg$year, mpg$class), 2), 2) # by column (rounded)</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="in">round(prop.table(table(mpg$year, mpg$class), 2), 2) * 100</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="mosaic-plot" class="level2">
+<h2 class="anchored" data-anchor-id="mosaic-plot">2.7 Mosaic plot</h2>
+<div class="sourceCode" id="cb14"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="in">mosaicplot(table(mpg$year, mpg$class),</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="in">           color = TRUE,</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="in">           xlab = "Year",</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="in">           ylab = "Class")</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Compute the median highway mileage (<code>hwy</code>) by number of cylinders (<code>cyl</code>) with <code>aggregate()</code>. Compare it to the corresponding boxplots in Section 4.6.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="data-wrangling-with-dplyr-pipes-select-filter-mutate-summarise-joins" class="level1">
+<h1>3. Data Wrangling with dplyr (Pipes, select, filter, mutate, summarise, joins)</h1>
+<p>The <strong>dplyr</strong> verbs make data manipulation fast and expressive. They work best with the pipe <code>|&gt;</code> (base R) or <code>%&gt;%</code> (magrittr). We’ll use <code>|&gt;</code> here (no extra package needed).</p>
+<section id="pipes" class="level2">
+<h2 class="anchored" data-anchor-id="pipes">3.1 Pipes</h2>
+<ul>
+<li>A pipe passes the left-hand object as the <strong>first argument</strong> to the next function.</li>
+<li>Read <code>data |&gt; f(x)</code> as “take <code>data</code>, then apply <code>f(x)</code>”.</li>
+</ul>
+<div class="sourceCode" id="cb15"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="in"># Without pipe</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="in">head(arrange(select(mpg, manufacturer, model, hwy), desc(hwy)), 5)</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="in"># With pipe (clearer)</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="in">mpg |&gt;</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="in">  select(manufacturer, model, hwy) |&gt;</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="in">  arrange(desc(hwy)) |&gt;</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="in">  head(5)</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="select-choose-columns" class="level2">
+<h2 class="anchored" data-anchor-id="select-choose-columns">3.2 <code>select()</code> (choose columns)</h2>
+<ul>
+<li>Keep/reorder columns; use helpers like <code>starts_with()</code>, <code>ends_with()</code>, <code>contains()</code>.</li>
+</ul>
+<div class="sourceCode" id="cb16"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="in">mpg |&gt;</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="in">  select(manufacturer, model, hwy)</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="in">mpg |&gt;</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="in">  select(starts_with("d")) |&gt;</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="in">  head(3)</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="in"># Rename while selecting</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="in">mpg |&gt;</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="in">  select(make = manufacturer, model, hwy) |&gt;</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="in">  head(3)</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="in"># Move columns around</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="in">mpg |&gt;</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="in">  relocate(hwy, .before = displ) |&gt;</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="in">  head(3)</span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="filter-keep-rows" class="level2">
+<h2 class="anchored" data-anchor-id="filter-keep-rows">3.3 <code>filter()</code> (keep rows)</h2>
+<ul>
+<li>Keep rows matching conditions (vectorized, so use <code>&amp;</code> and <code>|</code>).</li>
+</ul>
+<div class="sourceCode" id="cb17"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="in">mpg |&gt;</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="in">  filter(class == "suv", hwy &gt;= 20) |&gt;</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="in">  head(5)</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="in">mpg |&gt;</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="in">  filter(manufacturer %in% c("toyota", "honda")) |&gt;</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="in">  count(manufacturer)</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="mutate-createmodify-columns" class="level2">
+<h2 class="anchored" data-anchor-id="mutate-createmodify-columns">3.4 <code>mutate()</code> (create/modify columns)</h2>
+<ul>
+<li>Create new variables; <code>if_else()</code> is a vectorized if; <code>case_when()</code> for multiple conditions.</li>
+</ul>
+<div class="sourceCode" id="cb18"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="in">mpg |&gt;</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="in">  mutate(</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="in">    hwy_kmpl = hwy * 0.425144,           # convert mpg to km/L (approx)</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="in">    efficiency = case_when(</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="in">      hwy &gt;= 30 ~ "high",</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="in">      hwy &gt;= 20 ~ "medium",</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="in">      TRUE ~ "low"</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="in">    )</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="in">  ) |&gt;</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="in">  select(manufacturer, model, hwy, hwy_kmpl, efficiency) |&gt;</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="in">  head(6)</span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="arrange-sort-rows" class="level2">
+<h2 class="anchored" data-anchor-id="arrange-sort-rows">3.5 <code>arrange()</code> (sort rows)</h2>
+<div class="sourceCode" id="cb19"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="in">mpg |&gt;</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="in">  arrange(manufacturer, desc(hwy)) |&gt;</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="in">  head(6)</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="group_by-summarise-grouped-summaries" class="level2">
+<h2 class="anchored" data-anchor-id="group_by-summarise-grouped-summaries">3.6 <code>group_by()</code> + <code>summarise()</code> (grouped summaries)</h2>
+<ul>
+<li>Groups persist until removed; use <code>ungroup()</code> when done.</li>
+<li><code>across()</code> applies a function to multiple columns.</li>
+</ul>
+<div class="sourceCode" id="cb20"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="in">mpg |&gt;</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="in">  group_by(cyl) |&gt;</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="in">  summarise(</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="in">    mean_cty = mean(cty),</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="in">    median_hwy = median(hwy),</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="in">    n = dplyr::n()</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="in">  )</span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a><span class="in">mpg |&gt;</span></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a><span class="in">  group_by(drv) |&gt;</span></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a><span class="in">  summarise(across(c(cty, hwy), list(mean = mean, sd = sd)))</span></span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="distinct-slice-sampling" class="level2">
+<h2 class="anchored" data-anchor-id="distinct-slice-sampling">3.7 <code>distinct()</code>, <code>slice()</code>, sampling</h2>
+<div class="sourceCode" id="cb21"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="in"># Unique combinations of columns</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="in">mpg |&gt;</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="in">  distinct(manufacturer, class) |&gt;</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="in">  head(10)</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="in"># Take specific rows by position</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="in">mpg |&gt;</span></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="in">  slice(1:5)</span></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a><span class="in"># Random samples</span></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a><span class="in">set.seed(123)</span></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a><span class="in">mpg |&gt;</span></span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a><span class="in">  slice_sample(n = 5)</span></span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="joins-combine-tables-by-keys" class="level2">
+<h2 class="anchored" data-anchor-id="joins-combine-tables-by-keys">3.8 Joins (combine tables by keys)</h2>
+<p>We’ll make small toy tables and join them.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="in">a &lt;- tibble(id = c(1,2,3), val = c("A","B","C"))</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="in">b &lt;- tibble(id = c(2,3,4), note = c("two","three","four"))</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="in">left_join(a, b, by = "id")</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="in">inner_join(a, b, by = "id")</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="in">full_join(a, b, by = "id")</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="in">anti_join(a, b, by = "id")  # rows in a without matches in b</span></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="in">semi_join(a, b, by = "id")  # rows in a that have a match in b</span></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="reshaping-with-tidyr-bonus" class="level2">
+<h2 class="anchored" data-anchor-id="reshaping-with-tidyr-bonus">3.9 Reshaping with tidyr (bonus)</h2>
+<div class="sourceCode" id="cb23"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="in"># Wide -&gt; Long</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="in">wide &lt;- tibble(id = 1:3, y_2020 = c(1,2,3), y_2021 = c(4,5,6))</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="in">long &lt;- wide |&gt;</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="in">  pivot_longer(starts_with("y_"), names_to = "year", values_to = "y")</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="in">long</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="in"># Long -&gt; Wide</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="in">long |&gt;</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a><span class="in">  pivot_wider(names_from = year, values_from = y)</span></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Quick Cheatsheet
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Columns: <code>select()</code>, <code>rename()</code>, <code>relocate()</code></li>
+<li>Rows: <code>filter()</code>, <code>arrange()</code>, <code>slice()</code></li>
+<li>New columns: <code>mutate()</code>, <code>if_else()</code>, <code>case_when()</code></li>
+<li>Groups: <code>group_by()</code>, <code>summarise()</code>, <code>across()</code></li>
+<li>Uniques &amp; counts: <code>distinct()</code>, <code>count()</code></li>
+<li>Joins: <code>left_join()</code>, <code>inner_join()</code>, <code>full_join()</code>, <code>anti_join()</code>, <code>semi_join()</code></li>
+<li>Reshape: <code>pivot_longer()</code>, <code>pivot_wider()</code></li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="grammar-of-graphics-with-ggplot2" class="level1">
+<h1>4. Grammar of Graphics with ggplot2</h1>
+<p>The <strong>ggplot2</strong> package builds plots by layering components: data, aesthetic mappings, geoms, statistics, scales, coordinates, and facets.</p>
+<section id="first-plot" class="level2">
+<h2 class="anchored" data-anchor-id="first-plot">4.1 First plot</h2>
+<div class="sourceCode" id="cb24"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(mpg, aes(x = displ, y = hwy)) +</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_point()</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Compare to base R:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="in">plot(x = mpg$displ, y = mpg$hwy)</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="aesthetics-colour-size-shape-alpha" class="level2">
+<h2 class="anchored" data-anchor-id="aesthetics-colour-size-shape-alpha">4.2 Aesthetics: colour, size, shape, alpha</h2>
+<div class="sourceCode" id="cb26"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(mpg, aes(displ, hwy, colour = manufacturer)) + geom_point()</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(mpg, aes(displ, hwy, colour = manufacturer, size = cyl)) + geom_point()</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(mpg, aes(displ, hwy, shape = factor(year))) + geom_point()</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(mpg, aes(displ, hwy, alpha = cyl)) + geom_point()</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Fixed aesthetics (outside <code>aes()</code>):</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(mpg, aes(displ, hwy)) + geom_point(aes(colour = "blue"))</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(mpg, aes(displ, hwy)) + geom_point(colour = "blue")</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="faceting" class="level2">
+<h2 class="anchored" data-anchor-id="faceting">4.3 Faceting</h2>
+<div class="sourceCode" id="cb28"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(mpg, aes(displ, hwy)) +</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_point() +</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="in">  facet_wrap(~ class)</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="smoothed-trends" class="level2">
+<h2 class="anchored" data-anchor-id="smoothed-trends">4.4 Smoothed trends</h2>
+<div class="sourceCode" id="cb29"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(mpg, aes(displ, hwy)) + geom_point() + geom_smooth()</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(mpg, aes(displ, hwy)) + geom_point() + geom_smooth(method = "lm")</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(mpg, aes(displ, hwy)) + geom_point() + geom_smooth(span = 0.9)  # loess span</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="distributions-histogram-frequency-polygon-density-combo" class="level2">
+<h2 class="anchored" data-anchor-id="distributions-histogram-frequency-polygon-density-combo">4.5 Distributions: histogram, frequency polygon, density, combo</h2>
+<div class="sourceCode" id="cb30"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(mpg, aes(hwy)) + geom_histogram()</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(mpg, aes(hwy)) + geom_freqpoly()</span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="in"># Change binwidth</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(mpg, aes(hwy)) + geom_histogram(binwidth = 2)</span></span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(mpg, aes(hwy)) + geom_freqpoly(binwidth = 2)</span></span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a><span class="in"># Density</span></span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(mpg, aes(hwy)) + geom_density()</span></span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a><span class="in"># Overlay histogram + density and add a mean line</span></span>
+<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a><span class="in">p &lt;- ggplot(mpg, aes(hwy)) +</span></span>
+<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_histogram(aes(y = ..density..), colour = "black", fill = "white") +</span></span>
+<span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_density(alpha = .2, fill = "#FF6666")</span></span>
+<span id="cb30-16"><a href="#cb30-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-17"><a href="#cb30-17" aria-hidden="true" tabindex="-1"></a><span class="in">p + geom_vline(aes(xintercept = mean(hwy)), linetype = "dashed", size = 1)</span></span>
+<span id="cb30-18"><a href="#cb30-18" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="box-violin-and-jitter" class="level2">
+<h2 class="anchored" data-anchor-id="box-violin-and-jitter">4.6 Box, violin, and jitter</h2>
+<div class="sourceCode" id="cb31"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(mpg, aes(drv, hwy)) + geom_boxplot()</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(mpg, aes(drv, hwy)) + geom_jitter()</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(mpg, aes(drv, hwy)) + geom_violin()</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="bars-counts-vs.-pre-summarised-values" class="level2">
+<h2 class="anchored" data-anchor-id="bars-counts-vs.-pre-summarised-values">4.7 Bars: counts vs.&nbsp;pre-summarised values</h2>
+<div class="sourceCode" id="cb32"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="in"># Counts from raw rows</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(mpg, aes(manufacturer)) + geom_bar()</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="in"># Pre-summarised data</span></span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="in">drugs &lt;- data.frame(</span></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a><span class="in">  drug = c("a", "b", "c"),</span></span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a><span class="in">  effect = c(4.2, 9.7, 6.1)</span></span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(drugs, aes(drug, effect)) + geom_bar(stat = "identity")</span></span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="lines-paths-time-series" class="level2">
+<h2 class="anchored" data-anchor-id="lines-paths-time-series">4.8 Lines &amp; paths (time series)</h2>
+<div class="sourceCode" id="cb33"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(economics, aes(date, unemploy / pop)) + geom_line()</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(economics, aes(date, uempmed)) + geom_line()</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="in">str(economics)</span></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="axes-and-limits" class="level2">
+<h2 class="anchored" data-anchor-id="axes-and-limits">4.9 Axes and limits</h2>
+<div class="sourceCode" id="cb34"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(mpg, aes(cty, hwy)) + geom_point(alpha = 1/3)</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(mpg, aes(cty, hwy)) +</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_point(alpha = 1/3) +</span></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="in">  xlab("city driving (mpg)") +</span></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="in">  ylab("highway driving (mpg)")</span></span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(mpg, aes(cty, hwy)) + geom_point(alpha = 1/3) + xlab(NULL) + ylab(NULL)</span></span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(mpg, aes(drv, hwy)) + geom_jitter(width = 0.25)</span></span>
+<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(mpg, aes(drv, hwy)) +</span></span>
+<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_jitter(width = 0.25) +</span></span>
+<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a><span class="in">  xlim("f", "r") +</span></span>
+<span id="cb34-16"><a href="#cb34-16" aria-hidden="true" tabindex="-1"></a><span class="in">  ylim(20, 30)</span></span>
+<span id="cb34-17"><a href="#cb34-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-18"><a href="#cb34-18" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(mpg, aes(drv, hwy)) +</span></span>
+<span id="cb34-19"><a href="#cb34-19" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_jitter(width = 0.25, na.rm = TRUE) +</span></span>
+<span id="cb34-20"><a href="#cb34-20" aria-hidden="true" tabindex="-1"></a><span class="in">  ylim(NA, 30)</span></span>
+<span id="cb34-21"><a href="#cb34-21" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="annotations-math-expressions" class="level2">
+<h2 class="anchored" data-anchor-id="annotations-math-expressions">4.10 Annotations &amp; math expressions</h2>
+<div class="sourceCode" id="cb35"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(mpg, aes(displ, hwy)) +</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_point(aes(colour = factor(cyl))) +</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="in">  labs(</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="in">    x = "Engine displacement (litres)",</span></span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="in">    y = "Highway miles per gallon",</span></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="in">    colour = "Number of cylinders",</span></span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a><span class="in">    title = "Mileage by engine size and cylinders",</span></span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a><span class="in">    subtitle = "Source: http://fueleconomy.gov"</span></span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a><span class="in">  )</span></span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a><span class="in">values &lt;- seq(from = -2, to = 2, by = .01)</span></span>
+<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a><span class="in">df &lt;- data.frame(x = values, y = values^3)</span></span>
+<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(df, aes(x, y)) +</span></span>
+<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_path() +</span></span>
+<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a><span class="in">  labs(y = quote(f(x) == x^3))</span></span>
+<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="saving-plots" class="level2">
+<h2 class="anchored" data-anchor-id="saving-plots">4.11 Saving plots</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save a plot object to disk</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_path</span>() <span class="sc">+</span></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="fu">quote</span>(<span class="fu">f</span>(x) <span class="sc">==</span> x<span class="sc">^</span><span class="dv">3</span>))</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"plot.png"</span>, p, <span class="at">width =</span> <span class="dv">5</span>, <span class="at">height =</span> <span class="dv">5</span>)</span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Or specify a full path you control:</span></span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a><span class="co"># ggsave("path/to/your/folder/plot.png", p, width = 5, height = 5)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<hr>
+</section>
+</section>
+<section id="wrap-up" class="level1">
+<h1>Wrap-up</h1>
+<ul>
+<li>Base R conditionals are the building blocks of program logic.</li>
+<li>Base R provides quick descriptive and grouped summaries (<code>aggregate()</code>, <code>by()</code>, <code>table()</code>, <code>xtabs()</code>, <code>prop.table()</code>).</li>
+<li><strong>dplyr</strong> enables readable, chained transformations: think <em>rows</em> (<code>filter()</code>), <em>columns</em> (<code>select()</code>, <code>mutate()</code>), <em>groups</em> (<code>group_by()</code> + <code>summarise()</code>), and <em>joins</em>.</li>
+<li><strong>ggplot2</strong> enables layered, expressive visualizations; think in <em>layers</em> and <em>mappings</em>.</li>
+</ul>
+<p><strong>Practice:</strong> Using <code>mpg</code>, (1) create <code>efficiency</code> with <code>mutate()</code> and <code>case_when()</code>, (2) compute average <code>hwy</code> by <code>class</code> with <code>group_by()</code>/<code>summarise()</code>, and (3) plot <code>hwy</code> vs <code>displ</code> coloured by <code>class</code> with a linear smoother.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1099,6 +1490,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
