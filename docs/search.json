@@ -244,7 +244,7 @@
     "href": "day5.html",
     "title": "Day 5 - R-eady to be Deployed!",
     "section": "",
-    "text": "Setup",
+    "text": "Setup\nStart by creating a new qmd file, like we did yesterday. Write/paste all the code from today in the same file so that we can render at the end.\n# Install if needed (run once):\n# install.packages(c(\"tidyverse\"))\n\nlibrary(tidyverse)   # loads ggplot2, dplyr, tidyr, readr, tibble, stringr, forcats, purrr",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -254,7 +254,7 @@
     "href": "day5.html#setup",
     "title": "Day 5 - R-eady to be Deployed!",
     "section": "",
-    "text": "```{r}\n# Install if needed (run once):\n# install.packages(c(\"ggplot2\", \"dplyr\", \"tidyr\"))\n\nlibrary(ggplot2)\nlibrary(tidyverse)\n\n# Quick peek at the data we'll use\nhead(mpg)\nstr(mpg)\n```",
+    "text": "```{r}\n# Quick peek at the data we'll use\nhead(mpg)\nstr(mpg)\n```",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -263,8 +263,8 @@
     "objectID": "day5.html#comparison-operators-what-they-do",
     "href": "day5.html#comparison-operators-what-they-do",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "1.1 Comparison operators (what they do)",
-    "text": "1.1 Comparison operators (what they do)\n\n==, !=: test equality / inequality (return TRUE/FALSE).\n&gt;, &gt;=, &lt;, &lt;=: numeric comparisons.\n&&, ||: element-wise logic on single TRUE/FALSE values (short-circuit). Use &/| for vectorized logic.\n!: logical negation.\n\n```{r}\nx &lt;- 10\ny &lt;- 20\n\nx == y     # FALSE\nx != y     # TRUE\nx &gt; 0      # TRUE\nx &gt;= 10    # TRUE\nx &lt; y      # TRUE\nx &lt;= y     # TRUE\n```",
+    "section": "Comparison operators (what they do)",
+    "text": "Comparison operators (what they do)\n\n==, !=: test equality / inequality (return TRUE/FALSE).\n&gt;, &gt;=, &lt;, &lt;=: numeric comparisons.\n&&, ||: element-wise logic on single TRUE/FALSE values (short-circuit). Use &/| for vectorized logic.\n!: logical negation.\n\n```{r}\nx &lt;- 10\ny &lt;- 20\n\nx == y     # FALSE\nx != y     # TRUE\nx &gt; 0      # TRUE\nx &gt;= 10    # TRUE\nx &lt; y      # TRUE\nx &lt;= y     # TRUE\n```",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -273,8 +273,8 @@
     "objectID": "day5.html#if",
     "href": "day5.html#if",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "1.2 if",
-    "text": "1.2 if\n\nRuns a code block only if the condition is TRUE.\n\n```{r}\nif (x &gt; 0) {\n  print(\"x is a positive number\")\n}\n```",
+    "section": "if",
+    "text": "if\n\nRuns a code block only if the condition is TRUE.\n\n```{r}\nif (x &gt; 0) {\n  print(\"x is a positive number\")\n}\n```",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -283,8 +283,8 @@
     "objectID": "day5.html#if-...-else",
     "href": "day5.html#if-...-else",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "1.3 if ... else",
-    "text": "1.3 if ... else\n\nChooses one of two paths.\n\n```{r}\nif (x &gt; y) {\n  print(\"x is greater than y\")\n} else {\n  print(\"y is greater than or equal to x\")\n}\n```",
+    "section": "if ... else",
+    "text": "if ... else\n\nChooses one of two paths.\n\n```{r}\nif (x &gt; y) {\n  print(\"x is greater than y\")\n} else {\n  print(\"y is greater than or equal to x\")\n}\n```",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -293,8 +293,8 @@
     "objectID": "day5.html#laddered-else-if",
     "href": "day5.html#laddered-else-if",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "1.4 Laddered else if",
-    "text": "1.4 Laddered else if\n\nChains multiple mutually exclusive tests.\n\n```{r}\nx &lt;- y\nif (x &gt; y) {\n  print(\"x is greater than y\")\n} else if (y &gt; x) {\n  print(\"y is greater than x\")\n} else {\n  print(\"x and y are equal\")\n}\n```",
+    "section": "Laddered else if",
+    "text": "Laddered else if\n\nChains multiple mutually exclusive tests.\n\n```{r}\nx &lt;- y\nif (x &gt; y) {\n  print(\"x is greater than y\")\n} else if (y &gt; x) {\n  print(\"y is greater than x\")\n} else {\n  print(\"x and y are equal\")\n}\n```",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -303,8 +303,8 @@
     "objectID": "day5.html#nested-if",
     "href": "day5.html#nested-if",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "1.5 Nested if",
-    "text": "1.5 Nested if\n\nScope one decision inside another.\n\n```{r}\nx &lt;- 20; y &lt;- 10; z &lt;- -30\nif (x &gt; y) {\n  print(\"x is greater than y\")\n  if (x &gt; z) {\n    print(\"x is greater than y and z\")\n  }\n}\n```",
+    "section": "Nested if",
+    "text": "Nested if\n\nScope one decision inside another.\n\n```{r}\nx &lt;- 20; y &lt;- 10; z &lt;- -30\nif (x &gt; y) {\n  print(\"x is greater than y\")\n  if (x &gt; z) {\n    print(\"x is greater than y and z\")\n  }\n}\n```",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -313,8 +313,8 @@
     "objectID": "day5.html#multiple-conditions-and-the-difference-between-vs",
     "href": "day5.html#multiple-conditions-and-the-difference-between-vs",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "1.6 Multiple conditions and the difference between &/| vs &&/||",
-    "text": "1.6 Multiple conditions and the difference between &/| vs &&/||\n```{r}\n# For single TRUE/FALSE (first element only): &&, ||\nif (x &gt; y && x &gt; z) {\n  print(\"x is greater than both y and z\")\n}\n\n# Vectorized comparisons across all elements: &, |\nc(1,2,3) &gt; 2 & c(10,20,30) &gt; 15\n```\n\n\n\n\n\n\nExercise\n\n\n\nWrite an if...else if...else ladder that prints \"small\", \"medium\", or \"large\" depending on the value of n relative to 10 and 100.",
+    "section": "Multiple conditions and the difference between &/| vs &&/||",
+    "text": "Multiple conditions and the difference between &/| vs &&/||\n```{r}\n# For single TRUE/FALSE (first element only): &&, ||\nif (x &gt; y && x &gt; z) {\n  print(\"x is greater than both y and z\")\n}\n\n# Vectorized comparisons across all elements: &, |\nc(1,2,3) &gt; 2 & c(10,20,30) &gt; 15\n```\n\n\n\n\n\n\nExercise\n\n\n\nWrite an if...else if...else ladder that prints \"small\", \"medium\", or \"large\" depending on the value of n relative to 10 and 100.",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -323,8 +323,8 @@
     "objectID": "day5.html#central-tendency",
     "href": "day5.html#central-tendency",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "2.1 Central tendency",
-    "text": "2.1 Central tendency\n\nmean(x): arithmetic average (sensitive to outliers).\nmedian(x): middle value (robust to outliers).\n\n```{r}\nmean(mpg$displ)\nmedian(mpg$displ)\n\n# Note: base R's mode() returns the storage mode, not the statistical mode.\nmode(mpg$displ)\n```",
+    "section": "Central tendency",
+    "text": "Central tendency\n\nmean(x): arithmetic average (sensitive to outliers).\nmedian(x): middle value (robust to outliers).\n\n```{r}\nmean(mpg$displ)\nmedian(mpg$displ)\n\n# Note: base R's mode() returns the storage mode, not the statistical mode.\nmode(mpg$displ)\n```",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -333,8 +333,8 @@
     "objectID": "day5.html#spread-quantiles",
     "href": "day5.html#spread-quantiles",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "2.2 Spread & quantiles",
-    "text": "2.2 Spread & quantiles\n\nvar(x), sd(x): variance and SD.\nquantile(x, p): p-th quantile (e.g., 0.25 = Q1).\nIQR(x): Q3 - Q1.\nrange(x), min(x), max(x).\n\n```{r}\nvar(mpg$cty)\nsd(mpg$cty)\n\nquantile(mpg$cty, c(0.25, 0.75))\nIQR(mpg$cty)\n\nmin(mpg$cty); max(mpg$cty)\nrange(mpg$cty)\n```",
+    "section": "Spread & quantiles",
+    "text": "Spread & quantiles\n\nvar(x), sd(x): variance and SD.\nquantile(x, p): p-th quantile (e.g., 0.25 = Q1).\nIQR(x): Q3 - Q1.\nrange(x), min(x), max(x).\n\n```{r}\nvar(mpg$cty)\nsd(mpg$cty)\n\nquantile(mpg$cty, c(0.25, 0.75))\nIQR(mpg$cty)\n\nmin(mpg$cty); max(mpg$cty)\nrange(mpg$cty)\n```",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -343,8 +343,8 @@
     "objectID": "day5.html#categorical-summaries",
     "href": "day5.html#categorical-summaries",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "2.3 Categorical summaries",
-    "text": "2.3 Categorical summaries\n\ntable(x): counts by category.\nunique(x): distinct values.\n\n```{r}\ntable(mpg$drv)\nunique(mpg$cyl)\n```",
+    "section": "Categorical summaries",
+    "text": "Categorical summaries\n\ntable(x): counts by category.\nunique(x): distinct values.\n\n```{r}\ntable(mpg$drv)\nunique(mpg$cyl)\n```",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -353,8 +353,8 @@
     "objectID": "day5.html#group-wise-means-manual-vs.-aggregate",
     "href": "day5.html#group-wise-means-manual-vs.-aggregate",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "2.4 Group-wise means (manual vs. aggregate())",
-    "text": "2.4 Group-wise means (manual vs. aggregate())\n\naggregate(y ~ g, FUN, data): summary of y by groups g.\nsubset = lets you compute summaries on filtered rows.\n\n```{r}\n# Manual subsetting (repetitive)\nmean(mpg$cty[mpg$cyl == 4])\nmean(mpg$cty[mpg$cyl == 6])\nmean(mpg$cty[mpg$cyl == 8])\n\n# Using aggregate(): dv ~ iv\naggregate(cty ~ cyl, FUN = mean, data = mpg)\n\n# Subset argument\naggregate(cty ~ cyl,\n          FUN = mean,\n          subset = cty &lt; 15,\n          data = mpg)\n```",
+    "section": "Group-wise means (manual vs. aggregate())",
+    "text": "Group-wise means (manual vs. aggregate())\n\naggregate(y ~ g, FUN, data): summary of y by groups g.\nsubset = lets you compute summaries on filtered rows.\n\n```{r}\n# Manual subsetting (repetitive)\nmean(mpg$cty[mpg$cyl == 4])\nmean(mpg$cty[mpg$cyl == 6])\nmean(mpg$cty[mpg$cyl == 8])\n\n# Using aggregate(): dv ~ iv\naggregate(cty ~ cyl, FUN = mean, data = mpg)\n\n# Subset argument\naggregate(cty ~ cyl,\n          FUN = mean,\n          subset = cty &lt; 15,\n          data = mpg)\n```",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -363,8 +363,8 @@
     "objectID": "day5.html#quick-summaries-summary-by",
     "href": "day5.html#quick-summaries-summary-by",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "2.5 Quick summaries (summary(), by())",
-    "text": "2.5 Quick summaries (summary(), by())\n\nsummary(df) gives per-column summaries.\nby(df, group, summary) applies summary() within each group.\n\n```{r}\nsummary(mpg)\nsummary(mpg$displ)\n\nby(mpg, mpg$cyl, summary)\n```",
+    "section": "Quick summaries (summary(), by())",
+    "text": "Quick summaries (summary(), by())\n\nsummary(df) gives per-column summaries.\nby(df, group, summary) applies summary() within each group.\n\n```{r}\nsummary(mpg)\nsummary(mpg$displ)\n\nby(mpg, mpg$cyl, summary)\n```",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -373,8 +373,8 @@
     "objectID": "day5.html#contingency-tables-proportions-table-xtabs-prop.table",
     "href": "day5.html#contingency-tables-proportions-table-xtabs-prop.table",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "2.6 Contingency tables & proportions (table(), xtabs(), prop.table())",
-    "text": "2.6 Contingency tables & proportions (table(), xtabs(), prop.table())\n\nxtabs(~ a + b): formula interface for contingency tables.\nprop.table(tab, margin): convert counts to proportions (by rows 1 or columns 2).\n\n```{r}\n# Counts\ntable(mpg$cyl, mpg$year)\nxtabs(~ mpg$cyl + mpg$year)\n\n# Relative frequencies\nprop.table(table(mpg$year, mpg$class))\nprop.table(table(mpg$year, mpg$class), 1)          # by row\nround(prop.table(table(mpg$year, mpg$class), 2), 2) # by column (rounded)\nround(prop.table(table(mpg$year, mpg$class), 2), 2) * 100\n```",
+    "section": "Contingency tables & proportions (table(), xtabs(), prop.table())",
+    "text": "Contingency tables & proportions (table(), xtabs(), prop.table())\n\nxtabs(~ a + b): formula interface for contingency tables.\nprop.table(tab, margin): convert counts to proportions (by rows 1 or columns 2).\n\n```{r}\n# Counts\ntable(mpg$cyl, mpg$year)\nxtabs(~ mpg$cyl + mpg$year)\n\n# Relative frequencies\nprop.table(table(mpg$year, mpg$class))\nprop.table(table(mpg$year, mpg$class), 1)          # by row\nround(prop.table(table(mpg$year, mpg$class), 2), 2) # by column (rounded)\nround(prop.table(table(mpg$year, mpg$class), 2), 2) * 100\n```",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -383,8 +383,8 @@
     "objectID": "day5.html#mosaic-plot",
     "href": "day5.html#mosaic-plot",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "2.7 Mosaic plot",
-    "text": "2.7 Mosaic plot\n```{r}\nmosaicplot(table(mpg$year, mpg$class),\n           color = TRUE,\n           xlab = \"Year\",\n           ylab = \"Class\")\n```\n\n\n\n\n\n\nExercise\n\n\n\nCompute the median highway mileage (hwy) by number of cylinders (cyl) with aggregate(). Compare it to the corresponding boxplots in Section 4.6.",
+    "section": "Mosaic plot",
+    "text": "Mosaic plot\n```{r}\nmosaicplot(table(mpg$year, mpg$class),\n           color = TRUE,\n           xlab = \"Year\",\n           ylab = \"Class\")\n```\n\n\n\n\n\n\nExercise\n\n\n\nCompute the median highway mileage (hwy) by number of cylinders (cyl) with aggregate(). Compare it to the corresponding boxplots in Section 4.6.",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -393,8 +393,8 @@
     "objectID": "day5.html#pipes",
     "href": "day5.html#pipes",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "3.1 Pipes",
-    "text": "3.1 Pipes\n\nA pipe passes the left-hand object as the first argument to the next function.\nRead data |&gt; f(x) as “take data, then apply f(x)”.\n\n```{r}\n# Without pipe\nhead(arrange(select(mpg, manufacturer, model, hwy), desc(hwy)), 5)\n\n# With pipe (clearer)\nmpg |&gt;\n  select(manufacturer, model, hwy) |&gt;\n  arrange(desc(hwy)) |&gt;\n  head(5)\n```",
+    "section": "Pipes",
+    "text": "Pipes\n\nCodeResult\n\n\n\n# Without pipe\nhead(arrange(select(mpg, manufacturer, model, hwy), desc(hwy)), 5)\n\n# With pipe (clearer)\nmpg |&gt;\n  select(manufacturer, model, hwy) |&gt;\n  arrange(desc(hwy)) |&gt;\n  head(5)\n\n\n\n\n\n# A tibble: 5 × 3\n  manufacturer model        hwy\n  &lt;chr&gt;        &lt;chr&gt;      &lt;int&gt;\n1 volkswagen   jetta         44\n2 volkswagen   new beetle    44\n3 volkswagen   new beetle    41\n4 toyota       corolla       37\n5 honda        civic         36\n\n\n# A tibble: 5 × 3\n  manufacturer model        hwy\n  &lt;chr&gt;        &lt;chr&gt;      &lt;int&gt;\n1 volkswagen   jetta         44\n2 volkswagen   new beetle    44\n3 volkswagen   new beetle    41\n4 toyota       corolla       37\n5 honda        civic         36",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -403,8 +403,8 @@
     "objectID": "day5.html#select-choose-columns",
     "href": "day5.html#select-choose-columns",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "3.2 select() (choose columns)",
-    "text": "3.2 select() (choose columns)\n\nKeep/reorder columns; use helpers like starts_with(), ends_with(), contains().\n\n```{r}\nmpg |&gt;\n  select(manufacturer, model, hwy)\n\nmpg |&gt;\n  select(starts_with(\"d\")) |&gt;\n  head(3)\n\n# Rename while selecting\nmpg |&gt;\n  select(make = manufacturer, model, hwy) |&gt;\n  head(3)\n\n# Move columns around\nmpg |&gt;\n  relocate(hwy, .before = displ) |&gt;\n  head(3)\n```",
+    "section": "select() (choose columns)",
+    "text": "select() (choose columns)\n\nCodeResult\n\n\n\nmpg |&gt;\n  select(manufacturer, model, hwy)\n\nmpg |&gt;\n  select(starts_with(\"d\")) |&gt;\n  head(3)\n\n# Rename while selecting\nmpg |&gt;\n  select(make = manufacturer, model, hwy) |&gt;\n  head(3)\n\n# Move columns around\nmpg |&gt;\n  relocate(hwy, .before = displ) |&gt;\n  head(3)\n\n\n\n\n\n# A tibble: 234 × 3\n   manufacturer model        hwy\n   &lt;chr&gt;        &lt;chr&gt;      &lt;int&gt;\n 1 audi         a4            29\n 2 audi         a4            29\n 3 audi         a4            31\n 4 audi         a4            30\n 5 audi         a4            26\n 6 audi         a4            26\n 7 audi         a4            27\n 8 audi         a4 quattro    26\n 9 audi         a4 quattro    25\n10 audi         a4 quattro    28\n# ℹ 224 more rows\n\n\n# A tibble: 3 × 2\n  displ drv  \n  &lt;dbl&gt; &lt;chr&gt;\n1   1.8 f    \n2   1.8 f    \n3   2   f    \n\n\n# A tibble: 3 × 3\n  make  model   hwy\n  &lt;chr&gt; &lt;chr&gt; &lt;int&gt;\n1 audi  a4       29\n2 audi  a4       29\n3 audi  a4       31\n\n\n# A tibble: 3 × 11\n  manufacturer model   hwy displ  year   cyl trans      drv     cty fl    class \n  &lt;chr&gt;        &lt;chr&gt; &lt;int&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt;      &lt;chr&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; \n1 audi         a4       29   1.8  1999     4 auto(l5)   f        18 p     compa…\n2 audi         a4       29   1.8  1999     4 manual(m5) f        21 p     compa…\n3 audi         a4       31   2    2008     4 manual(m6) f        20 p     compa…",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -413,8 +413,8 @@
     "objectID": "day5.html#filter-keep-rows",
     "href": "day5.html#filter-keep-rows",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "3.3 filter() (keep rows)",
-    "text": "3.3 filter() (keep rows)\n\nKeep rows matching conditions (vectorized, so use & and |).\n\n```{r}\nmpg |&gt;\n  filter(class == \"suv\", hwy &gt;= 20) |&gt;\n  head(5)\n\nmpg |&gt;\n  filter(manufacturer %in% c(\"toyota\", \"honda\")) |&gt;\n  count(manufacturer)\n```",
+    "section": "filter() (keep rows)",
+    "text": "filter() (keep rows)\n\nCodeResult\n\n\n\nmpg |&gt;\n  filter(class == \"suv\", hwy &gt;= 20) |&gt;\n  head(5)\n\nmpg |&gt;\n  filter(manufacturer %in% c(\"toyota\", \"honda\")) |&gt;\n  count(manufacturer)\n\n\n\n\n\n# A tibble: 5 × 11\n  manufacturer model       displ  year   cyl trans drv     cty   hwy fl    class\n  &lt;chr&gt;        &lt;chr&gt;       &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;\n1 chevrolet    c1500 subu…   5.3  2008     8 auto… r        14    20 r     suv  \n2 chevrolet    c1500 subu…   5.3  2008     8 auto… r        14    20 r     suv  \n3 jeep         grand cher…   3    2008     6 auto… 4        17    22 d     suv  \n4 jeep         grand cher…   4    1999     6 auto… 4        15    20 r     suv  \n5 nissan       pathfinder…   4    2008     6 auto… 4        14    20 p     suv  \n\n\n# A tibble: 2 × 2\n  manufacturer     n\n  &lt;chr&gt;        &lt;int&gt;\n1 honda            9\n2 toyota          34",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -423,8 +423,8 @@
     "objectID": "day5.html#mutate-createmodify-columns",
     "href": "day5.html#mutate-createmodify-columns",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "3.4 mutate() (create/modify columns)",
-    "text": "3.4 mutate() (create/modify columns)\n\nCreate new variables; if_else() is a vectorized if; case_when() for multiple conditions.\n\n```{r}\nmpg |&gt;\n  mutate(\n    hwy_kmpl = hwy * 0.425144,           # convert mpg to km/L (approx)\n    efficiency = case_when(\n      hwy &gt;= 30 ~ \"high\",\n      hwy &gt;= 20 ~ \"medium\",\n      TRUE ~ \"low\"\n    )\n  ) |&gt;\n  select(manufacturer, model, hwy, hwy_kmpl, efficiency) |&gt;\n  head(6)\n```",
+    "section": "mutate() (create/modify columns)",
+    "text": "mutate() (create/modify columns)\n\nCodeResult\n\n\n\nmpg |&gt;\n  mutate(\n    hwy_kmpl = hwy * 0.425144,           # convert mpg to km/L (approx)\n    efficiency = case_when(\n      hwy &gt;= 30 ~ \"high\",\n      hwy &gt;= 20 ~ \"medium\",\n      TRUE ~ \"low\"\n    )\n  ) |&gt;\n  select(manufacturer, model, hwy, hwy_kmpl, efficiency) |&gt;\n  head(6)\n\n\n\n\n\n# A tibble: 6 × 5\n  manufacturer model   hwy hwy_kmpl efficiency\n  &lt;chr&gt;        &lt;chr&gt; &lt;int&gt;    &lt;dbl&gt; &lt;chr&gt;     \n1 audi         a4       29     12.3 medium    \n2 audi         a4       29     12.3 medium    \n3 audi         a4       31     13.2 high      \n4 audi         a4       30     12.8 high      \n5 audi         a4       26     11.1 medium    \n6 audi         a4       26     11.1 medium",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -433,8 +433,8 @@
     "objectID": "day5.html#arrange-sort-rows",
     "href": "day5.html#arrange-sort-rows",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "3.5 arrange() (sort rows)",
-    "text": "3.5 arrange() (sort rows)\n```{r}\nmpg |&gt;\n  arrange(manufacturer, desc(hwy)) |&gt;\n  head(6)\n```",
+    "section": "arrange() (sort rows)",
+    "text": "arrange() (sort rows)\n\nCodeResult\n\n\n\nmpg |&gt;\n  arrange(manufacturer, desc(hwy)) |&gt;\n  head(6)\n\n\n\n\n\n# A tibble: 6 × 11\n  manufacturer model      displ  year   cyl trans  drv     cty   hwy fl    class\n  &lt;chr&gt;        &lt;chr&gt;      &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt;  &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;\n1 audi         a4           2    2008     4 manua… f        20    31 p     comp…\n2 audi         a4           2    2008     4 auto(… f        21    30 p     comp…\n3 audi         a4           1.8  1999     4 auto(… f        18    29 p     comp…\n4 audi         a4           1.8  1999     4 manua… f        21    29 p     comp…\n5 audi         a4 quattro   2    2008     4 manua… 4        20    28 p     comp…\n6 audi         a4           3.1  2008     6 auto(… f        18    27 p     comp…",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -443,8 +443,8 @@
     "objectID": "day5.html#group_by-summarise-grouped-summaries",
     "href": "day5.html#group_by-summarise-grouped-summaries",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "3.6 group_by() + summarise() (grouped summaries)",
-    "text": "3.6 group_by() + summarise() (grouped summaries)\n\nGroups persist until removed; use ungroup() when done.\nacross() applies a function to multiple columns.\n\n```{r}\nmpg |&gt;\n  group_by(cyl) |&gt;\n  summarise(\n    mean_cty = mean(cty),\n    median_hwy = median(hwy),\n    n = dplyr::n()\n  )\n\nmpg |&gt;\n  group_by(drv) |&gt;\n  summarise(across(c(cty, hwy), list(mean = mean, sd = sd)))\n```",
+    "section": "group_by() + summarise() (grouped summaries)",
+    "text": "group_by() + summarise() (grouped summaries)\n\nCodeResult\n\n\n\nmpg |&gt;\n  group_by(cyl) |&gt;\n  summarise(\n    mean_cty = mean(cty),\n    median_hwy = median(hwy),\n    n = dplyr::n()\n  )\n\nmpg |&gt;\n  group_by(drv) |&gt;\n  summarise(across(c(cty, hwy), list(mean = mean, sd = sd)))\n\n\n\n\n\n# A tibble: 4 × 4\n    cyl mean_cty median_hwy     n\n  &lt;int&gt;    &lt;dbl&gt;      &lt;dbl&gt; &lt;int&gt;\n1     4     21.0         29    81\n2     5     20.5         29     4\n3     6     16.2         24    79\n4     8     12.6         17    70\n\n\n# A tibble: 3 × 5\n  drv   cty_mean cty_sd hwy_mean hwy_sd\n  &lt;chr&gt;    &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;\n1 4         14.3   2.87     19.2   4.08\n2 f         20.0   3.63     28.2   4.21\n3 r         14.1   2.22     21     3.66",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -453,8 +453,8 @@
     "objectID": "day5.html#distinct-slice-sampling",
     "href": "day5.html#distinct-slice-sampling",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "3.7 distinct(), slice(), sampling",
-    "text": "3.7 distinct(), slice(), sampling\n```{r}\n# Unique combinations of columns\nmpg |&gt;\n  distinct(manufacturer, class) |&gt;\n  head(10)\n\n# Take specific rows by position\nmpg |&gt;\n  slice(1:5)\n\n# Random samples\nset.seed(123)\nmpg |&gt;\n  slice_sample(n = 5)\n```",
+    "section": "distinct(), slice(), sampling",
+    "text": "distinct(), slice(), sampling\n\nCodeResult\n\n\n\n# Unique combinations of columns\nmpg |&gt;\n  distinct(manufacturer, class) |&gt;\n  head(10)\n\n# Take specific rows by position\nmpg |&gt;\n  slice(1:5)\n\n# Random samples\nset.seed(123)\nmpg |&gt;\n  slice_sample(n = 5)\n\n\n\n\n\n# A tibble: 10 × 2\n   manufacturer class  \n   &lt;chr&gt;        &lt;chr&gt;  \n 1 audi         compact\n 2 audi         midsize\n 3 chevrolet    suv    \n 4 chevrolet    2seater\n 5 chevrolet    midsize\n 6 dodge        minivan\n 7 dodge        pickup \n 8 dodge        suv    \n 9 ford         suv    \n10 ford         pickup \n\n\n# A tibble: 5 × 11\n  manufacturer model displ  year   cyl trans      drv     cty   hwy fl    class \n  &lt;chr&gt;        &lt;chr&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt;      &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; \n1 audi         a4      1.8  1999     4 auto(l5)   f        18    29 p     compa…\n2 audi         a4      1.8  1999     4 manual(m5) f        21    29 p     compa…\n3 audi         a4      2    2008     4 manual(m6) f        20    31 p     compa…\n4 audi         a4      2    2008     4 auto(av)   f        21    30 p     compa…\n5 audi         a4      2.8  1999     6 auto(l5)   f        16    26 p     compa…\n\n\n# A tibble: 5 × 11\n  manufacturer model       displ  year   cyl trans drv     cty   hwy fl    class\n  &lt;chr&gt;        &lt;chr&gt;       &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;\n1 pontiac      grand prix    5.3  2008     8 auto… f        16    25 p     mids…\n2 toyota       toyota tac…   4    2008     6 auto… 4        16    20 r     pick…\n3 toyota       4runner 4wd   4.7  2008     8 auto… 4        14    17 r     suv  \n4 audi         a4 quattro    3.1  2008     6 auto… 4        17    25 p     comp…\n5 toyota       corolla       1.8  1999     4 auto… f        24    33 r     comp…",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -463,8 +463,8 @@
     "objectID": "day5.html#joins-combine-tables-by-keys",
     "href": "day5.html#joins-combine-tables-by-keys",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "3.8 Joins (combine tables by keys)",
-    "text": "3.8 Joins (combine tables by keys)\nWe’ll make small toy tables and join them.\n```{r}\na &lt;- tibble(id = c(1,2,3), val = c(\"A\",\"B\",\"C\"))\nb &lt;- tibble(id = c(2,3,4), note = c(\"two\",\"three\",\"four\"))\n\nleft_join(a, b, by = \"id\")\ninner_join(a, b, by = \"id\")\nfull_join(a, b, by = \"id\")\nanti_join(a, b, by = \"id\")  # rows in a without matches in b\nsemi_join(a, b, by = \"id\")  # rows in a that have a match in b\n```",
+    "section": "Joins (combine tables by keys)",
+    "text": "Joins (combine tables by keys)\n\nCodeResult\n\n\n\na &lt;- tibble(id = c(1,2,3), val = c(\"A\",\"B\",\"C\"))\nb &lt;- tibble(id = c(2,3,4), note = c(\"two\",\"three\",\"four\"))\n\nleft_join(a, b, by = \"id\")\ninner_join(a, b, by = \"id\")\nfull_join(a, b, by = \"id\")\nanti_join(a, b, by = \"id\")  # rows in a without matches in b\nsemi_join(a, b, by = \"id\")  # rows in a that have a match in b\n\n\n\n\n\n# A tibble: 3 × 3\n     id val   note \n  &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;\n1     1 A     &lt;NA&gt; \n2     2 B     two  \n3     3 C     three\n\n\n# A tibble: 2 × 3\n     id val   note \n  &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;\n1     2 B     two  \n2     3 C     three\n\n\n# A tibble: 4 × 3\n     id val   note \n  &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;\n1     1 A     &lt;NA&gt; \n2     2 B     two  \n3     3 C     three\n4     4 &lt;NA&gt;  four \n\n\n# A tibble: 1 × 2\n     id val  \n  &lt;dbl&gt; &lt;chr&gt;\n1     1 A    \n\n\n# A tibble: 2 × 2\n     id val  \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 B    \n2     3 C",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -473,8 +473,8 @@
     "objectID": "day5.html#reshaping-with-tidyr-bonus",
     "href": "day5.html#reshaping-with-tidyr-bonus",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "3.9 Reshaping with tidyr (bonus)",
-    "text": "3.9 Reshaping with tidyr (bonus)\n```{r}\n# Wide -&gt; Long\nwide &lt;- tibble(id = 1:3, y_2020 = c(1,2,3), y_2021 = c(4,5,6))\nlong &lt;- wide |&gt;\n  pivot_longer(starts_with(\"y_\"), names_to = \"year\", values_to = \"y\")\nlong\n\n# Long -&gt; Wide\nlong |&gt;\n  pivot_wider(names_from = year, values_from = y)\n```\n\n\n\n\n\n\nQuick Cheatsheet\n\n\n\n\nColumns: select(), rename(), relocate()\nRows: filter(), arrange(), slice()\nNew columns: mutate(), if_else(), case_when()\nGroups: group_by(), summarise(), across()\nUniques & counts: distinct(), count()\nJoins: left_join(), inner_join(), full_join(), anti_join(), semi_join()\nReshape: pivot_longer(), pivot_wider()",
+    "section": "Reshaping with tidyr (bonus)",
+    "text": "Reshaping with tidyr (bonus)\n\nCodeResult\n\n\n\n# Wide -&gt; Long\nwide &lt;- tibble(id = 1:3, y_2020 = c(1,2,3), y_2021 = c(4,5,6))\nlong &lt;- wide |&gt;\n  pivot_longer(starts_with(\"y_\"), names_to = \"year\", values_to = \"y\")\nlong\n\n# Long -&gt; Wide\nlong |&gt;\n  pivot_wider(names_from = year, values_from = y)\n\n\n\n\n\n# A tibble: 6 × 3\n     id year       y\n  &lt;int&gt; &lt;chr&gt;  &lt;dbl&gt;\n1     1 y_2020     1\n2     1 y_2021     4\n3     2 y_2020     2\n4     2 y_2021     5\n5     3 y_2020     3\n6     3 y_2021     6\n\n\n# A tibble: 3 × 3\n     id y_2020 y_2021\n  &lt;int&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1     1      1      4\n2     2      2      5\n3     3      3      6\n\n\n\n\n\n\n\n\n\n\n\nQuick Cheatsheet\n\n\n\n\nColumns: select(), rename(), relocate()\nRows: filter(), arrange(), slice()\nNew columns: mutate(), if_else(), case_when()\nGroups: group_by(), summarise(), across()\nUniques & counts: distinct(), count()\nJoins: left_join(), inner_join(), full_join(), anti_join(), semi_join()\nReshape: pivot_longer(), pivot_wider()",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -483,8 +483,8 @@
     "objectID": "day5.html#first-plot",
     "href": "day5.html#first-plot",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "4.1 First plot",
-    "text": "4.1 First plot\n```{r}\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point()\n```\nCompare to base R:\n```{r}\nplot(x = mpg$displ, y = mpg$hwy)\n```",
+    "section": "First plot",
+    "text": "First plot\n\nCodeResult\n\n\n\nggplot(mpg, aes(x = displ, y = hwy)) +\n  geom_point()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCompare to base R:\n\nCodeResult\n\n\n\nplot(x = mpg$displ, y = mpg$hwy)",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -493,8 +493,8 @@
     "objectID": "day5.html#aesthetics-colour-size-shape-alpha",
     "href": "day5.html#aesthetics-colour-size-shape-alpha",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "4.2 Aesthetics: colour, size, shape, alpha",
-    "text": "4.2 Aesthetics: colour, size, shape, alpha\n```{r}\nggplot(mpg, aes(displ, hwy, colour = manufacturer)) + geom_point()\nggplot(mpg, aes(displ, hwy, colour = manufacturer, size = cyl)) + geom_point()\nggplot(mpg, aes(displ, hwy, shape = factor(year))) + geom_point()\nggplot(mpg, aes(displ, hwy, alpha = cyl)) + geom_point()\n```\nFixed aesthetics (outside aes()):\n```{r}\nggplot(mpg, aes(displ, hwy)) + geom_point(aes(colour = \"blue\"))\nggplot(mpg, aes(displ, hwy)) + geom_point(colour = \"blue\")\n```",
+    "section": "Aesthetics: colour, size, shape, alpha",
+    "text": "Aesthetics: colour, size, shape, alpha\n\nCodeResult\n\n\n\nggplot(mpg, aes(displ, hwy, colour = manufacturer)) + geom_point()\nggplot(mpg, aes(displ, hwy, colour = manufacturer, size = cyl)) + geom_point()\nggplot(mpg, aes(displ, hwy, shape = factor(year))) + geom_point()\nggplot(mpg, aes(displ, hwy, alpha = cyl)) + geom_point()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFixed aesthetics (outside aes()):\n\nCodeResult\n\n\n\nggplot(mpg, aes(displ, hwy)) + geom_point(aes(colour = \"blue\"))\nggplot(mpg, aes(displ, hwy)) + geom_point(colour = \"blue\")",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -503,8 +503,8 @@
     "objectID": "day5.html#faceting",
     "href": "day5.html#faceting",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "4.3 Faceting",
-    "text": "4.3 Faceting\n```{r}\nggplot(mpg, aes(displ, hwy)) +\n  geom_point() +\n  facet_wrap(~ class)\n```",
+    "section": "Faceting",
+    "text": "Faceting\n\nCodeResult\n\n\n\nggplot(mpg, aes(displ, hwy)) +\n  geom_point() +\n  facet_wrap(~ class)",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -513,8 +513,8 @@
     "objectID": "day5.html#smoothed-trends",
     "href": "day5.html#smoothed-trends",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "4.4 Smoothed trends",
-    "text": "4.4 Smoothed trends\n```{r}\nggplot(mpg, aes(displ, hwy)) + geom_point() + geom_smooth()\nggplot(mpg, aes(displ, hwy)) + geom_point() + geom_smooth(method = \"lm\")\nggplot(mpg, aes(displ, hwy)) + geom_point() + geom_smooth(span = 0.9)  # loess span\n```",
+    "section": "Smoothed trends",
+    "text": "Smoothed trends\n\nCodeResult\n\n\n\nggplot(mpg, aes(displ, hwy)) + geom_point() + geom_smooth()\nggplot(mpg, aes(displ, hwy)) + geom_point() + geom_smooth(method = \"lm\")\nggplot(mpg, aes(displ, hwy)) + geom_point() + geom_smooth(span = 0.9)  # loess span\n\n\n\n\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -523,8 +523,8 @@
     "objectID": "day5.html#distributions-histogram-frequency-polygon-density-combo",
     "href": "day5.html#distributions-histogram-frequency-polygon-density-combo",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "4.5 Distributions: histogram, frequency polygon, density, combo",
-    "text": "4.5 Distributions: histogram, frequency polygon, density, combo\n```{r}\nggplot(mpg, aes(hwy)) + geom_histogram()\nggplot(mpg, aes(hwy)) + geom_freqpoly()\n\n# Change binwidth\nggplot(mpg, aes(hwy)) + geom_histogram(binwidth = 2)\nggplot(mpg, aes(hwy)) + geom_freqpoly(binwidth = 2)\n\n# Density\nggplot(mpg, aes(hwy)) + geom_density()\n\n# Overlay histogram + density and add a mean line\np &lt;- ggplot(mpg, aes(hwy)) +\n  geom_histogram(aes(y = ..density..), colour = \"black\", fill = \"white\") +\n  geom_density(alpha = .2, fill = \"#FF6666\")\n\np + geom_vline(aes(xintercept = mean(hwy)), linetype = \"dashed\", size = 1)\n```",
+    "section": "Distributions: histogram, frequency polygon, density, combo",
+    "text": "Distributions: histogram, frequency polygon, density, combo\n\nCodeResult\n\n\n\nggplot(mpg, aes(hwy)) + geom_histogram()\nggplot(mpg, aes(hwy)) + geom_freqpoly()\n\n# Change binwidth\nggplot(mpg, aes(hwy)) + geom_histogram(binwidth = 2)\nggplot(mpg, aes(hwy)) + geom_freqpoly(binwidth = 2)\n\n# Density\nggplot(mpg, aes(hwy)) + geom_density()\n\n# Overlay histogram + density and add a mean line\np &lt;- ggplot(mpg, aes(hwy)) +\n  geom_histogram(aes(y = ..density..), colour = \"black\", fill = \"white\") +\n  geom_density(alpha = .2, fill = \"#FF6666\")\n\np + geom_vline(aes(xintercept = mean(hwy)), linetype = \"dashed\", size = 1)\n\n\n\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\n\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\n\nWarning: The dot-dot notation (`..density..`) was deprecated in ggplot2 3.4.0.\nℹ Please use `after_stat(density)` instead.\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -533,8 +533,8 @@
     "objectID": "day5.html#box-violin-and-jitter",
     "href": "day5.html#box-violin-and-jitter",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "4.6 Box, violin, and jitter",
-    "text": "4.6 Box, violin, and jitter\n```{r}\nggplot(mpg, aes(drv, hwy)) + geom_boxplot()\nggplot(mpg, aes(drv, hwy)) + geom_jitter()\nggplot(mpg, aes(drv, hwy)) + geom_violin()\n```",
+    "section": "Box, violin, and jitter",
+    "text": "Box, violin, and jitter\n\nCodeResult\n\n\n\nggplot(mpg, aes(drv, hwy)) + geom_boxplot()\nggplot(mpg, aes(drv, hwy)) + geom_jitter()\nggplot(mpg, aes(drv, hwy)) + geom_violin()",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -543,8 +543,8 @@
     "objectID": "day5.html#bars-counts-vs.-pre-summarised-values",
     "href": "day5.html#bars-counts-vs.-pre-summarised-values",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "4.7 Bars: counts vs. pre-summarised values",
-    "text": "4.7 Bars: counts vs. pre-summarised values\n```{r}\n# Counts from raw rows\nggplot(mpg, aes(manufacturer)) + geom_bar()\n\n# Pre-summarised data\ndrugs &lt;- data.frame(\n  drug = c(\"a\", \"b\", \"c\"),\n  effect = c(4.2, 9.7, 6.1)\n)\nggplot(drugs, aes(drug, effect)) + geom_bar(stat = \"identity\")\n```",
+    "section": "Bars: counts vs. pre-summarised values",
+    "text": "Bars: counts vs. pre-summarised values\n\nCodeResult\n\n\n\n# Counts from raw rows\nggplot(mpg, aes(manufacturer)) + geom_bar()\n\n# Pre-summarised data\ndrugs &lt;- data.frame(\n  drug = c(\"a\", \"b\", \"c\"),\n  effect = c(4.2, 9.7, 6.1)\n)\nggplot(drugs, aes(drug, effect)) + geom_bar(stat = \"identity\")",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -553,8 +553,8 @@
     "objectID": "day5.html#lines-paths-time-series",
     "href": "day5.html#lines-paths-time-series",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "4.8 Lines & paths (time series)",
-    "text": "4.8 Lines & paths (time series)\n```{r}\nggplot(economics, aes(date, unemploy / pop)) + geom_line()\nggplot(economics, aes(date, uempmed)) + geom_line()\n\nstr(economics)\n```",
+    "section": "Lines & paths (time series)",
+    "text": "Lines & paths (time series)\n\nCodeResult\n\n\n\nggplot(economics, aes(date, unemploy / pop)) + geom_line()\nggplot(economics, aes(date, uempmed)) + geom_line()\n\nstr(economics)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nspc_tbl_ [574 × 6] (S3: spec_tbl_df/tbl_df/tbl/data.frame)\n $ date    : Date[1:574], format: \"1967-07-01\" \"1967-08-01\" ...\n $ pce     : num [1:574] 507 510 516 512 517 ...\n $ pop     : num [1:574] 198712 198911 199113 199311 199498 ...\n $ psavert : num [1:574] 12.6 12.6 11.9 12.9 12.8 11.8 11.7 12.3 11.7 12.3 ...\n $ uempmed : num [1:574] 4.5 4.7 4.6 4.9 4.7 4.8 5.1 4.5 4.1 4.6 ...\n $ unemploy: num [1:574] 2944 2945 2958 3143 3066 ...",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -563,8 +563,8 @@
     "objectID": "day5.html#axes-and-limits",
     "href": "day5.html#axes-and-limits",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "4.9 Axes and limits",
-    "text": "4.9 Axes and limits\n```{r}\nggplot(mpg, aes(cty, hwy)) + geom_point(alpha = 1/3)\n\nggplot(mpg, aes(cty, hwy)) +\n  geom_point(alpha = 1/3) +\n  xlab(\"city driving (mpg)\") +\n  ylab(\"highway driving (mpg)\")\n\nggplot(mpg, aes(cty, hwy)) + geom_point(alpha = 1/3) + xlab(NULL) + ylab(NULL)\n\nggplot(mpg, aes(drv, hwy)) + geom_jitter(width = 0.25)\n\nggplot(mpg, aes(drv, hwy)) +\n  geom_jitter(width = 0.25) +\n  xlim(\"f\", \"r\") +\n  ylim(20, 30)\n\nggplot(mpg, aes(drv, hwy)) +\n  geom_jitter(width = 0.25, na.rm = TRUE) +\n  ylim(NA, 30)\n```",
+    "section": "Axes and limits",
+    "text": "Axes and limits\n\nCodeResult\n\n\n\nggplot(mpg, aes(cty, hwy)) + geom_point(alpha = 1/3)\n\nggplot(mpg, aes(cty, hwy)) +\n  geom_point(alpha = 1/3) +\n  xlab(\"city driving (mpg)\") +\n  ylab(\"highway driving (mpg)\")\n\nggplot(mpg, aes(cty, hwy)) + geom_point(alpha = 1/3) + xlab(NULL) + ylab(NULL)\n\nggplot(mpg, aes(drv, hwy)) + geom_jitter(width = 0.25)\n\nggplot(mpg, aes(drv, hwy)) +\n  geom_jitter(width = 0.25) +\n  xlim(\"f\", \"r\") +\n  ylim(20, 30)\n\nggplot(mpg, aes(drv, hwy)) +\n  geom_jitter(width = 0.25, na.rm = TRUE) +\n  ylim(NA, 30)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWarning: Removed 139 rows containing missing values or values outside the scale range\n(`geom_point()`).",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -573,8 +573,8 @@
     "objectID": "day5.html#annotations-math-expressions",
     "href": "day5.html#annotations-math-expressions",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "4.10 Annotations & math expressions",
-    "text": "4.10 Annotations & math expressions\n```{r}\nggplot(mpg, aes(displ, hwy)) +\n  geom_point(aes(colour = factor(cyl))) +\n  labs(\n    x = \"Engine displacement (litres)\",\n    y = \"Highway miles per gallon\",\n    colour = \"Number of cylinders\",\n    title = \"Mileage by engine size and cylinders\",\n    subtitle = \"Source: http://fueleconomy.gov\"\n  )\n\nvalues &lt;- seq(from = -2, to = 2, by = .01)\ndf &lt;- data.frame(x = values, y = values^3)\nggplot(df, aes(x, y)) +\n  geom_path() +\n  labs(y = quote(f(x) == x^3))\n```",
+    "section": "Annotations & math expressions",
+    "text": "Annotations & math expressions\n\nCodeResult\n\n\n\nggplot(mpg, aes(displ, hwy)) +\n  geom_point(aes(colour = factor(cyl))) +\n  labs(\n    x = \"Engine displacement (litres)\",\n    y = \"Highway miles per gallon\",\n    colour = \"Number of cylinders\",\n    title = \"Mileage by engine size and cylinders\",\n    subtitle = \"Source: http://fueleconomy.gov\"\n  )\n\nvalues &lt;- seq(from = -2, to = 2, by = .01)\ndf &lt;- data.frame(x = values, y = values^3)\nggplot(df, aes(x, y)) +\n  geom_path() +\n  labs(y = quote(f(x) == x^3))",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -583,8 +583,8 @@
     "objectID": "day5.html#saving-plots",
     "href": "day5.html#saving-plots",
     "title": "Day 5 - R-eady to be Deployed!",
-    "section": "4.11 Saving plots",
-    "text": "4.11 Saving plots\n\n# Save a plot object to disk\np &lt;- ggplot(df, aes(x, y)) +\n  geom_path() +\n  labs(y = quote(f(x) == x^3))\nggsave(\"plot.png\", p, width = 5, height = 5)\n\n# Or specify a full path you control:\n# ggsave(\"path/to/your/folder/plot.png\", p, width = 5, height = 5)",
+    "section": "Saving plots",
+    "text": "Saving plots\n\n# Save a plot object to disk\np &lt;- ggplot(df, aes(x, y)) +\n  geom_path() +\n  labs(y = quote(f(x) == x^3))\nggsave(\"plot.png\", p, width = 5, height = 5)\n\n# Or specify a full path you control:\n# ggsave(\"path/to/your/folder/plot.png\", p, width = 5, height = 5)",
     "crumbs": [
       "Day 5 - **R**-eady to be Deployed!"
     ]
@@ -634,7 +634,7 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "“2016 Time Series Study.” n.d. ANES | American National\nElection Studies. https://electionstudies.org/data-center/2016-time-series-study/.",
+    "text": "“2016 Time Series Study.” n.d. ANES | American National\nElection Studies. https://electionstudies.org/data-center/2016-time-series-study/.\n\n\nWickham, Hadley. 2010. “A Layered Grammar of Graphics.”\nJournal of Computational and Graphical Statistics 19 (1): 3–28.\nhttps://doi.org/10.1198/jcgs.2009.07098.\n\n\nWilkinson, Leland. 2005. The Grammer of Graphics. Second\nedition. Statistics and Computing. New York, NY: Springer. https://doi.org/10.1007/0-387-28695-0.",
     "crumbs": [
       "References"
     ]
