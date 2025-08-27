@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Day 1 - Getting Started – Math Camp 2025</title>
+<title>Methods Brown Bag – Math Camp 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./day2.html" rel="next">
-<link href="./intro.html" rel="prev">
+<link href="./file-workflow.html" rel="next">
+<link href="./references.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -43,9 +43,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -116,7 +113,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./day1.html">Day 1 - Getting Started</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Methods-Brown-Bag.html">Methods Brown Bag</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -158,7 +155,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./day1.html" class="sidebar-item-text sidebar-link active">
+  <a href="./day1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Day 1 - Getting Started</span></a>
   </div>
 </li>
@@ -200,7 +197,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./Methods-Brown-Bag.html" class="sidebar-item-text sidebar-link">
+            <a href="./Methods-Brown-Bag.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Methods Brown Bag</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -220,28 +217,15 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#math-session" id="toc-math-session" class="nav-link active" data-scroll-target="#math-session">Math Session</a></li>
-  <li><a href="#software-session" id="toc-software-session" class="nav-link" data-scroll-target="#software-session">Software Session</a>
-  <ul class="collapse">
-  <li><a href="#r-and-r-studio" id="toc-r-and-r-studio" class="nav-link" data-scroll-target="#r-and-r-studio">R and R Studio</a></li>
-  <li><a href="#stata" id="toc-stata" class="nav-link" data-scroll-target="#stata">Stata</a></li>
-  <li><a href="#zotero" id="toc-zotero" class="nav-link" data-scroll-target="#zotero">Zotero</a></li>
-  <li><a href="#github" id="toc-github" class="nav-link" data-scroll-target="#github">GitHub</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Day 1 - Getting Started</h1>
+<h1 class="title">Methods Brown Bag</h1>
 </div>
 
 
@@ -258,66 +242,9 @@ window.Quarto = {
 </header>
 
 
-<section id="math-session" class="level2">
-<h2 class="anchored" data-anchor-id="math-session">Math Session</h2>
-<p><strong>Notation, Functions, and Limits</strong></p>
-<ol type="1">
-<li><p>Measurement and notation</p></li>
-<li><p>Review Basic Algebra</p></li>
-<li><p>Functions</p></li>
-<li><p>Limits and Series</p></li>
-</ol>
-<p>Links</p>
-<ul>
-<li>Lecture slides <a href="https://georgetown.box.com/s/kq4qi6xw6ymdr55gzyk77gli7ijjbh6y">here</a></li>
-<li>Problem set <a href="https://georgetown.box.com/s/q3rnzyccc5evngpocvt8besavrpr60el">here</a></li>
-</ul>
-</section>
-<section id="software-session" class="level2">
-<h2 class="anchored" data-anchor-id="software-session">Software Session</h2>
-<p>We will be getting started with the following installations today:</p>
-<ol type="1">
-<li><p><a href="https://www.r-project.org/about.html">R</a> - Statistical Programming Language</p></li>
-<li><p><a href="https://posit.co/products/open-source/rstudio/">RStudio</a> - Interactive Development Environment for R</p></li>
-<li><p><a href="https://www.stata.com/">Stata</a> - Statistical Software Package (the “other” one)</p></li>
-<li><p><a href="https://www.zotero.org/">Zotero</a> - Reference Management Tool</p></li>
-<li><p><a href="https://github.com/">GitHub</a> - Storing code online with version control</p></li>
-</ol>
-<section id="r-and-r-studio" class="level3">
-<h3 class="anchored" data-anchor-id="r-and-r-studio">R and R Studio</h3>
-<p>Use the <a href="https://rstudio-education.github.io/hopr/starting.html">link here</a> to install RStudio on your systems.</p>
-</section>
-<section id="stata" class="level3">
-<h3 class="anchored" data-anchor-id="stata">Stata</h3>
-<p>Stata is a paid software. Georgetown provides download option through the <a href="https://sites.google.com/georgetown.edu/gustudentsoftwarewebstore/?pli=1&amp;authuser=1">university webstore here</a>.</p>
-</section>
-<section id="zotero" class="level3">
-<h3 class="anchored" data-anchor-id="zotero">Zotero</h3>
-<p>Zotero is a reference management tool. It allows you to maintain a structured bibliography. Its integration with various web browsers and software like MS Word and R, makes it a fantastic tool for keeping track of readings as well as citing them.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="zotero.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Zotero Folder"><img src="zotero.png" class="img-fluid figure-img" width="734" alt="Zotero Folder"></a></p>
-<figcaption>Zotero Folder</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<ol type="1">
-<li>Make <a href="https://www.zotero.org/">Zotero</a> Account.</li>
-<li>Add a connector to the browser (For eg, <a href="https://www.zotero.org/start">zotero connector</a> for google chrome).</li>
-<li>Download Zotero Desktop App <a href="(https://www.zotero.org/)">here</a>.</li>
-<li>Connect Zotero to R Studio. (We will do this step on Day 5, using the link <a href="https://github.com/scskalicky/zotero_tutorial/blob/main/zotero_and_Rstudio.md">here</a>).</li>
-</ol>
-</section>
-<section id="github" class="level3">
-<h3 class="anchored" data-anchor-id="github">GitHub</h3>
-<p>Make your account <a href="https://github.com/">here</a></p>
+<p>Additional topics.</p>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -886,49 +813,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./intro.html" class="pagination-link" aria-label="Introduction">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introduction</span>
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">References</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./day2.html" class="pagination-link" aria-label="Day 2 - Basics">
-        <span class="nav-page-text">Day 2 - Basics</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./file-workflow.html" class="pagination-link" aria-label="File Management and Workflow">
+        <span class="nav-page-text">File Management and Workflow</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","loop":false,"closeEffect":"zoom","openEffect":"zoom"});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 
