@@ -314,7 +314,7 @@ window.Quarto = {
 </header>
 
 
-<p><a href="rwar.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="rwar.webp" class="img-fluid" style="width:50.0%"></a></p>
+<p><a href="rprofane.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="rprofane.png" class="img-fluid"></a></p>
 <section id="why-programming-or-coding-revisiting" class="level2">
 <h2 class="anchored" data-anchor-id="why-programming-or-coding-revisiting">Why Programming or Coding? (Revisiting)</h2>
 <p>Coding is about formalizing your thinking about how you treat the data and automating the formalization task to be done repetitively. It improves efficiency, enhances reproducibility, and boosts creativity when it comes to finding new patterns in your data.</p>
@@ -442,7 +442,7 @@ window.Quarto = {
 <section id="r-projects" class="level2">
 <h2 class="anchored" data-anchor-id="r-projects">R Projects</h2>
 <p>We used the <code>setwd()</code> command till now to trace the files we need in our work. As your work expands, projects will have multiple datasets to be loaded, different subsidiary scripts to be used, and multiple outputs to be saved.</p>
-<p>A first order problem related to both file management and reproducability of code is the usage of file paths. Using <strong>absolute paths</strong>, like <code>~/User/MyName/Documents/.....</code> becomes cumbersome and also inhibits efficiency of reproducability. Every time someone else runs the script, they will have to change the file paths in all the instances in Rscripts or <code>.qmd</code> file to locate the related datasets as well as other objects. Similarly, there would be issues with saving objects in new places. A partially efficient way we used till now involved using <code>setwd()</code> to direct R to a new working directory; this is also called usage of <strong>relative paths</strong></p>
+<p>A first order problem related to both file management and reproducibility of code is the usage of file paths. Using <strong>absolute paths</strong>, like <code>~/User/MyName/Documents/.....</code> becomes cumbersome and also inhibits efficiency of reproducibility. Every time someone else runs the script, they will have to change the file paths in all the instances in Rscripts or <code>.qmd</code> file to locate the related datasets as well as other objects. Similarly, there would be issues with saving objects in new places. A partially efficient way we used till now involved using <code>setwd()</code> to direct R to a new working directory; this is also called usage of <strong>relative paths</strong></p>
 <p><strong>R Projects</strong> is a built-in mechanism in RStudio for seamless file management and usage of relative paths.</p>
 <p>Let’s start by creating a new project. Click <code>File &gt; New Project</code>. Name the new project <code>govt-8001-dataessay</code>.</p>
 <div class="cell">
@@ -467,9 +467,9 @@ Figure&nbsp;1: To create new project: (top) first click New Directory, then (mid
 <div class="callout-body-container">
 <p><strong>Exercise</strong></p>
 <ol type="1">
-<li><p>Do this process again, this time creating a new project in the the existing directory. The existing directory should be the folder where you have been saving R scripts and <code>.qmd</code> file associated with math camp 2024.</p></li>
+<li><p>Do this process again, this time creating a new project in the the existing directory of math camp files. That is, the folder where you have been saving R scripts and <code>.qmd</code> file associated with math camp 2025. Name it <code>mathcamp2025</code></p></li>
 <li><p>Go to the folder on your system, and click the <code>.RProj</code> file.</p></li>
-<li><p>Start a new <code>qmd</code> file like we did yesterday. Delete existing code except for YAML. Run <code>getwd()</code> command in console and see the difference.</p></li>
+<li><p>Start a new <code>qmd</code> file like we did before. Delete existing code except for YAML. Run <code>getwd()</code> command in console and see the difference.</p></li>
 <li><p>Start a new R code chunk (<code>cmd + option + I</code>) and load vdem dataset. Notice the change in behavior when you press <code>TAB</code> inside the <code>readRDS()</code> function.</p></li>
 </ol>
 </div>
@@ -513,7 +513,7 @@ Figure&nbsp;1: To create new project: (top) first click New Directory, then (mid
 &nbsp;&nbsp;&nbsp;└─&nbsp;Text
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;...txt</code></pre>
 <p><strong>Suggested folder structure for a Quant-1 project</strong></p>
-<p>While we learnt how to create or associate an <code>.RProj</code> with a folder, integrating it with <code>here()</code> function from the <code>here</code> package, makes things further smoother. Let’s do it with the following exercise.</p>
+<p>While we learnt how to create or associate an <code>.RProj</code> with a folder, integrating it with <code>here()</code> function from the <code>here</code> package, makes workflow smoother. Let’s do it with the following exercise.</p>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -522,9 +522,9 @@ Figure&nbsp;1: To create new project: (top) first click New Directory, then (mid
 <div class="callout-body-container">
 <p><strong>Exercise</strong></p>
 <ol type="1">
-<li><p>Go the RStudio window with <code>mathcamp2024</code> project. Check the extreme upper left corner to see if you are in the write window.</p></li>
+<li><p>Go the RStudio window with <code>mathcamp2024</code> project. Check the extreme upper right corner to see if you are in the right window.</p></li>
 <li><p>In the qmd file we were working in, add an R chunk.</p></li>
-<li><p>Load the library <code>here</code> with the follwing code. Run the code line by line</p></li>
+<li><p>Load the library <code>here</code> with the following code. Run the code line by line</p></li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
@@ -544,7 +544,7 @@ Figure&nbsp;1: To create new project: (top) first click New Directory, then (mid
 </div>
 <p>This is a cleaner syntax which when coupled with usage of R projects saves time in typing file paths and avoids issues when the project is run on some other computer system.</p>
 <p>Note: <code>here()</code> always notes the path from the main folder or the root directory where your <code>.RProj</code> file is located.</p>
-<p><strong>Save the files and close the <code>mathcamp2024</code> project window</strong></p>
+<p><strong>Save the files and close the <code>mathcamp2025</code> project window</strong></p>
 </div>
 </div>
 </div>
@@ -635,8 +635,8 @@ Figure&nbsp;1: To create new project: (top) first click New Directory, then (mid
 <li><p>Paste the <code>000-setup.R</code> file in the main project folder. Open it in the same Rstudio window with the project and run the complete file. Your folder structure is created.</p></li>
 <li><p>Copy your raw data in <code>Data/Raw</code> folder. Similarly, your scripts in <code>Scripts/RScripts</code> folder</p></li>
 <li><p>Start your new <code>.qmd</code> file and save it in the main folder.</p></li>
-<li><p>Remember to use <code>here()</code> package extensively in both scripts and quarto file when loading or saving the data.</p></li>
-<li><p>You can always zip the whole project folder for sharing. The receiver will just need to unzip and run the code after starting the associated <code>.RProj</code> file, without changing file paths on their computer.</p></li>
+<li><p>Remember to use <code>here()</code> package extensively in both, scripts and quarto files, when loading or saving the data.</p></li>
+<li><p>You can zip the whole project folder for sharing. The receiver will just need to unzip and run the code after starting the associated <code>.RProj</code> file, without changing file paths on their computer.</p></li>
 </ol>
 
 
@@ -1228,7 +1228,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","descPosition":"bottom","loop":false,"closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
