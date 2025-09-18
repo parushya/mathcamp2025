@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>File Management and Workflow – Math Camp 2025</title>
+<title>Version Control with Git and Github – Math Camp 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,62 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -85,8 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./vc-git-hub.html" rel="next">
-<link href="./Methods-Brown-Bag.html" rel="prev">
+<link href="./github-web.html" rel="next">
+<link href="./file-workflow.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -336,7 +281,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Methods-Brown-Bag.html">Methods Brown Bag</a></li><li class="breadcrumb-item"><a href="./file-workflow.html">File Management and Workflow</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Methods-Brown-Bag.html">Methods Brown Bag</a></li><li class="breadcrumb-item"><a href="./vc-git-hub.html">Version Control with Git and Github</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -429,13 +374,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./file-workflow.html" class="sidebar-item-text sidebar-link active">
+  <a href="./file-workflow.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">File Management and Workflow</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./vc-git-hub.html" class="sidebar-item-text sidebar-link">
+  <a href="./vc-git-hub.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Version Control with Git and Github</span></a>
   </div>
 </li>
@@ -457,17 +402,15 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#why-programming-or-coding-revisiting" id="toc-why-programming-or-coding-revisiting" class="nav-link active" data-scroll-target="#why-programming-or-coding-revisiting">Why Programming or Coding? (Revisiting)</a></li>
-  <li><a href="#guidelines" id="toc-guidelines" class="nav-link" data-scroll-target="#guidelines">Guidelines</a></li>
-  <li><a href="#file-management-and-workflow" id="toc-file-management-and-workflow" class="nav-link" data-scroll-target="#file-management-and-workflow">File Management and Workflow</a>
+  <li><a href="#what-is-version-control" id="toc-what-is-version-control" class="nav-link active" data-scroll-target="#what-is-version-control">What is Version Control?</a></li>
+  <li><a href="#understanding-git" id="toc-understanding-git" class="nav-link" data-scroll-target="#understanding-git">Understanding Git</a>
   <ul class="collapse">
-  <li><a href="#understanding-absolute-and-relative-paths" id="toc-understanding-absolute-and-relative-paths" class="nav-link" data-scroll-target="#understanding-absolute-and-relative-paths">Understanding Absolute and Relative Paths</a></li>
+  <li><a href="#the-three-states" id="toc-the-three-states" class="nav-link" data-scroll-target="#the-three-states">The Three States</a></li>
+  <li><a href="#using-git" id="toc-using-git" class="nav-link" data-scroll-target="#using-git">Using Git</a></li>
+  <li><a href="#local-git-workflow" id="toc-local-git-workflow" class="nav-link" data-scroll-target="#local-git-workflow">Local Git Workflow</a></li>
   </ul></li>
-  <li><a href="#r-projects" id="toc-r-projects" class="nav-link" data-scroll-target="#r-projects">R Projects</a>
-  <ul class="collapse">
-  <li><a href="#standardized-folder-and-file-structure-here-package" id="toc-standardized-folder-and-file-structure-here-package" class="nav-link" data-scroll-target="#standardized-folder-and-file-structure-here-package">Standardized Folder and File Structure (<code>here</code> package)</a></li>
-  </ul></li>
-  <li><a href="#takeaways" id="toc-takeaways" class="nav-link" data-scroll-target="#takeaways">Takeaways</a></li>
+  <li><a href="#using-github" id="toc-using-github" class="nav-link" data-scroll-target="#using-github">Using Github</a></li>
+  <li><a href="#additonal-resource" id="toc-additonal-resource" class="nav-link" data-scroll-target="#additonal-resource">Additonal Resource</a></li>
   </ul>
 </nav>
     </div>
@@ -475,9 +418,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Methods-Brown-Bag.html">Methods Brown Bag</a></li><li class="breadcrumb-item"><a href="./file-workflow.html">File Management and Workflow</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Methods-Brown-Bag.html">Methods Brown Bag</a></li><li class="breadcrumb-item"><a href="./vc-git-hub.html">Version Control with Git and Github</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">File Management and Workflow</h1>
+<h1 class="title">Version Control with Git and Github</h1>
 </div>
 
 
@@ -494,343 +437,201 @@ window.Quarto = {
 </header>
 
 
-<p><a href="rprofane.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="rprofane.png" class="img-fluid"></a></p>
-<section id="why-programming-or-coding-revisiting" class="level2">
-<h2 class="anchored" data-anchor-id="why-programming-or-coding-revisiting">Why Programming or Coding? (Revisiting)</h2>
-<p>Coding is about formalizing your thinking about how you treat the data and automating the formalization task to be done repetitively. It improves efficiency, enhances reproducibility, and boosts creativity when it comes to finding new patterns in your data.</p>
-<p>Benchmarks for reproducible data and statistical analyses:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<ol type="1">
-<li><strong>Accuracy</strong>: Write a code that reduces the chances of making an error and lets you catch one if it occurs.</li>
-<li><strong>Efficiency</strong>: If you are doing it twice, see the pattern of your decision-making and formalize it in your code. <em>Difference between Excel and coding</em></li>
-<li><strong>Replicate-and-Reproduce</strong>: Ability to repeat the computational process which reflects your thinking and decisions that you took along the way. Improves transparency and forces one to be deliberate and responsible about choices during analyses.<br>
-</li>
-<li><strong>Human Interpretability</strong>: Writing code is not just about analyzing but allowing yourself and then others to be able to understand your analytic choices.<br>
-</li>
-<li><strong>Public Good</strong>: Research is a public good. And the code allows your research to be truly accessible. This means you write a code that anyone else who understands the language can read, reuse, and recreate without you being present. We essentially ensure that by writing a readable and ideally publicly accessible code.</li>
-</ol>
-</section>
-<section id="guidelines" class="level2">
-<h2 class="anchored" data-anchor-id="guidelines">Guidelines</h2>
-<p>The article “Ten Simple Rules for Reproducible Computational Research” by <span class="citation" data-cites="sandveTenSimpleRules2013">Sandve et al. (<a href="references.html#ref-sandveTenSimpleRules2013" role="doc-biblioref">2013</a>)</span> provides guidelines to ensure that computational research is reproducible, transparent, and robust. Here’s a summary of the key points:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 58%">
-<col style="width: 20%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Rule</th>
-<th>Description</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Documentation</td>
-<td>Track how results are produced, including all steps in the analysis workflow.</td>
-<td>Keep short notes on reults</td>
-</tr>
-<tr class="even">
-<td>Automation</td>
-<td>Minimize manual data manipulation by using scripts and documenting any manual changes.</td>
-<td>Make changes to raw data in your scripts</td>
-</tr>
-<tr class="odd">
-<td>Version Control</td>
-<td>Use version control systems for all custom scripts to track changes and maintain reproducibility.</td>
-<td>Using Github</td>
-</tr>
-<tr class="even">
-<td>Comprehensive Records</td>
-<td>Archive all versions of external programs used, all intermediate results, and exact observation conditions.</td>
-<td>Keep notes about data in comments</td>
-</tr>
-<tr class="odd">
-<td>Accessibility</td>
-<td>Make raw data, scripts, and results publicly accessible to enhance transparency and replication.</td>
-<td>Maintainig good workflow</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="file-management-and-workflow" class="level2">
-<h2 class="anchored" data-anchor-id="file-management-and-workflow">File Management and Workflow</h2>
-<section id="understanding-absolute-and-relative-paths" class="level3">
-<h3 class="anchored" data-anchor-id="understanding-absolute-and-relative-paths">Understanding Absolute and Relative Paths</h3>
-<p>When working with files in any programming environment, paths specify the location of files and folders. These paths can be absolute or relative, and the choice between them significantly impacts reproducibility, portability, and ease of collaboration</p>
-<p><strong>Absolute Paths</strong> An absolute path provides the complete address of a file or folder, starting from the root directory of the file system. It tells the software exactly where to find a file, regardless of where the script is run.</p>
-<p>Example: C:/Users/YourName/Documents/Project/Data/raw_data.dta</p>
-<p><strong>Relative Paths</strong> A relative path specifies the location of a file or folder relative to a “base directory” (e.g., the project’s working directory). It does not start from the root directory but instead is calculated based on the location of the script.</p>
-<p>Suppose your working directory is set to: <code>C:/Users/YourName/Documents/Project</code></p>
-<p>Then, a relative path might look like: <code>Data/raw_data.dta</code></p>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p><strong>Practical Analogy</strong> Think of absolute and relative paths like giving directions to a house:</p>
-<p>Absolute Path: “Go to the main city square, then take the highway north, turn right at the first traffic light, and find the house at 123 Main Street.” Works for people starting anywhere, but requires detailed instructions specific to the city. Relative Path: “From the library, walk two blocks north, then turn left. The house is the second one on the right.” Simpler and context-aware, but assumes everyone starts from the library.</p>
-</div>
-</div>
-</div>
-<p><strong>Key Differences Between Absolute and Relative Paths</strong></p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 22%">
-<col style="width: 48%">
-<col style="width: 29%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Feature</strong></th>
-<th><strong>Absolute Path</strong></th>
-<th><strong>Relative Path</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Starting Point</strong></td>
-<td>Starts from the root directory of the file system.</td>
-<td>Starts from the current working directory.</td>
-</tr>
-<tr class="even">
-<td><strong>Portability</strong></td>
-<td>Not portable—specific to the user’s system.</td>
-<td>Highly portable—adapts to different systems.</td>
-</tr>
-<tr class="odd">
-<td><strong>Ease of Sharing</strong></td>
-<td>Harder to share; others must update paths.</td>
-<td>Easier to share; no changes needed if structure is consistent.</td>
-</tr>
-<tr class="even">
-<td><strong>Use Case</strong></td>
-<td>Best for fixed environments or one-off scripts.</td>
-<td>Ideal for collaborative and reproducible projects.</td>
-</tr>
-<tr class="odd">
-<td><strong>Flexibility</strong></td>
-<td>Breaks if the file is moved or the system changes.</td>
-<td>Adapts as long as the folder structure remains consistent.</td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-<section id="r-projects" class="level2">
-<h2 class="anchored" data-anchor-id="r-projects">R Projects</h2>
-<p>We used the <code>setwd()</code> command till now to trace the files we need in our work. As your work expands, projects will have multiple datasets to be loaded, different subsidiary scripts to be used, and multiple outputs to be saved.</p>
-<p>A first order problem related to both file management and reproducibility of code is the usage of file paths. Using <strong>absolute paths</strong>, like <code>~/User/MyName/Documents/.....</code> becomes cumbersome and also inhibits efficiency of reproducibility. Every time someone else runs the script, they will have to change the file paths in all the instances in Rscripts or <code>.qmd</code> file to locate the related datasets as well as other objects. Similarly, there would be issues with saving objects in new places. A partially efficient way we used till now involved using <code>setwd()</code> to direct R to a new working directory; this is also called usage of <strong>relative paths</strong></p>
-<p><strong>R Projects</strong> is a built-in mechanism in RStudio for seamless file management and usage of relative paths.</p>
-<p>Let’s start by creating a new project. Click <code>File &gt; New Project</code>. Name the new project <code>govt-8001-dataessay</code>.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-new-project" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-new-project-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="new-project.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;1: To create new project: (top) first click New Directory, then (middle) click New Project, then (bottom) fill in the directory (project) name, choose a good subdirectory for its home and click Create Project. source"><img src="new-project.png" class="img-fluid figure-img" width="1172"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-new-project-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: To create new project: (top) first click New Directory, then (middle) click New Project, then (bottom) fill in the directory (project) name, choose a good subdirectory for its home and click Create Project. <a href="https://r4ds.hadley.nz/workflow-scripts">source</a>
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="git-supreme.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="source"><img src="git-supreme.webp" class="img-fluid figure-img" alt="source"></a></p>
+<figcaption><a href="https://www.reddit.com/r/ProgrammerHumor/comments/gtl9qy/git_checkout_memesfolder/">source</a></figcaption>
 </figure>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p><strong>Exercise</strong></p>
-<ol type="1">
-<li><p>Do this process again, this time creating a new project in the the existing directory of math camp files. That is, the folder where you have been saving R scripts and <code>.qmd</code> file associated with math camp 2025. Name it <code>mathcamp2025</code></p></li>
-<li><p>Go to the folder on your system, and click the <code>.RProj</code> file.</p></li>
-<li><p>Start a new <code>qmd</code> file like we did before. Delete existing code except for YAML. Run <code>getwd()</code> command in console and see the difference.</p></li>
-<li><p>Start a new R code chunk (<code>cmd + option + I</code>) and load vdem dataset. Notice the change in behavior when you press <code>TAB</code> inside the <code>readRDS()</code> function.</p></li>
-</ol>
-</div>
-</div>
-</div>
-<section id="standardized-folder-and-file-structure-here-package" class="level3">
-<h3 class="anchored" data-anchor-id="standardized-folder-and-file-structure-here-package">Standardized Folder and File Structure (<code>here</code> package)</h3>
-<p>An efficient file and folder management system is going to be crucial as we move into working with serious projects. Storing using all the files associated with a project in a comprehensible folder system is facilitated in both R and Stata. You would ideally want to create your own template for folder management that you follow across projects.</p>
-<p>An efficient file and folder management system is going to be crucial as we move into working with serious projects. As stressed earlier, keeping and using all the files associated with a project in a comprehensible folder system is facilitated by R Projects. You would ideally want to create your own template for folder management that you follow across proejcts. For starters, the folder structure below is the one created for your data essay assignment in Govt 8001 or Quant 1.</p>
-<p>You can use the point-and-click fucntionality in your computers to create this structure. Later today, we will briefly go through an R script that do this programmatically.</p>
-<pre><code>📦 govt-8001-dataessay
-├─&nbsp;govt-8001-dataessay.RProj
-├─&nbsp;000-setup.R
-├─&nbsp;001-eda.qmd
-├─&nbsp;002-analysis.qmd
-└─&nbsp;003-manuscript.qmd
-├─&nbsp;Data
-│&nbsp;&nbsp;├─&nbsp;Raw
-│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;Dataset1
-│&nbsp;&nbsp;│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;dataset1.csv
-│&nbsp;&nbsp;│&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;codebook-dataset1.pdf
-│&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;Dataset2
-│&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─&nbsp;...dta
-│&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;codebook-dataset2.pdf
-│&nbsp;&nbsp;└─&nbsp;Clean
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;Merged-df1-df2.csv
-├─&nbsp;Scripts
-│&nbsp;&nbsp;├─&nbsp;R-scripts
-│&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;plotting-some-variable.R
-│&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;exploring-different-models.R
-│&nbsp;&nbsp;├─&nbsp;Stata-Scripts
-│&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;seeing-variable-labels.do
-│&nbsp;&nbsp;└─&nbsp;Python-Scripts
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;scraping-data-from-website.py
-└─&nbsp;Outputs
-&nbsp;&nbsp;&nbsp;├─&nbsp;Plots
-&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;├─&nbsp;...jpeg
-&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;...png
-&nbsp;&nbsp;&nbsp;├─&nbsp;Tables
-&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;└─&nbsp;.csv
-&nbsp;&nbsp;&nbsp;└─&nbsp;Text
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&nbsp;...txt</code></pre>
-<p><strong>Suggested folder structure for a Quant-1 project</strong></p>
-<p>While we learnt how to create or associate an <code>.RProj</code> with a folder, integrating it with <code>here()</code> function from the <code>here</code> package, makes workflow smoother. Let’s do it with the following exercise.</p>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p><strong>Exercise</strong></p>
-<ol type="1">
-<li><p>Go the RStudio window with <code>mathcamp2024</code> project. Check the extreme upper right corner to see if you are in the right window.</p></li>
-<li><p>In the qmd file we were working in, add an R chunk.</p></li>
-<li><p>Load the library <code>here</code> with the following code. Run the code line by line</p></li>
-</ol>
+<section id="what-is-version-control" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-version-control">What is Version Control?</h2>
+<p>Version Control System (VCS) is a system to keep records of changes made to files/files over time. Using a VCS enables us to revisit and/or restore older version of files, in case we made a mistake or even need to revisit our thinking as a process progressed. Think <strong>Google Docs</strong>.</p>
+</section>
+<section id="understanding-git" class="level2">
+<h2 class="anchored" data-anchor-id="understanding-git">Understanding Git</h2>
+<p>Git is a widely used VCS. A git project stores changes in a local repository. That is, snapshots with metadata and a snapshot of how the folder system with its files looked like is saved locally on your computer.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a> <span class="co"># See the output for each of the following lines</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">here</span>()</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">here</span>(<span class="st">"Datasets-mathcamp"</span>,<span class="st">"V-Dem-CY-Full+Others-v12.rds"</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># syntax is</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># here("First subfolder from the root folder", "second subfolder",...., "file")</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>vdem_new <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="fu">here</span>(<span class="st">"Datasets-mathcamp"</span>,<span class="st">"V-Dem-CY-Full+Others-v12.rds"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>This is a cleaner syntax which when coupled with usage of R projects saves time in typing file paths and avoids issues when the project is run on some other computer system.</p>
-<p>Note: <code>here()</code> always notes the path from the main folder or the root directory where your <code>.RProj</code> file is located.</p>
-<p><strong>Save the files and close the <code>mathcamp2025</code> project window</strong></p>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="git-vcs.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Git thinks of files as snapshots in time. In a git system, different versions of the folder with all the files are stored as snapshot with timestamps attached to them. source"><img src="git-vcs.png" class="img-fluid figure-img" width="837" alt="Git thinks of files as snapshots in time. In a git system, different versions of the folder with all the files are stored as snapshot with timestamps attached to them. source"></a></p>
+<figcaption>Git thinks of files as snapshots in time. In a git system, different versions of the folder with all the files are stored as snapshot with timestamps attached to them. <a href="https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F">source</a></figcaption>
+</figure>
 </div>
 </div>
 </div>
-<p>Make it a habit of using R Projects and <code>here()</code> function in your scripts for writing portable code.</p>
-<p>You can read this quick and informative blogpost on using these two <a href="http://jenrichmond.rbind.io/post/how-to-use-the-here-package/">here</a>.</p>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
+<p>Git is a <strong>local</strong> system (mostly). No connection to a server or internet is needed to access older snapshots. Not just the older version of files, but details of the changes are recorded locally and can be accessed with locally available git commands.</p>
+<section id="the-three-states" class="level3">
+<h3 class="anchored" data-anchor-id="the-three-states">The Three States</h3>
+<p>The key to understanding a git project is to develop clarity about the three states it holds the file in.</p>
+<p>1- <strong>Modified</strong>: Any changes you make and save. Think, saving a word doc.<br>
+2- <strong>Staged</strong>: Any saved changes are <strong>offered or assembled</strong> on a table to be offered to git.<br>
+3- <strong>Committed</strong>: The staged table is deposited or <strong>committed</strong> to local git repository.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="git-stages.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Modification happens in Working Directory (Your Local Folder). Staging happens in Staging Area. Committing saves a snapshot of the staged changes to the local Git repository (stored in the .git directory inside your folder) source"><img src="git-stages.png" class="img-fluid figure-img" width="602" alt="Modification happens in Working Directory (Your Local Folder). Staging happens in Staging Area. Committing saves a snapshot of the staged changes to the local Git repository (stored in the .git directory inside your folder) source"></a></p>
+<figcaption>Modification happens in Working Directory (Your Local Folder). Staging happens in Staging Area. Committing saves a snapshot of the staged changes to the local Git repository (stored in the .git directory inside your folder) <a href="https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F">source</a></figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<i class="callout-icon"></i>
 </div>
-<div class="callout-body-container">
-<p>Exercise</p>
+<div class="callout-title-container flex-fill">
+From <a href="https://git-scm.com/">Git-book</a>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The working tree is a single checkout of one version of the project. These files are pulled out of the compressed database in the Git directory and placed on disk for you to use or modify.</p>
+<p>The staging area is a file, generally contained in your Git directory, that stores information about what will go into your next commit. Its technical name in Git parlance is the “index”, but the phrase “staging area” works just as well.</p>
+<p>The Git directory is where Git stores the metadata and object database for your project. This is the most important part of Git, and it is what is copied when you clone a repository from another computer.</p>
+<p>The basic Git workflow goes something like this:</p>
+<p>1- You modify files in your working tree.</p>
+<p>2- You selectively stage just those changes you want to be part of your next commit, which adds only those changes to the staging area.</p>
+<p>3- You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.</p>
+</div>
+</div>
+</section>
+<section id="using-git" class="level3">
+<h3 class="anchored" data-anchor-id="using-git">Using Git</h3>
+<p>We use command-line program called <strong>Bash</strong> to run git on computer. This essentially means using Terminal on macOS and Git Bash on Windows.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Setup
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>MacOS</strong>: For mac, open terminal and type <code>git</code>. If a list of commands shows up, you have git installed. Else, download and install using the <a href="https://git-scm.com/downloads/mac">link here</a>.</p>
+<p><strong>Windows</strong>: Install using the <a href="https://git-scm.com/downloads/win">link here</a>. Check all default installations. If installed correctly, upon right-clicking in any folder you should see <code>open terminal here</code>.</p>
+<p>Detailed instructions on installation <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">here</a></p>
+</div>
+</div>
+<p>We need some basic bash commands to get started:</p>
 <ol type="1">
-<li><p>Download the <code>000-setup.R</code> from <a href="https://georgetown.app.box.com/file/1629650190568">here</a></p></li>
-<li><p>Place it in the <code>govt-8001-dataessay</code> folder.</p></li>
-<li><p>Open it in the opened RStudio window.</p></li>
+<li><code>pwd</code>: prints working directory.<br>
+</li>
+<li><code>ls</code>: lists all the files in the working directory.<br>
+</li>
+<li><code>cd</code>: changes directory.<br>
+</li>
+<li><code>mkdir</code>: Makes a new directory.</li>
 </ol>
-<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Name: 000-setup.R</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Author: Parushya</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Purpose: Creates main folders, subfolders in the main project directory</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Will also ensure that you have basic packages required to run the repository</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Date Created: 2020/10/07</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Checking if packages are installed and installing</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co"># check.packages function: install and load multiple R packages.</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Found this function here: https://gist.github.com/smithdanielle/9913897 on 2019/06/17</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Check to see if packages are installed. Install them if they are not, then load them into the R session.</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>check.packages <span class="ot">&lt;-</span> <span class="cf">function</span>(pkg) {</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  new.pkg <span class="ot">&lt;-</span> pkg[<span class="sc">!</span>(pkg <span class="sc">%in%</span> <span class="fu">installed.packages</span>()[, <span class="st">"Package"</span>])]</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">length</span>(new.pkg)) {</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(new.pkg, <span class="at">dependencies =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sapply</span>(pkg, require, <span class="at">character.only =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if packages are installed and loaded:</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>packages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"janitor"</span>,  <span class="st">"tidyverse"</span>, <span class="st">"utils"</span>, <span class="st">"here"</span>)</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="fu">check.packages</span>(packages)</span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Setting Directories and creating subfolders</span></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating Sub Folders</span></span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="do">## Data</span></span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="fu">file.path</span>(<span class="fu">paste0</span>(<span class="fu">here</span>(<span class="st">"Data"</span>)))) <span class="co"># Data Folder</span></span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="fu">file.path</span>(<span class="fu">paste0</span>(<span class="fu">here</span>(<span class="st">"Data"</span>,<span class="st">"Raw"</span>)))) <span class="co"># Raw Data sub-folder</span></span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="fu">file.path</span>(<span class="fu">paste0</span>(<span class="fu">here</span>(<span class="st">"Data"</span>,<span class="st">"Clean"</span>)))) <span class="co"># Clean Data sub-folder</span></span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Scripts</span></span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="fu">file.path</span>(<span class="fu">paste0</span>(<span class="fu">here</span>(<span class="st">"Scripts"</span>)))) <span class="co"># Scripts Folder</span></span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="fu">file.path</span>(<span class="fu">paste0</span>(<span class="fu">here</span>(<span class="st">"Scripts"</span>,<span class="st">"RScripts"</span>)))) <span class="co"># RScripts  sub-folder</span></span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="fu">file.path</span>(<span class="fu">paste0</span>(<span class="fu">here</span>(<span class="st">"Scripts"</span>,<span class="st">"Stata-Scripts"</span>)))) <span class="co"># Stata Scripts sub-folder</span></span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="fu">file.path</span>(<span class="fu">paste0</span>(<span class="fu">here</span>(<span class="st">"Scripts"</span>,<span class="st">"Python-Scripts"</span>)))) <span class="co"># Python Scripts sub-folder</span></span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a><span class="co"># Output</span></span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="fu">file.path</span>(<span class="fu">paste0</span>(<span class="fu">here</span>(<span class="st">"Outputs"</span>)))) <span class="co"># Outputs Folder</span></span>
-<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="fu">file.path</span>(<span class="fu">paste0</span>(<span class="fu">here</span>(<span class="st">"Outputs"</span>,<span class="st">"figures"</span>)))) <span class="co"># Figures sub-folder</span></span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="fu">file.path</span>(<span class="fu">paste0</span>(<span class="fu">here</span>(<span class="st">"Outputs"</span>,<span class="st">"tables"</span>)))) <span class="co"># Tables sub-folder</span></span>
-<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="fu">file.path</span>(<span class="fu">paste0</span>(<span class="fu">here</span>(<span class="st">"Outputs"</span>,<span class="st">"text"</span>)))) <span class="co"># Text sub-folder</span></span>
-<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Try these commands in Terminal/Bash on your systems.</p>
+<p><strong>Git commands</strong></p>
+<p>Commands for git(or any program) start with name of the program. Try the following commands:</p>
+<p><code>git status</code></p>
+<p><code>git log</code></p>
+<p>You can also using terminal/bash from <code>RStudio</code>. Look at the second button at the bottom left, next to console. It automatically shows bash in the workign directory of your project.</p>
+</section>
+<section id="local-git-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="local-git-workflow">Local Git Workflow</h3>
+<p>Git workflow is anchored around <strong>repository</strong>. A repository is a folder where files including data, scripts, and other files are stored along with git log.</p>
+<p>In our workflow, this should ideally be the folder where <code>.RProj</code> file is located.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Practice
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Let’s practice using an existing folder with scripts and data.</p>
+<p>1- Open the existing R project.</p>
+<p>2- In the terminal window of Rstudio, type <code>pwd</code> to see of the correct working directory is opened.</p>
+<p>3- Type <code>git init</code>. This initializes the git repository for the project. <strong>This step needs to be done only once per folder</strong>.</p>
+<p>4- Tell git which files are to be trcaked and then staged. Use <code>git add</code> followed by filename or tab to add a few files one by one.</p>
+<p>3- Once added type <code>git commit -m "first commit"</code>. This takes a snapshot of staged file/s. ** Do not forget the -m**.</p>
+<p>4- Use <code>git status</code> and <code>git log</code> to see outputs about the process.</p>
 <ol start="4" type="1">
-<li>Run the file line-by-line. See the folder structure created in your main folder.</li>
+<li>Repeat this process after modifications to any script.</li>
 </ol>
 </div>
 </div>
+<p><strong>As a norm, avoid hosting raw data files like .csv, .dta, or .xlsx on GitHub. Large or sensitive files should be listed in a .gitignore file to prevent accidental upload. Git is best suited for tracking code and small plain-text files.See more on <code>.gitignore</code> <a href="https://docs.github.com/en/get-started/git-basics/ignoring-files">here</a></strong>.</p>
+<p>Similar to comments in R codes, commit messages should also ideally be brief phrases explaining contextual change rather than being detailed messages.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="git-commit.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="source"><img src="git-commit.webp" class="img-fluid figure-img" alt="source"></a></p>
+<figcaption><a href="https://programmerhumor.io/git-memes/from-small-changes-to-existential-crisis-neqt">source</a></figcaption>
+</figure>
+</div>
+</div>
 </div>
 </section>
 </section>
-<section id="takeaways" class="level2">
-<h2 class="anchored" data-anchor-id="takeaways">Takeaways</h2>
-<p>Here’s a quick workflow for starting a new project or assignment or paper.</p>
+<section id="using-github" class="level2">
+<h2 class="anchored" data-anchor-id="using-github">Using Github</h2>
+<p><a href="https://github.com/">Github</a> is an online hosting service for git based VCS. Git and Github are often confused with one another. It is important to remeber how they are different and that they complement each other.</p>
+<p>The most common workflow involves creating and modifying files locally,intializing local git repo (<code>git init</code>), staging files (<code>git add</code>) and committing changes with an informative message (<code>git commit -m"&lt;message&gt;"</code>) to local git repository, and then <code>push</code> changes to Github.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Github Practice
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ol type="1">
-<li><p>Make a new folder in your computer with apt name. Ideally, <code>govt-&lt;coursecode&gt;-&lt;project&gt;</code>.</p></li>
-<li><p>Start RStudio.</p></li>
-<li><p>Create a new Rstudio Project by clicking <code>File &gt; New Project</code>. Name it <code>govt-&lt;coursecode&gt;-&lt;project</code>.</p></li>
-<li><p>Check if now your RStudio Window shows the project name on top right corner. If not, go to folder and double-click the <code>.RProj</code> file.</p></li>
-<li><p>Paste the <code>000-setup.R</code> file in the main project folder. Open it in the same Rstudio window with the project and run the complete file. Your folder structure is created.</p></li>
-<li><p>Copy your raw data in <code>Data/Raw</code> folder. Similarly, your scripts in <code>Scripts/RScripts</code> folder</p></li>
-<li><p>Start your new <code>.qmd</code> file and save it in the main folder.</p></li>
-<li><p>Remember to use <code>here()</code> package extensively in both, scripts and quarto files, when loading or saving the data.</p></li>
-<li><p>You can zip the whole project folder for sharing. The receiver will just need to unzip and run the code after starting the associated <code>.RProj</code> file, without changing file paths on their computer.</p></li>
+<li><p>Make you account on <a href="https://github.com/">Github</a> if not already done. Ideally, use personal email id to register.</p></li>
+<li><p>Make a new RProject on your computer as we had done previously. Name it <code>my-git-practice</code>.</p></li>
+<li><p>Download and place the <a href="https://georgetown.app.box.com/file/1629650190568"><code>000-setup.R</code></a> in the folder.</p></li>
+<li><p>Run the R Project file, if not already done. In the opened Rstudio window, go to terminal at the bottom and check with <code>pwd</code>. Then run <code>git init</code>.</p></li>
+<li><p>On Github.com homescreen, click the green <code>New</code> button on top left corner.</p></li>
+<li><p>Call the new repository <code>my-git-practice</code> (same as local repository). Don’t make ay other changes on this page. Click <code>Create repository</code>.</p></li>
+<li><p>Copy the code under <strong>…or push an existing repository from the command line</strong>. Note: If you’re using an older version of Git or RStudio, your default branch may be master instead of main. You can rename it later or use git branch -M main.</p></li>
+<li><p>Paste it in the terminal window of Rstudio and press <code>Enter</code>.</p></li>
 </ol>
-
-
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-sandveTenSimpleRules2013" class="csl-entry" role="listitem">
-Sandve, Geir Kjetil, Anton Nekrutenko, James Taylor, and Eivind Hovig. 2013. <span>“Ten Simple Rules for Reproducible Computational Research.”</span> <em>PLOS Computational Biology</em> 9 (10): e1003285. <a href="https://doi.org/10.1371/journal.pcbi.1003285">https://doi.org/10.1371/journal.pcbi.1003285</a>.
+<p><strong>IF any issues here, resolve by talking amongst yourself or google</strong>.</p>
+<ol start="9" type="1">
+<li><p>Refresh the github.com window.</p></li>
+<li><p>Run <code>git add 000-setup.R</code> in terminal. (Staging state)</p></li>
+<li><p>Run <code>git commit -m "setup file added"</code> in terminal. (Committing state)</p></li>
+<li><p>Run <code>git push</code> in terminal. This pushes the local changes from repository to remote (online) repository.</p></li>
+</ol>
+</div>
+</div>
+<p>While git is used for version control, Github is additionally used for collaborative work. We are not covering <strong>branching</strong> and collaboration today. Links below can help you with starting these at later stages.</p>
+<p>In addition to git functions, Github adds similar but additional stages. Compare the following flowchart to one in section on understanding git.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="github.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="The backward arrow represent steps where repositiories are pulled from remote to local directory. This is used mostly when multiple peeople work on different systems on same repository or if your work involves working on different systems. The process is intuitive: Changes are pushed from one sytem to remote and then continued by first fetching or pulling the repository from the remote to local by next user or system. Image source"><img src="github.png" class="img-fluid figure-img" width="580" alt="The backward arrow represent steps where repositiories are pulled from remote to local directory. This is used mostly when multiple peeople work on different systems on same repository or if your work involves working on different systems. The process is intuitive: Changes are pushed from one sytem to remote and then continued by first fetching or pulling the repository from the remote to local by next user or system. Image source"></a></p>
+<figcaption>The backward arrow represent steps where repositiories are pulled from remote to local directory. This is used mostly when multiple peeople work on different systems on same repository or if your work involves working on different systems. The process is intuitive: Changes are pushed from one sytem to remote and then continued by first fetching or pulling the repository from the remote to local by next user or system. <a href="https://imgur.com/oodiCnB">Image source</a></figcaption>
+</figure>
+</div>
 </div>
 </div>
 </section>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>Inspired by the summary provided by Prof <a href="https://aaronrwilliams.com/about">Aaron Williams</a>’ course on Data Analysis offered at McCourt School. Strongly recommended to learn good coding using R<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<section id="additonal-resource" class="level2">
+<h2 class="anchored" data-anchor-id="additonal-resource">Additonal Resource</h2>
+<ol type="1">
+<li><p>Git <a href="https://git-scm.com/doc">Documentation</a></p></li>
+<li><p>Advanced Git operations <a href="https://gitimmersion.com/">tutorial</a></p></li>
+<li><p>Git <a href="https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet">Cheatsheet</a></p></li>
+<li><p>Video explainers of git workflow (<a href="https://www.youtube.com/watch?v=e9lnsKot_SQ">here</a>, <a href="https://www.youtube.com/watch?v=HMoZ5cYzU4I">here</a>, and <a href="https://www.youtube.com/watch?v=mJ-qvsxPHpY">here</a>)</p></li>
 </ol>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -1248,13 +1049,13 @@ Sandve, Geir Kjetil, Anton Nekrutenko, James Taylor, and Eivind Hovig. 2013. <sp
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./Methods-Brown-Bag.html" class="pagination-link" aria-label="Methods Brown Bag">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Methods Brown Bag</span>
+      <a href="./file-workflow.html" class="pagination-link" aria-label="File Management and Workflow">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">File Management and Workflow</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./vc-git-hub.html" class="pagination-link" aria-label="Version Control with Git and Github">
-        <span class="nav-page-text">Version Control with Git and Github</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./github-web.html" class="pagination-link" aria-label="Publishing Website with Quarto and Github">
+        <span class="nav-page-text">Publishing Website with Quarto and Github</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
